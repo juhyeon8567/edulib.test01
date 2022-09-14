@@ -1,0 +1,131 @@
+<?php include '../layout/header.html' ?>
+
+<div id="wrap">
+	<div id="container_wrap">
+		<div class="main-wrap">
+			<!-- 기존 로그인 영역 -->
+			<section class="ct-signbox" style="display: none;">
+				<div class="login-view">
+					<div class="text-center">
+						<div class="space-box">
+							<span><img src="../../static/image/header_edulib.png" alt=""></span>
+						</div>
+						<p class="font-m desk-xs-none">로그인 후, 교육 콘텐츠를 무제한으로 즐겨보세요!</p>
+					</div>
+					<div class="info-login">
+						<div>
+							<input type="text" class="form-control info-line" placeholder="아이디"/>
+						</div>
+						<div>
+							<input type="password" class="form-control info-line" placeholder="비밀번호"/>
+						</div>
+						<div class="q-checkbox float-left">
+							<label class="font-m"><input type="checkbox"/> 아이디 저장</label>
+						</div>
+						<div class="login-wrap-box">
+							<div class="box-util float-right font-m">
+								<a href="#" class="id-find">아이디 찾기 ㅣ</a>
+								<a href="#" class="pw-find">비밀번호 찾기</a>
+							</div>
+							<div class="button-login">
+								<button class="btn btn-primary btn-block" type="button">로그인</button>
+								<button class="btn btn-default btn-block" type="button">회원가입</button>
+							</div>
+							<ul class="sns-login text-left">
+								<li class="font-m">
+									<a href="#"> 
+										<img src="../../static/image/i_blog.png" alt="네이버이미지"/>
+										<span>naver계정으로 로그인</span>
+									</a>
+								</li>
+								<li class="font-m">
+									<a href="#">
+										<img src="../../static/image/i_kakao.png" alt="카카오톡이미지"/>
+										<span>kakao계정으로 로그인</span>
+									</a>
+								</li>
+								<li class="font-m">
+									<a href="#">
+										<img src="../../static/image/i_facebook.png" alt="페이스북이미지"/>
+										<span>facebook계정으로 로그인</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 로그인 신규 레이아웃 -->
+			<div class="login-wrap">
+				<div class="container">
+					<div class="login-inner">
+						<div class="login-head">
+							<p class="login-tit">교육 콘텐츠는 역시,<span class="text_b"> 에듀립!</span></p>
+							<p class="login-txt">환영합니다! 교육 콘텐츠를 풍부하게 활용해 보세요.</p>
+						</div>
+						<div class="login-body">
+							<!-- <div class="login-top">
+								<img src="../../static/image/login-cir.png" alt="로그인탑_컬러써클이미지"/>
+							</div> -->
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="login-left">
+										<div class="login-imgs">
+											<img src="../../static/image/login-edulib-img.png" alt="임시이미지"/>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="login-right">
+										<div class="login-input">
+											<p>로그인</p>
+											<div>
+												<input type="text" placeholder="아이디"/>
+												<span class="login-id"></span>
+											</div>
+											<div>
+												<input type="password" placeholder="비밀번호"/>
+												<span class="login-pw"></span>
+											</div>
+										</div>
+										<div class="login-id-box">
+											<label>
+												<input type="checkbox" name="id-save" class="id-save"/>
+												<span>아이디 저장</span>
+											</label>
+											<div>
+												<a href="#">회원가입</a>
+											</div>
+										</div>
+										<button type="button" class="login-btn">로그인</button>
+										<div class="login-idpw">
+											<a href="#">아이디 찾기</a>
+											<a href="#">비밀번호 찾기</a>
+										</div>
+										<div class="login-sns">
+											<p>SNS 로그인</p>
+											<div class="sns-imgs">
+												<a href="#">
+													<img src="../../static/image/i_sns_facebook.png" alt="페이스북로고이미지"/>
+												</a>
+												<a href="#">
+													<img src="../../static/image/i_sns_kakao.png" alt="카카오톡로고이미지"/>
+												</a>
+												<a href="#">
+													<img src="../../static/image/i_sns_naver.png" alt="네이버로고이미지"/>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php include '../layout/footer.html' ?>

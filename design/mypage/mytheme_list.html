@@ -1,0 +1,940 @@
+
+<?php include '../layout/header.html' ?>
+	<!-- 상단공통알림바 고정 타입 1 -->
+	<div class="meb-push" style="display: none;">
+		<div class="meb-item row container">
+			<div class="col-md-4 meb-tit">
+				<span>마이 에듀립</span>
+				<h3>홍길동 회원님</h3>
+				<span>환영합니다.</span>
+				<div class="my-bell" style="display: none;">
+					<img src="../../static/image/i_alarm.png" alt="알림아이콘이미지"/>
+					<span class="badge badge-warning">2</span>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<ul class="my-list-item list-inline">
+					<li>
+						<img src="../../static/image/i_sub.png" alt="나의구독권아이콘이미지"/>
+						<p class="bold push-tit">나의 구독권</p>
+						<p>12개월권</p>
+						<!-- <p>없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_mynt.png" alt="나의문의아이콘이미지"/>
+						<p class="bold push-tit">나의 문의</p>
+						<p>1건 / 진행중</p>
+						<!-- <p>0건 / 없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_mypay.png" alt="나의결제아이콘이미지"/>
+						<p class="bold push-tit">결제 내역</p>
+						<p>1건 / 결제완료</p>
+						<!-- <p>0건 / 없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_myp.png" alt="회원아이콘이미지"/>
+						<p class="bold push-tit">회원 정보</p>
+						<div class="alt-btn">
+							<a href="#">수정하기 ></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 상단고정알림바 펼치기 가능 -->
+	<div class="meb-push">
+		<div class="card container">
+			<div class="card-header">
+				<span class="spc-bubble" style="display: none;">나의 정보창을 열고 닫을 수 있습니다!</span>
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body p-0">
+				<div class="meb-item row">
+					<div class="col-md-4 meb-tit">
+						<span>마이 에듀립</span>
+						<h3>홍길동 회원님</h3>
+						<span>환영합니다.</span>
+						<div class="my-bell" style="display: none;">
+							<img src="../../static/image/i_alarm.png" alt="알림아이콘이미지"/>
+							<span class="badge badge-warning">2</span>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<ul class="my-list-item list-inline">
+							<li>
+								<img src="../../static/image/i_sub.png" alt="나의구독권아이콘이미지"/>
+								<p class="bold push-tit">나의 구독권</p>
+								<p>12개월권</p>
+								<!-- <p>없음</p> -->
+							</li>
+							<li>
+								<img src="../../static/image/i_mynt.png" alt="나의문의아이콘이미지"/>
+								<p class="bold push-tit">나의 문의</p>
+								<p>1건 / 진행중</p>
+								<!-- <p>0건 / 없음</p> -->
+							</li>
+							<li>
+								<img src="../../static/image/i_mypay.png" alt="나의결제아이콘이미지"/>
+								<p class="bold push-tit">결제 내역</p>
+								<p>1건 / 결제완료</p>
+								<!-- <p>0건 / 없음</p> -->
+							</li>
+							<li>
+								<img src="../../static/image/i_myp.png" alt="회원아이콘이미지"/>
+								<p class="bold push-tit">회원 정보</p>
+								<div class="alt-btn">
+									<a href="#">수정하기 ></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="sub-wrap container">
+	<?php
+		$menu = 'mypage';
+		include '../layout/leftside.php'
+	?>
+	<div class="cont-area">
+		<div class="cont-inner">
+			<div class="desk-xs-none" style="display: none;">
+				<p class="sub-cate float-right list-inline">
+					<span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+					<span><a href="#">마이 에듀립 ></a></span>
+					<b><span><a href="#">나의 관심 주제</a></span></b>
+				</p>
+			</div>
+			<div class="sub-cont">
+				<div class="sub-contents">
+					<div class="member-list">
+						<div class="meb-inner">
+							<div class="meb-head">
+								<p class="sub-theme-tit">내가 설정한 관심 주제
+									<button type="button" class="btn click-btn" data-toggle="modal" data-target=".theme-modal">
+										<img src="../../static/image/i_set.png" alt="관심주제설정하기버튼"/>
+									</button>
+								</p>
+								<p class="ex-tit">관심있는 주제의 과목을 설정하면 콘텐츠를 추천해 드립니다!</p>
+								<!-- 관심주제 없을 시 설정하는 영역 -->
+								<div class="not-cont-wrap" style="display: none;">
+									<div class="not-cont-img">
+										<img src="../../static/image/not-cont.png" alt="콘텐츠없을시이미지"/>
+									</div>
+									<div class="not-cont-box">
+										<p class="not-cont-tit">나만의 <span>관심주제</span>를 설정해 주세요.</p>
+										<div class="not-cont-btn">
+											<a href="#" class="btn" data-toggle="modal" data-target=".theme-modal">관심 주제 설정하기</a>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="mh-box card">
+									<div class="mh-top card-header">
+										<span class="font-s">더보기</span>
+										<div class="card-tools">
+											<button type="button" class="btn btn-tool" data-card-widget="collapse">
+												<i class="fas fa-minus"></i>
+											</button>
+										</div>
+									</div>
+									<div class="card-body p-0">
+										<ul class="theme-list-item list-inline">
+											<li>
+												<a href="#">
+													<div class="grade-books ele-books01">
+														<p>초등 교과</p>
+														<span>국어</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="grade-books ele-books01">
+														<p>초등 교과</p>
+														<span>도덕</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="grade-books ele-books02">
+														<p>초등 범교과</p>
+														<span>미디어리터러시 교육</span>
+													</div>
+												</a>
+											</li>
+											<li class="on">
+												<a href="#">
+													<div class="grade-books mld-books03">
+														<p>중학 교과</p>
+														<span>듣기.말하기</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="grade-books mld-books04">
+														<p>중학 범교과</p>
+														<span>통일.독도 교육</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="grade-books mld-books04">
+														<p>중학 범교과</p>
+														<span>역사 교육</span>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div> -->
+								
+								<!-- 관심주제 카테고리 -->
+								<div class="books-box">
+									<div class="card collapsed-card">
+										<div class="mh-top card-header">
+											<ul class="theme-list-item list-inline">
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등(교과)</p>
+															<span>국어</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등(교과)</p>
+															<span>기술가정</span>
+															<span>기술가정</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books02">
+															<p>초등(범교과)</p>
+															<span>미디어리터러시 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books03">
+															<p>중학(교과)</p>
+															<span>듣기.말하기</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학(범교과)</p>
+															<span>통일.독도 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학(범교과)</p>
+															<span>역사 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학(범교과)</p>
+															<span>통일.독도 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학(범교과)</p>
+															<span>역사 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등(교과)</p>
+															<span>국어</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등(교과)</p>
+															<span>도덕</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books02">
+															<p>초등(범교과)</p>
+															<span>미디어리터러시 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books03">
+															<p>중학(교과)</p>
+															<span>듣기.말하기</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+											<div class="card-tools">
+												<span class="font-s">더보기</span>
+												<button type="button" class="btn btn-tool" data-card-widget="collapse">
+													<i class="fas fa-minus"></i>
+												</button>
+											</div>
+										</div>
+										<div class="mh-cnt card-body p-0">
+											<ul class="theme-list-item list-inline">
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등 교과</p>
+															<span>국어</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books01">
+															<p>초등 교과</p>
+															<span>도덕</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books ele-books02">
+															<p>초등 범교과</p>
+															<span>미디어리터러시 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books03">
+															<p>중학 교과</p>
+															<span>듣기.말하기</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학 범교과</p>
+															<span>통일.독도 교육</span>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<div class="grade-books mld-books04">
+															<p>중학 범교과</p>
+															<span>역사 교육</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div> 
+							<!-- 내가 섫정한 관심주제에 따른 추천콘텐츠 이미지형 -->
+							<div class="meb-body">
+								<p>나의 관심 주제에 해당하는 <span class="text_b">추천 콘텐츠 Pick!</span></p>
+								<div class="sb-contbox">
+									<? foreach(range(1,12) as $v) { ?>
+									<div class="cont-item sb-item">
+										<div class="sub-thum-item">
+											<a href="#">
+												<div class="thum-item">
+													<div class="thum type01">
+														<div class="thum-image">
+															<img src="../../static/image/V11271455_33e5c32d_3df5_4743_b72c_0cb0c37b841a.jpg" alt="거미의 덧셈"/>
+														</div>
+														<div class="thum-types">
+															<div class="thum-category">수학</div>
+															<div class="thum-title" title="거미의 덧셈">
+																<div class="thum-title-md">
+																	<div class="thum-title-wb">
+																		<span>거미의</span> 덧셈
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="cont-title">
+											<a href="#">거미의 덧셈</a>
+										</div>
+										<div class="cont-footer">
+                                            <div class="swiper swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#거미</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#계산</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#더하기</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#덧셈</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#수와연산</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+									</div>
+									<? } ?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sub-pagination clearfix">
+						<ul class="pagination pagination-md">
+							<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">5</a></li>
+							<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 관심주제 설정하기 팝업창 -->
+<div class="modal fade theme-modal">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">나만의 관심주제 설정하기</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body scrollbar" style="height: 900px; width: 950px;">
+				<div class="theme_modal">
+					<div class="theme_inner">
+						<!-- 초등 -->
+						<div class="theme_center" style="display: none;">
+							<ul class="tm-subject">
+								<p class="item-tit">학급</p>
+								<p class="font-s">* 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 <span class="text_b">택1</span>)</p>
+								<li>
+									<label>
+										<input type="radio" class="on"><span>초등</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>중학</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">학년</p>
+								<li>
+									<label>
+										<input type="radio"><span>1학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>2학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>3학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>4학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>5학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>6학년</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">과목</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>국어</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>수학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>사회</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>도덕</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>봄</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>여름</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>가을</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>겨울</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>안전한 생활</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>실과</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>음악</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미술</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>체육</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">범교과</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>안정 &#183; 건강</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>인성</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>진로</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>통일 &#183; 독도</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>창의 &#183; 과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>역사</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>독서</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>경제 &#183; 금융</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>ESD</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>SW</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미디어리터러시</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<!-- 중학 -->
+						<div class="theme_center">
+							<ul class="tm-subject">
+								<p class="item-tit">학급</p>
+								<p class="font-s">* 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 <span class="text_b">택1</span>)</p>
+								<li>
+									<label>
+										<input type="radio"><span>초등</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" class="on"><span>중학</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject2">
+								<p class="item-tit">과목</p>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">국어</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>듣기 &#183; 말하기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>읽기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>쓰기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>문법</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>문학</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">수학</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ②</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ③</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">사회</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>사회 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>사회 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">도덕</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>도덕 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>도덕 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">역사</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>역사 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>역사 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">과학</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ②</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ③</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">기술 &#183; 가정</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>기술 &#183; 가정 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>기술 &#183; 가정 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">음악</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>음악 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">미술</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>미술 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">체육</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>체육 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">정보</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>정보</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">범교과</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>안정 &#183; 건강</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>인성</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>진로</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>통일 &#183; 독도</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>창의 &#183; 과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>역사</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>독서</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>경제 &#183; 금융</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>ESD</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>SW</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미디어리터러시</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="tm-clickbox scrollbar">
+					<p class="f20">내가 선택한 관심주제</p>
+					<span>* 마우스를 스크롤해서 확인 해보세요.</span>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>국어</li>
+						<span>&#62;</span>
+						<li>듣기 &#183; 말하기</li>
+					</ul>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>수학</li>
+						<span>&#62;</span>
+						<li>수학 ②</li>
+					</ul>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>1학년</li>
+						<span>&#62;</span>
+						<li>창의 &#183; 과학</li>
+					</ul>
+				</div>
+				<div class="row justify-content-between btn-row">
+					<div class="reset_btn col-sm-6 text-left">
+						<button type="button" class="btn btn-primary">
+							<img src="../../static/image/i_selectall.png" alt="전체선택아이콘"> 전체 선택
+						</button>
+						<button type="button" class="btn btn-default">
+							<img src="../../static/image/i_reset.png" alt="선택초기화아이콘"> 선택 초기화
+						</button>
+					</div>
+					<div class="apply_btn col-sm-6 text-right">
+						<button type="button" class="btn btn-primary">확인</button>
+						<button type="button" class="btn btn-default">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php include '../layout/footer.html' ?>
+	
+
+ 
+	   
+	   
+

@@ -1,0 +1,372 @@
+<?php include '../layout/header.html' ?>
+
+	<div class="meb-push">
+		<div class="meb-item row container">
+			<div class="col-md-4 meb-tit">
+				<span>마이 에듀립</span>
+				<h3>홍길동 회원님</h3>
+				<span>환영합니다.</span>
+			</div>
+			<div class="col-md-8">
+				<ul class="my-list-item list-inline">
+					<li>
+						<img src="../../static/image/i_sub.png" alt="나의구독권아이콘이미지"/>
+						<p class="bold push-tit">MY 구독권</p>
+						<p>12개월권</p>
+						<!-- <p>없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_mynt.png" alt="나의문의아이콘이미지"/>
+						<p class="bold push-tit">MY 문의</p>
+						<p>1건 / 진행중</p>
+						<!-- <p>0건 / 없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_mypay.png" alt="나의결제아이콘이미지"/>
+						<p class="bold push-tit">결제 내역</p>
+						<p>1건 / 결제완료</p>
+						<!-- <p>0건 / 없음</p> -->
+					</li>
+					<li>
+						<img src="../../static/image/i_myp.png" alt="회원아이콘이미지"/>
+						<p class="bold push-tit">회원 정보</p>
+						<div class="alt-btn">
+							<a href="#">수정하기 ></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="sub-wrap container">
+		<?php
+			$menu = 'mypage';
+			include '../layout/leftside.php'
+		?>
+		
+		<!-- 콘텐츠 영역 -->
+		<div class="cont-area">
+			<div class="cont-inner">
+				<div class="desk-xs-none">
+					<p class="sub-cate float-right list-inline">
+						<span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+						<span>마이 에듀립 ></span>
+						<b><span>회원정보</span></b>
+					</p>
+				</div>
+				<div class="cont-head">
+					<p class="sub-theme-tit">회원정보수정</p>
+				</div>
+				<div class="sub-cont">
+					<div class="sub-contents">
+						<div class="sub-notice">
+							<div class="notice-view">
+								<div class="nt-inner">
+									<div class="nt-head">
+										<p class="bold">비밀번호 재확인</p>
+										<p class="font-m">회원님의 정보를 안전하게 보호하기 위해 비밀번호를 확인해주세요.</p>
+										<div class="form-inline">
+											<div class="form-group">
+												<input type="password" class="form-control" placeholder="현재 비밀번호를 입력해주세요." size="30"/>
+											</div>
+										</div>
+										<p class="text_r font-s">※ 입력된 비밀번호가 불일치합니다.</p>
+									</div>
+									<div class="no-list-btn text-center">
+										<span class="done-btn-free"><a href="#">확 인</a></span>
+										<span class="cancel-btn-free"><a href="#">취 소</a></span>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body table-responsive p-0">
+										<table class="member-info-table table">
+											<colgroup>
+												<col style="width: 15%;">
+												<col style="width: 50%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>아이디</td>
+													<td>edulib@tccom.co.kr</td>
+												</tr>
+												<tr>
+													<td>비밀번호</td>
+													<td class="font-m">
+														<button type="button" class="btn btn-default">비밀번호 변경하기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>이름</td>
+													<td>홍길동</td>
+												</tr>
+												<tr>
+													<td>성별</td>
+													<td>남성</td>
+												</tr>
+												<tr>
+													<td>생년월일</td>
+													<td>1980.11.01</td>
+												</tr>
+												<tr>
+													<td>이메일</td>
+													<td>
+														<div class="form-inline">
+															<input type="email" class="form-control form-txt-space"/>
+															<button type="button" class="btn btn-default form-txt-space" data-toggle="modal" data-target=".done-modal">인증하기</button>
+															<button type="button" class="btn btn-default" data-toggle="modal" data-target=".done-modal">인증완료</button>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>연락처</td>
+													<td>
+														<div class="form-inline">
+															<input type="tel" class="form-control form-txt-space" name="tel" placeholder="'-'없이 숫자만 입력해주세요."/>
+															<button type="button" class="btn btn-default" data-toggle="modal" data-target=".done-modal">인증하기</button>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>인증방법 확인</td>
+													<td>
+														<div class="form-inline">
+															<input type="text" class="form-control form-txt-space" placeholder="인증번호 입력"/>
+															<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".done-modal">확인</button>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>관심정보</td>
+													<td>
+														<select class="form-select form-control">
+															<option selected>전 체</option>
+															<option value="1">초 등</option>
+															<option value="2">중</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>소속</td>
+													<td>
+														<div class="form-inline">
+															<input type="text" class="form-control form-txt-space" placeholder="ex) 마포초등학교"/>
+															<select class="form-select form-control">
+																<option selected>지역선택</option>
+																<option value="1">서울</option>
+																<option value="2">경기</option>
+															</select>
+														</div>
+													</td>	
+												</tr>
+											</tbody>
+										</table>
+										<div class="space-box float-right">
+											<a href="#" data-toggle="modal" data-target=".secession-modal"><span class="font-w">회원탈퇴하기 ></span></a>
+											<!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target=".secession-modal">회원탈퇴하기</button> -->
+										</div>
+									</div>
+								</div>
+								<div class="no-list-btn text-center">
+									<span class="done-btn-free"><a href="#">수 정</a></span>
+									<span class="cancel-btn-free"><a href="#">취 소</a></span>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+		<!-- 회원탈퇴 신청 확인 팝업 -->
+		<div class="modal fade secession-modal">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="pop-top">
+							<p class="bold">회원탈퇴 신청</p>
+							<p class="font-m">소중한 에듀립의 회원님, 회원 탈퇴 시 아래 사항을 숙지하시길 바랍니다.</p>
+						</div>
+						<table class="member-info-table">
+							<tbody>
+								<tr>
+									<td class="font-m">비밀번호 확인</td>
+									<td><input type="password" class="form-control" placeholder="현재 비밀번호를 입력해주세요."/></td>
+								</tr>
+								<tr>
+									<td class="font-m">보유중인 구독권</td>
+									<td>
+										<span class="font-m">월간권 (매월)</span>
+										<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".done2-modal">만료일시 확인하기</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="font-m">탈퇴 이유</td>
+									<td class="secc-list">
+										<div>
+											<label><input type="checkbox" class="cus-checkbox"/><span>서비스 이용 불편</span></label>
+										</div>
+										<div>
+											<label><input type="checkbox" class="cus-checkbox"/><span>가격</span></label>
+										</div>
+										<div>
+											<label><input type="checkbox" class="cus-checkbox"/><span>콘텐츠 부족</span></label>
+										</div>
+										<div>
+											<label><input type="checkbox" class="cus-checkbox"/><span>방문 빈도</span></label>
+										</div>
+										<div>
+											<label><input type="checkbox" class="cus-checkbox"/><span>기타 / 직접 입력</span></label>
+											<textarea class="text form-control" placeholder="내용을 입력해주세요." style="height: 120px;"></textarea>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="font-m">회원탈퇴 시 유의사항</td>
+									<td>
+										<span class="font_m">회원 탈퇴가 완료되면 아래와 같이 진행됩니다.</span>
+										<ul class="caution-list font-m">
+											<li>
+												<p>* 탈퇴 신청 후 에듀립 계정의 개인 정보가 삭제되며,</p> 
+												<p>데이터를 임의로 삭제 혹은 복원 해드릴 수 없습니다.</p>
+											</li>
+											<li>
+												<p>* 기존의 계정 아이디는 재사용이 불가하며, 복구할 수 없습니다.</p>
+											</li>
+											<li>
+												<p>* 회원탈퇴 시 보유중인 이용권은 모두 소멸되며,</p>
+												<p>복구 및 환불이 불가합니다.</p>
+												<p>(내부결제 해지방법을 참고하시어 반드시 구독 해지 하시기 바랍니다.)</p>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label>
+											<input type="checkbox" class="checkbox"/>
+											<span>위 내용을 확인했으며, 탈퇴를 진행합니다.</span>
+										</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row">
+							<a href="#" class="full-c-btn" data-dismiss="modal" aria-label="Close"><span>취소</span></a>
+						</div>
+						<div class="text-right">
+							<a href="#" data-toggle="modal" data-target=".cpl5-modal"><span class="font-m">회원탈퇴하기 ></span></a>
+						</div>
+					</div>
+					<!-- <div class="modal-footer">
+						<div class="row rec-btn">
+							<a href="#" class="full-c-btn" data-dismiss="modal" aria-label="Close"><span>취소</span></a>
+							<a href="#" class="confirm-btn" data-toggle="modal" data-target=".cpl5-modal"><span>회원탈퇴</span></a>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 변경완료 알림 팝업 -->
+		<div class="modal fade cpl3-modal">
+			<div class="modal-dialog modal-dialog-scrollable modal-xs">
+				<div class="modal-content text-center" style="height: 250px; width: 500px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body cpl-txt" id="sample-layer-body">
+						<p>변경하신 정보로 회원 정보 수정이</p>
+						<p>완료되었습니다.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">취소</button>
+						<button type="button" class="btn btn-primary">완료</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 정상처리 알림 팝업 -->
+		<div class="modal fade cpl4-modal">
+			<div class="modal-dialog modal-dialog-scrollable modal-xs">
+				<div class="modal-content text-center" style="height: 250px; width: 500px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body cpl-txt" id="sample-layer-body">
+						<p>인증이 정상적으로 처리되었습니다.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">완료</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 회원탈퇴신청 완료 팝업 -->
+		<div class="modal fade cpl5-modal">
+			<div class="modal-dialog modal-dialog-scrollable modal-xs">
+				<div class="modal-content text-center" style="height: 250px; width: 500px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body cpl-txt" id="sample-layer-body">
+						<p>회원탈퇴 신청이 완료되었습니다.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">확인</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 보유중인 구독권 확인 알림팝업 -->
+		<div class="modal fade done2-modal">
+			<div class="modal-dialog modal-dialog-scrollable modal-xs">
+				<div class="modal-content text-center" style="height: 250px; width: 500px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body cpl-txt" id="sample-layer-body">
+						<p>보유중인 구독권이 있어,</p>
+						<p>구독권 해지 후 탈퇴 가능합니다.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">나의 구독권</button>
+						<button type="button" class="btn btn-default">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- //콘텐츠 영역-->
+	</div>
+
+	<!-- 인증번호 정상 처리 알림팝업 -->
+    <div class="modal fade done-modal">
+        <div class="modal-dialog modal-dialog-scrollable modal-xs">
+            <div class="modal-content text-center" style="height: 180px; width: 500px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body cpl-txt">
+                    <p>인증이 정상적으로 처리되었습니다.</p>
+                    <!-- 인증요청 실패시 -->
+                    <!-- <p>인증 요청에 실패하였습니다.</p>
+                    <p class="font-m">＊다시 시도해주세요.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php include '../layout/footer.html' ?>

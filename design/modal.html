@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Modal</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/external/plugins/fontawesome-free/css/all.min.css">
+    <!-- jQuery ui -->
+    <link rel="stylesheet" href="../static/external/plugins/jquery-ui/jquery-ui.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="../static/external/plugins/daterangepicker/daterangepicker.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../static/external/plugins/bootstrap/css/bootstrap.min.css"/>
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="../static/external/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="../static/external/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../static/external/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="../static/external/plugins/fullcalendar/main.css"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/external/dist/css/adminlte.min.css"/>
+    <!-- summernote -->
+    <link rel="stylesheet" href="../static/external/plugins/summernote/summernote-bs4.min.css"/>
+    <!-- adminlte custom -->
+    <link rel="stylesheet" href="../static/css/adminlte.custom.css"/>
+    <!-- flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css' />
+    <!-- 신규 추가 -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/css/style.css"/>
+    <!-- 반응형 css -->
+    <link rel="stylesheet" href="../static/css/responsive.css"/>
+</head>
+<body>
+    
+    <div class="modal-area">
+         <!-- 팝업 추가 -->
+         <div class="container-fluid">
+            <div class="row justify-content-between btn-row">
+                <div class="col-sm6">
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#sample-list-layer">
+                        <i class="fas"></i> 미리보기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 팝업 추가 -->
+
+        <!-- 팝업 추가 -->
+        <div class="container-fluid">
+            <div class="row justify-content-between btn-row">
+                <div class="col-sm6">
+                    <button class="btn btn-secondary" data-toggle="modal" data-target=".sample111">
+                        <i class="fas"></i>관심주제 설정
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 팝업 추가 -->
+
+
+        <div class="modal fade ask-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <!-- modal-sm modal-lg modal-xl -->
+            <div class="modal-content" style="height: 820px; width: 1000px;">
+                <div class="modal-header">
+                    <h4 class="modal-title">Q. [회원/가입] 회원가입 중, 다음 페이지로 넘어가지 않아요.</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="sample-layer-body" style="height: 800px; width: 900px;">
+                    <div class="nt-content">
+                        <img src="../../static/image/main-banner02.jpg" alt="공지사항임의예시이미지"/>
+                        <button type="button" class="btn btn-default">목록으로</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 일정 및 공지사항 팝업 예제-->
+    <div class="modal fade" id="sample-list-layer">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <!-- modal-sm modal-lg modal-xl -->
+            <div class="modal-content" style="height: 820px; width:1000px;">
+                <div class="modal-header">
+                    <h4 class="modal-title">샘플선택 팝업</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="sample-layer-body" style="height: 820px; width:1000px;">
+                    <div class="card card-outline card-secondary">
+                        <div class="card-header">
+                            <form id="form-search-sample-list-layer" onsubmit="return false;">
+                                <input type="hidden" name="mode" value="single">
+                                <input type="hidden" name="callback" value="main.fn.setSingle">
+                                <input type="hidden" name="pagingInfo.pageNo" value="1">
+                                <input type="hidden" name="pagingInfo.pageRowSize" value="10">
+
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">검색조건</label>
+                                    <div class="col-sm-2">
+                                        <select class="custom-select" name="srchCnd">
+                                            <option value="title_content">제목+내용</option>
+                                            <option value="title">제목</option>
+                                            <option value="content">내용</option>
+                                            <option value="reg_id">등록자</option>
+                                        </select>
+                                    </div>
+                                    <div class="col px-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="srchKwd">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-secondary"
+                                                    id="btn-search-sample-list-layer">
+                                                    <i class="fas fa-search"></i> 검색
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body">
+                            <div id="sample-list-layer-list-header">
+                                <div class="row mb-2 justify-content-between">
+                                    <div class="col-sm-4 text-left align-self-center">
+                                        <h3>총 <span class="total-row-count">601</span>건</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="form-data-sample-list-layer">
+                                <table class="table table-bordered table-striped table-hover table-centered">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col>
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th style="width: 5%">#</th>
+                                            <th>제목</th>
+                                            <th>등록자</th>
+                                            <th>등록날짜</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-sample-list-layer">
+                                        <tr>
+                                            <td>601<input type="hidden" name="sampleSeqs" value="638"><input
+                                                    type="hidden" name="titles" value="123"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(0)">123</a></td>
+                                            <td>1</td>
+                                            <td>2021-10-14 13:48:35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>600<input type="hidden" name="sampleSeqs" value="635"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(1)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:29:08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>599<input type="hidden" name="sampleSeqs" value="634"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(2)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:22:46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>598<input type="hidden" name="sampleSeqs" value="633"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(3)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:20:56</td>
+                                        </tr>
+                                        <tr>
+                                            <td>597<input type="hidden" name="sampleSeqs" value="632"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(4)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:19:38</td>
+                                        </tr>
+                                        <tr>
+                                            <td>596<input type="hidden" name="sampleSeqs" value="631"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(5)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:18:46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>595<input type="hidden" name="sampleSeqs" value="630"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(6)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:17:44</td>
+                                        </tr>
+                                        <tr>
+                                            <td>594<input type="hidden" name="sampleSeqs" value="629"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(7)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:17:14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>593<input type="hidden" name="sampleSeqs" value="628"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(8)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:16:28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>592<input type="hidden" name="sampleSeqs" value="627"><input
+                                                    type="hidden" name="titles" value="테스트 제목 1"></td>
+                                            <td class="text-left"><a href="javascript:void(0);"
+                                                    onclick="sampleListLayer.fn.getSingle(9)">테스트 제목 1</a></td>
+                                            <td>1</td>
+                                            <td>2021-08-30 09:15:25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <div id="sample-list-layer-list-paging">
+                                <div class="row mt-3">
+                                    <div class="col clearfix">
+                                        <ul class="pagination pagination m-0 float-right page-paging">
+                                            <li class="page-item"><a class="page-link" href="javascript:void(0);">«</a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link"
+                                                    href="javascript:void(0);">1</a></li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 2);">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 3);">3</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 4);">4</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 5);">5</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 6);">6</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 7);">7</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 8);">8</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 9);">9</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 10);">10</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link"
+                                                    href="javascript:tccom.common.fn.list.paging(sampleListLayer, 11);">»</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row justify-content-between btn-row">
+                                <div class="col-sm-6 text-left"></div>
+                                <div class="col-sm-6 text-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="/static/js/sample/sampleListLayer.js"></script>
+                    <script type="text/javascript">
+                        $(function () { try { sampleListLayer.fn.init(); } catch (e) { } });</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인페이지 관심주제 설정 -->
+    <div class="modal fade sample111">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content" style="height: 820px; width: 1000px;">
+                <div class="modal-header">
+                    <h4 class="modal-title">나만의 관심주제 설정하기</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="sample-layer-body" style="height: 900px; width: 1000px;">
+                    <div class="theme_modal">
+                        <div class="theme_inner">
+                            <!-- <div class="theme_center">
+                                <span class="item-tit">학급</span>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label class="form-check-label ele-tit" for="flexRadioDefault1">초등</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label class="form-check-label mid-tit" for="flexRadioDefault1">중학</label>
+                                </div>
+                                <span><small>※ 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 택1)</small></span>
+                                <hr>
+                                <ul class="list-inline">
+                                    <span class="item-tit">학년</span>
+                                    <li><a href="#">1학년</a></li>
+                                    <li><a href="#">2학년</a></li>
+                                    <li><a href="#">3학년</a></li>
+                                    <li><a href="#">4학년</a></li>
+                                    <li><a href="#">5학년</a></li>
+                                    <li><a href="#">6학년</a></li>
+                                </ul>       
+                                <hr>
+                                <ul class="list-inline">
+                                    <span class="item-tit">교과</span>
+                                    <li><a href="#">국어</a></li>
+                                    <li><a href="#">수학</a></li>
+                                    <li><a href="#">봄</a></li>
+                                    <li><a href="#">여름</a></li>
+                                    <li><a href="#">가을</a></li>
+                                    <li><a href="#">겨울</a></li>
+                                    <li><a href="#">안전한 생활</a></li>
+                                </ul>
+                                <hr>
+                                <span class="item-tit">범교과</span>
+                                <ul class="item-box list-inline">
+                                    <li><a href="#">안전.건강</a></li>
+                                    <li><a href="#">인성</a></li>
+                                    <li><a href="#">진로</a></li>
+                                    <li><a href="#">통일.독도</a></li>
+                                    <li><a href="#">창의.과학</a></li>
+                                    <li><a href="#">역사</a></li>
+                                    <li><a href="#">독서</a></li>
+                                    <li><a href="#">경제금융</a></li>
+                                    <li><a href="#">ESD</a></li>
+                                    <li><a href="#">SW</a></li>
+                                    <li><a href="#">미디어리터러시</a></li>
+                                </ul>
+                            </div> -->
+                            <div class="theme_center">
+                                <span class="item-tit">학급</span>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label class="form-check-label ele-tit" for="flexRadioDefault1">초등</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                    <label class="form-check-label mid-tit" for="flexRadioDefault1">중학</label>
+                                </div>
+                                <span><small>※ 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 택1)</small></span>
+                                <hr>
+                                <ul>
+                                    <span class="item-tit">교과</span>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li class="">국어</li>
+                                            <li><a href="#">듣기.말하기</a></li>
+                                            <li><a href="#">읽기</a></li>
+                                            <li><a href="#">쓰기</a></li>
+                                            <li><a href="#">문법</a></li>
+                                            <li><a href="#">문학</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>수학</li>
+                                            <li><a href="#">수학1</a></li>
+                                            <li><a href="#">수학2</a></li>
+                                            <li><a href="#">수학3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>사회</li>
+                                            <li><a href="#">사회1</a></li>
+                                            <li><a href="#">사회2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>역사</li>
+                                            <li><a href="#">역사1</a></li>
+                                            <li><a href="#">역사2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>과학</li>
+                                            <li><a href="#">과학1</a></li>
+                                            <li><a href="#">과학2</a></li>
+                                            <li><a href="#">과학3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>도덕</li>
+                                            <li><a href="#">도덕1</a></li>
+                                            <li><a href="#">도덕2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>기가</li>
+                                            <li><a href="#">기술.가정1</a></li>
+                                            <li><a href="#">기술.가정2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline">
+                                            <li>창체</li>
+                                            <li><a href="#">음악</a></li>
+                                            <li><a href="#">미술</a></li>
+                                            <li><a href="#">체육</a></li>
+                                            <li><a href="#">정보</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <span class="item-tit">범교과</span>
+                                <ul class="item-box list-inline">
+                                    <li><a href="#">안전.건강</a></li>
+                                    <li><a href="#">인성</a></li>
+                                    <li><a href="#">진로</a></li>
+                                    <li><a href="#">통일.독도</a></li>
+                                    <li><a href="#">창의.과학</a></li>
+                                    <li><a href="#">역사</a></li>
+                                    <li><a href="#">독서</a></li>
+                                    <li><a href="#">경제금융</a></li>
+                                    <li><a href="#">ESD</a></li>
+                                    <li><a href="#">SW</a></li>
+                                    <li><a href="#">미디어리터러시</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row justify-content-between btn-row">
+                        <div class="reset_btn col-sm-6 text-left">
+                            <button type="button" class="btn btn-default"><img src="../static/image/i_selectall.png" alt="전체선택아이콘"> 전체선택</button>
+                            <button type="button" class="btn btn-default"><img src="../static/image/i_reset.png" alt="선택초기화아이콘"> 선택 초기화</button>
+                        </div>
+                        <div class="apply_btn col-sm-6 text-right">
+                            <button type="button" class="btn btn-primary">확인</button>
+                            <button type="button" class="btn btn-default">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+
+    <!-- SCRIPT -->
+    <script src="../static/external/plugins/jquery/jquery.min.js"></script>
+	<!-- jQuery ui -->
+	<script src="../static/external/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+	<script src="../static/external/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="../static/external/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- bs-custom-file-input -->
+	<script src="../static/external/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="../static/external/dist/js/adminlte.min.js"></script>
+	<!-- InputMask, fullCalendar 2.2.5 -->
+	<script src="../static/external/plugins/moment/moment.min.js"></script>
+	<!-- fullCalendar 2.2.5 -->
+	<script src="../static/external/plugins/fullcalendar/main.js"></script>
+	<!-- InputMask -->
+	<script src="../static/external/plugins/inputmask/jquery.inputmask.min.js"></script>
+	<!-- date-range-picker -->
+	<script src="../static/external/plugins/daterangepicker/daterangepicker.js"></script>
+	<!-- bootstrap color picker -->
+	<script src="../static/external/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- Tempusdominus Bootstrap 4 -->
+	<script src="../static/external/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+	<!-- Summernote -->
+	<script src="../static/external/plugins/summernote/summernote-bs4.min.js"></script>
+	<!-- jQuery Loading -->
+	<script src="../static/external/plugins/jquery-loading/jquery.loading.js"></script>
+	<!-- base script -->
+	<script src='../static/js/base/tccom-common.js'></script>
+	<script src='../static/js/base/tccom-fileuploader.js'></script>
+	<script src='../static/js/base/tccom-component.js'></script>
+	<script src='../static/js/base/tccom-function.js'></script>
+	<script src='../static/js/base/tccom-auto.js'></script>
+	<!-- 신규 추가 -->
+	<!-- 메인 -->
+	<script src="../static/js/main/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<?php include '../layout/header.html' ?>
+
+<div class="sub-wrap container">
+    <?php
+        $menu = 'subject';
+        include '../layout/leftside.php'
+    ?>
+
+    <!-- 콘텐츠 영역 -->
+    <div class="cont-area">
+        <div class="cont-inner">
+            <div class="mo_search_inner mo-boxes">
+                <form class="form-inline">
+                    <p class="form-txt-space bold">학기</p>
+                    <div class="form-group">
+                        <button type="button" class="btn on">1학년 1학기</button>
+                        <button type="button" class="btn">1학년 2학기</button>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <p class="form-txt-space bold">대단원</p>
+                    <div class="form-group">
+                        <select class="form-select form-control">
+                            <option selected>1. 바른 자세로 읽고 쓰기</option>
+                            <option value="1">2. 재미있게 ㄱㄴㄷ</option>
+                            <option value="2">3. 다함께 아야어여</option>
+                            <option value="3">4. 글자를 만들어요</option>
+                            <option value="4">5. 다정하게 인사해요</option>
+                        </select>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <p class="form-txt-space bold">중단원</p>
+                    <div class="form-group">
+                        <select class="form-select form-control">
+                            <option selected>텍스트</option>
+                            <option value="1">텍스트</option>
+                            <option value="2">텍스트</option>
+                            <option value="3">텍스트</option>
+                            <option value="4">텍스트</option>
+                        </select>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <p class="form-txt-space bold">차시</p>
+                    <div class="form-group">
+                        <select class="form-select form-control">
+                            <option selected>전체</option>
+                            <option value="1">1차시</option>
+                            <option value="2">2차시</option>
+                            <option value="3">3~4차시</option>
+                            <option value="4">5~6차시</option>
+                            <option value="5">7~8차시</option>
+                            <option value="6">9~10차시</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="desk-xs-none">
+                <p class="sub-cate float-right list-inline">
+                    <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                    <span><a href="#">초등 ></a></span>
+                    <span><a href="#">1학년 ></a></span>
+                    <span><a href="#">국어 ></a></span>
+                    <span><a href="#">1-1 ></a></span>
+                    <span><a href="#">1단원 ></a></span>
+                    <b><span><a href="#">1차시</a></span></b>
+                </p>
+            </div>
+            <p class="sub-theme-tit desk-xs-none">국어</p>
+            <div class="sub-cont">
+                <div class="sub-contents">
+                    <div class="subject-list">
+                        <div class="sb-head desk-xs-none">
+                            <p class="bold">1. 바른 자세로 읽고 쓰기</p>
+                            <ul class="order-list">
+                                <!-- 중단원 표기 라벨 -->
+                                <li><span class="badge rounded-pill bg-success">중단원</span> 바르게 듣는 자세 익히기</li>
+                                <!-- 차시 표기 라벨 -->
+                                <li><span class="badge rounded-pill bg-primary">1차시</span> 바르게 듣는 자세 익히기 바르게 듣는 자세 익히기 자세 익히기 바르게 듣는 자세 익히기 자세 익히기</li>
+                            </ul>
+                            <div class="desk-xs-none">
+                                <div class="select-menu">
+                                    <select class="form-select form-select-lg sel-menubox" aria-label=".form-select-lg example">
+                                        <option selected>1차시</option>
+                                        <option value="1">2차시</option>
+                                        <option value="2">3~4차시</option>
+                                        <option value="3">5~6차시</option>
+                                        <option value="3">7~8차시</option>
+                                        <option value="3">9~10차시</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 이미지형으로 보기 (최대 12개까지 노출) -->
+                        <div class="sb-body">
+                            <ul class="list-icons list-inline">
+                                <li><a href="#"><img src="../../static/image/i_list-type.png" alt="리스트로보기아이콘"></a></li>
+                                <li class="on"><a href="#"><img src="../../static/image/i_img-type.png" alt="이미지로보기아이콘"></a></li>
+                            </ul>
+                            <div class="sb-contbox">
+                                <? foreach(range(1,12) as $v) { ?>
+                                <div class="cont-item sb-item">
+                                    <div class="sub-thum-item">
+                                        <a href="#">
+                                            <div class="thum-item">
+                                                <div class="thum type01">
+                                                    <div class="thum-image">
+                                                        <img src="../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg" alt="세모모양 숲 속 이야기"/>
+                                                    </div>
+                                                    <div class="thum-types">
+                                                        <div class="thum-category">수학</div>
+                                                        <div class="thum-title" title="세모모양 숲 속 이야기">
+                                                            <div class="thum-title-md">
+                                                                <div class="thum-title-wb">
+                                                                    <span>세모모양</span> 숲 속 이야기
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="cont-title">
+                                        <a href="#">세모모양 숲속 이야기</a>
+                                    </div>
+                                    <div class="cont-footer">
+                                        <div class="swiper swiper-hashtag">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#세모</span></a>
+                                                </div>
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#수학</span></a>
+                                                </div>
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#초등1학년</span></a>
+                                                </div>
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#여러가지모양</span></a>
+                                                </div>
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#도형</span></a>
+                                                </div>
+                                                <div class="swiper-slide slide-tag">
+                                                    <a href="#"><span>#산수</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="float-right">
+                                            <a href="#"><span class="heart-like"></span></a>
+                                            <a href="#"><span class="link-copy"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <? } ?>
+                            </div>
+                        </div>
+                        
+
+                        <!-- 리스트형 (모바일 화면 시 -> 구조변경되게) 신규제작 -->
+                        <div class="cont-list-wrap">
+                            <? foreach(range(1,10) as $v) { ?>
+                            <div class="cont-list">
+                                <div class="row">
+                                    <!-- 리스트형 이미지 영역 -->
+                                    <div class="col-md-4">
+                                        <div class="list-img">
+                                            <a href="#">
+                                                <div class="thum-item">
+                                                    <div class="thum type01">
+                                                        <div class="thum-image">
+                                                            <img src="../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg" alt="세모모양 숲 속 이야기"/>
+                                                        </div>
+                                                        <div class="thum-types">
+                                                            <div class="thum-category">수학</div>
+                                                            <div class="thum-title" title="세모모양 숲 속 이야기">
+                                                                <div class="thum-title-md">
+                                                                    <div class="thum-title-wb">
+                                                                        <span>세모모양</span> 숲 속 이야기
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 리스트형 텍스트 + 아이콘 영역 -->
+                                    <div class="col-md-7">
+                                        <div class="list-txt">
+                                            <div class="list-tit" title="세모모양 숲 속 이야기">
+                                                <a href="#">
+                                                    <p class="bold">세모모양 숲 속 이야기</p>
+                                                </a>
+                                            </div>
+                                            <div class="list-exp" title="숲 속 열매와 동물, 별들의 이야기 속에서 세모 모양을 찾을 수 있다.">
+                                                숲 속 열매와 동물, 별들의 이야기 속에서 세모 모양을 찾을 수 있다.
+                                                숲 속 열매와 동물, 별들의 이야기 속에서 세모 모양을 찾을 수 있다.
+                                                숲 속 열매와 동물, 별들의 이야기 속에서 세모 모양을 찾을 수 있다.
+                                            </div>
+                                            <ul class="taglist">
+                                                <li><a href="#">#삼각형</a></li>
+                                                <li><a href="#">#세모</a></li>
+                                                <li><a href="#">#여러가지모양</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="list-icon col-md-1">
+                                        <a href="#"><span class="heart-like"></span></a>
+                                        <a href="#"><span class="link-copy"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                    <div class="sub-pagination clearfix">
+                        <ul class="pagination pagination-md">
+                            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item"><a class="page-link on" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                    <!-- 콘텐츠 없을 시 노출되는 이미지-->
+                    <div class="not-cont-wrap">
+                        <div class="not-cont-img">
+                            <img src="../../static/image/not-cont.png" alt="콘텐츠없을시이미지"/>
+                        </div>
+                        <div class="not-cont-box">
+                            <p class="not-cont-tit">해당 <span>콘텐츠</span> 자료를 준비 중입니다.</p>
+                            <p class="not-cont-txt">1:1 문의를 통해 관리자에게 콘텐츠 요청을 하실 수 있습니다.</p>
+                            <div class="not-cont-btn">
+                                <a href="#" class="btn">1:1 문의하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include '../layout/footer.html' ?>

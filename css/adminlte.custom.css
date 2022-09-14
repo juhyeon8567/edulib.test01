@@ -1,0 +1,94 @@
+body {
+	font-size:1rem;
+}
+
+/*=======================================*/
+/* table */
+/*=======================================*/
+.table-hover thead.table-dark tr {
+	border-top: 1px solid #212529;
+}
+.table-hover thead.table-dark tr:hover {
+	background-color: #212529;
+}
+.table-centered th, .table-centered td {
+	text-align: center;
+}
+.table thead th, .table th, .table td {
+	vertical-align: middle;
+}
+
+/*=======================================*/
+/* input checkbox, radio */
+/*=======================================*/
+[class*=icheck-] > label {
+	margin-right: .5rem!important;
+}
+.custom-checkbox, .custom-radio {
+	width: 18px; 
+	height: 18px;
+	vertical-align: middle;
+}
+
+.col-form-label {
+	background-color: #e9ecef;
+	color: #495057;
+}
+
+/*=======================================*/
+/* card */
+/*=======================================*/
+.card-title {
+	font-size: 1.6rem !important;
+}
+
+.card-header {
+	background-color: rgba(0,0,0,.03);
+}
+
+.auto-fileuploader-delete {
+	cursor: pointer;
+}
+
+.auto-colspan {
+	display: none;
+}
+
+.auto-editor-view {
+	display: none;
+}
+
+.form-text {
+	margin-top: .4rem;
+}
+
+.hidden, .none {
+	display: none;
+}
+
+.modal-header {
+	padding: 0.8rem 1rem 0.7rem 1rem;
+}
+
+.close, .mailbox-attachment-close {
+	font-size: 2rem;
+}
+
+.modal-header.bg-primary .close, .modal-header.bg-warning .close, .modal-header.bg-danger .close{
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+}
+
+.downlink {
+	color: #6c757d;
+	text-decoration: underline;
+}
+
+.downlink:hover {
+	color: #1f2225;
+	text-decoration: underline;
+}
+
+pre.highlight {
+	padding:0px;
+}

@@ -1,0 +1,76 @@
+
+<?php include '../layout/header.html' ?>
+
+<div class="sub-wrap container">
+    <?php
+        $menu = 'package';
+        include '../layout/leftside.php'
+    ?>
+    <div class="cont-area"> 
+        <div class="cont-inner">
+            <div class="desk-xs-none">
+                <p class="sub-cate float-right list-inline">
+                    <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                    <span>주제별 패키지 ></span>
+                    <b><span>인기 PKG</span></b>
+                </p>
+            </div>
+            <div class="sub-cont">
+                <div class="sub-contents">
+                    <p class="sub-theme-tit">인기 PKG</p>
+                    <p class="ex-tit">에듀립 PKG (패키지)는 인기 교육 주제를 한번에 순차적으로 볼 수 있도록 복수의 콘텐츠로 구성된 커리큘럼 PKG입니다.</p>
+                    <div class="listtab mo-boxes">
+                        <ul class="list-tabmenu list-inline">
+                            <li class="all-active"><a href="#">인기 PKG</a></li>
+                            <li><a href="#">신규 PKG</a></li>
+                        </ul>
+                    </div>
+                    <div class="pkg-list">
+                        <? foreach(range(1,4) as $v) { ?>
+                        <div class="pkg-item">
+                            <div class="sb-body row">
+                                <div class="col-md-5 pkg-box">
+                                    <a href="#">
+                                        <img src="../../static/image/pkg-unity-A.png" alt="임시패키지썸네일이미지"/>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pkg-box2 list-inline">
+                                    <ul class="list-inline">
+                                        <div class="pkg-tit" title="평화 감수성을 키우는 평화 · 통일 교육 PKG">
+                                            <label class="label label-danger">HOT</label>
+                                            <a href="#">평화 감수성을 키우는 평화 · 통일 교육 PKG 평화 감수성을 키우는 평화 · 통일 교육 PKG</a>
+                                        </div>
+                                    </ul>
+                                    <p>분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                        분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                        분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                    </p>
+                                    <ul class="pkg-system list-inline">
+                                        <li>
+                                            <span>추천 대상</span>
+                                        </li>
+                                        <li><span>초등 고학년</span></li>
+                                        <li><span>중학</span></li>
+                                    </ul>
+                                    <span class="font-s float-right">구성 콘텐츠 10건</span>
+                                </div>
+                            </div> 
+                        </div>
+                        <? } ?>
+                        <div class="more-btn text-center">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include '../layout/footer.html' ?>
+
+       
+        
+
+
+    

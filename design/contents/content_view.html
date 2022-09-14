@@ -1,0 +1,367 @@
+    <?php include '../layout/header.html' ?>
+
+    <div class="sub-wrap container">
+        <?php
+            $menu = 'content';
+            include '../layout/leftside.php'
+        ?>
+        <!-- 콘텐츠 영역 -->
+        <div class="cont-area">
+            <div class="cont-inner">
+                <div>
+                    <p class="sub-cate float-right list-inline">
+                        <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                        <span>초등 ></span>
+                        <span>범교과 ></span>
+                        <span>안전&#183;건강교육 ></span>
+                        <b><span>생활&#183;교통&#183;재난</span></b>
+                    </p>
+                </div>
+                <div class="sub-cont">
+                    <div class="sub-contents">
+                        <p class="sub-theme-tit">안전한 생활</p>
+                        <div class="subject-view">
+                            <div class="sb-body">
+                                <div class="view-box">
+                                    <!-- 영상 삽입 영역 -->
+                                    <div class="thumbframe">
+                                        <img id="video_obj" src="http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrFV1UChAjWcx8lTGFF7DyismsAklYHQtpiimsCmdPAeXG7Aieie" alt="먹보꿀돼지썸네일이미지"/>
+                                        <div class="d-bg"></div>                                           
+                                        <div class="player-btn">
+                                            <a href="#">
+                                                <img src="../../static/image/player_btn.png" alt="흰색재생버튼이미지"/>
+                                            </a>
+                                        </div>
+                                        <!-- <iframe id="player" class="player" src="//play.wecandeo.com/video/v/?key=z8sFOATHMistLMTUp8EDMisOX1HyUDM8NuKkwJc1okPAZCU93sHEbkyDJANHNT3S1xAgWRiiI0BxhIzWe96lJaipLAieie&contSeq=34418&cateSeq=183&unitSeq=1488" 
+                                        frameborder="0" allowfullscreen="" allow="autoplay;fullscreen;">
+                                        </iframe> -->
+                                        <!-- <video class="cont-view-video" id="video_obj" loop muted poster="http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie">
+                                            <source src="http://api.wecandeo.com/video/default/BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie#t=,3" type="video/mp4">
+                                        </video> -->
+                                        <div class="control-player">
+                                            <div class="play-start"></div>
+                                            <div class="play-pause"></div>
+                                            <div class="time-bar">
+                                                <input type="range" value="0" class="slides-bar" onchange="console.log('pos:'+this.value);">
+                                                <span class="time">5:45</span>
+                                                <!-- <div class="prg-bar">
+                                                    <div class="slide-bar"></div>
+                                                    <span class="time">5:45</span>
+                                                </div> -->
+                                            </div>
+                                            <div class="volume-item">
+                                                <div class="volume-btn"></div>
+                                                <div class="volume-bar">
+                                                    <!-- <div class="vol-bar">
+                                                        <div class="slide-vol-bar"></div>
+                                                    </div> -->
+                                                    <input type="range" class="volm-bar" min="0" max="11" value="7" step="1">
+                                                </div>
+                                                <div class="volume-ps-btn"></div>
+                                            </div>
+                                            <button class="full-screen" onclick="video_fullscreen()"></button>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="frame-txt">
+                                        <ul class="list-inline">
+                                            <li class="preview-play">미리보기 재생 중</li>
+                                            <li class="font-m">구독권을 이용시 100% 무제한 시청 가능</li>
+                                        </ul>
+                                        <!-- <button type="button" class="btn btn-default">구독권 안내</button> -->
+                                        <div class="float-right">
+                                            <div class="frame-icon">
+                                                <a href="#"><span class="icon-wrap heart-like"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".link-modal"><span class="icon-wrap link-copy"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".inquiry-modal"><span class="icon-wrap inquiry"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view-inner">
+                                        <div class="b-viewtop">
+                                            <p>꺼진 불도 다시 봐요</p>
+                                            <div class="v-time">
+                                                <span>3분 30초</span>
+                                            </div>
+                                        </div>
+                                        <div class="b-viewbtm">
+                                            <ul class="v-grade">
+                                                <li>초등 저학년</li>
+                                            </ul>
+                                            <p class="f16">야외에서 캠핑과 캠프파이어를 할 때 지켜야 할 안전 수칙에 대해 알아본다.</p>
+                                        </div>
+                                        <ul class="keyword-tag list-inline">
+                                            <li><a href="#">#생활안전</a></li>
+                                            <li><a href="#">#화재안전</a></li>
+                                            <li><a href="#">#야외안전</a></li>
+                                            <li><a href="#">#화재</a></li>
+                                            <li><a href="#">#캠핑</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- 다중분류표시 -->
+                                <div class="csfc-wrap">
+                                    <div class="csfc-inner">
+                                        <div class="csfc-item csfc-item02">
+                                            <p><span>Now!</span> 지금 보고 있어요.</p>
+                                            <img src="../../static/image/navigation.png" alt="네비게이션아이콘"/>
+                                            <div class="csfc-box">
+                                                <span>초등&nbsp; > &nbsp;1학년 &nbsp; > &nbsp;사회&nbsp; > &nbsp;1학기&nbsp; > &nbsp;① 지역의</span>
+                                                <ul>
+                                                    <li>지역의 위치와 특징 &nbsp; ></li>
+                                                    <li>&nbsp; 3차시 지역의 위치와 특징 알아보기</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="csfc-item csfc-item01">
+                                            <p>추천! <span>교과연계</span>로 활용하세요.</p>
+                                            <!-- 공백일시 - 처리 -->
+                                            <div class="csfc-table">
+                                                <table class="csfc-table table">
+                                                    <colgroup>
+                                                        <col style="width: 10%;">
+                                                        <col style="width: 10%;">
+                                                        <col style="width: 10%;">
+                                                        <col style="width: 10%;">
+                                                        <col style="width: 15%;">
+                                                        <col style="width: 15%;">
+                                                        <col style="width: 30%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>학급</th>
+                                                            <th>교과</th>
+                                                            <th>학년</th>
+                                                            <th>학기</th>
+                                                            <th>대단원</th>
+                                                            <th>중단원</th>
+                                                            <th>차시</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>초등</td>
+                                                            <td>사회</td>
+                                                            <td>1학년</td>
+                                                            <td>1학기</td>
+                                                            <td>① 지역의</td>
+                                                            <td>지역의 위치와 특징</td>
+                                                            <td>3차시 지역의 위치와 특징 알아보기 3차시 지역의 위치와 특징 알아보기</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>중학</td>
+                                                            <td>사회</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>① 지역의</td>
+                                                            <td>-</td>
+                                                            <td>3차시 지역의 위치와 특징 알아보기</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 비슷한 주제의 콘텐츠 추천 스와이프 -->
+                                <div class="cont-swiper">
+                                    <div class="cont-top">
+                                        <p class="sub-theme-tit">비슷한 주제의 <span class="text_rb">콘텐츠 추천 Pick!</span></p>
+                                        <div class="cont-swiper-nav">
+                                            <div class="swiper-button-next cont-swiper-next"></div>
+                                            <div class="swiper-button-prev cont-swiper-prev"></div>
+                                        </div>
+                                    </div>
+                                    <div class="sub-swiper-container sub-swiper">
+                                        <div class="swiper-wrapper act-wrapper">
+                                            <? foreach(range(1,12) as $v) { ?>
+                                            <div class="swiper-slide swiper-slide-active">
+                                                <div class="cont-item act-item">
+                                                    <div class="slide-thum-item">
+                                                        <a href="#">
+                                                            <div class="thum-item">
+                                                                <div class="thum type01">
+                                                                    <div class="thum-image">
+                                                                        <img src="../../static/image/V11271455_33e5c32d_3df5_4743_b72c_0cb0c37b841a.jpg" alt="거미의 덧셈"/>
+                                                                    </div>
+                                                                    <div class="thum-types">
+                                                                        <div class="thum-category">수학</div>
+                                                                        <div class="thum-title" title="거미의 덧셈">
+                                                                            <div class="thum-title-md">
+                                                                                <div class="thum-title-wb">
+                                                                                    <span>거미의</span> 덧셈
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>   
+                                                    </div>
+                                                    <div class="cont-title">
+                                                        <a href="#">거미의 덧셈</a>
+                                                    </div>
+                                                    <!-- <div class="cont-footer">
+                                                        <span class="float-right">
+                                                            <a href="#"><span class="heart-like"></span></a>
+                                                            <a href="#"><span class="link-copy"></span></a>
+                                                        </span>
+                                                    </div> -->
+                                                    <div class="cont-footer">
+                                                        <div class="swiper swiper-hashtag">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#거미</span></a>
+                                                                </div>
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#계산</span></a>
+                                                                </div>
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#더하기</span></a>
+                                                                </div>
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#덧셈</span></a>
+                                                                </div>
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#수</span></a>
+                                                                </div>
+                                                                <div class="swiper-slide slide-tag">
+                                                                    <a href="#"><span>#수와연산</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="float-right">
+                                                            <a href="#"><span class="heart-like"></span></a>
+                                                            <a href="#"><span class="link-copy"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <? } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 링크공유 아이콘 클릭시 링크공유 팝업창 -->
+    <div class="modal fade link-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="link_popup">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="link_center">
+                            <input type="url" class="link-input" value="http://www.edulib.kr"/>
+                            <button type="button" class="btn btn-link">URL 복사</button>
+                        </div>
+                        <div class="link_bottom">
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_kakao.png" alt="카카오톡이미지"/>
+                                    <figcaption>카카오톡</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_line.png" alt="라인이미지"/>
+                                    <figcaption>라인</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_blog.png" alt="네이버블로그로고이미지"/>
+                                    <figcaption>블로그</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_facebook.png" alt="페이스북로고이미지"/>
+                                    <figcaption>페이스북</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_twiter.png" alt="트위터로고이미지"/>
+                                    <figcaption>트위터</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 상세페이지 오청아이콘 클릭 시 로그인 유도 팝업 -->
+    <div class="modal fade inquiry-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>해당 콘텐츠에 요청하실 사항이 있으신가요?</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group">
+                            <p><img src="../../static/image/i_theme.png" alt="말풍선아이콘"/> 문제 유형</p>
+                        </div>
+                        <div class="inq-select">
+                            <label>
+                                <input type="radio" name="error" value="error1">
+                                <span>콘텐츠 정보내용 오류</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="error" value="error2">
+                                <span>콘텐츠 재생 문제 (화질, 화면)</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="error" value="error3">
+                                <span>버퍼링 문제</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="error" value="error4">
+                                <span>소리 문제</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="error" value="error5">
+                                <span>자막 오류</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="error" value="error5">
+                                <span>기타</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <p><img src="../../static/image/i_theme.png" alt="말풍선아이콘"/> 요청하실 내용</p>
+                            <textarea class="form-control" placeholder="요청하실 내용을 입력해주세요." rows="5"></textarea>
+                        </div>
+                        <div class="agree-btn">
+                            <button type="button">문의하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include '../layout/footer.html' ?>
+
+
+    

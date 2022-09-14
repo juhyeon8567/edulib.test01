@@ -1,0 +1,168 @@
+<?php include '../layout/header.html' ?>
+
+	<div class="sub-wrap container">
+		<?php
+			$menu = 'issue';
+			include '../layout/leftside.php'
+		?>
+		<div class="cont-area">
+			<div class="cont-inner">
+				<div class="desk-xs-none">
+					<p class="sub-cate float-right list-inline">
+						<span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+						<span>교육이슈 ></span>
+						<b><span>교수학습법</span></b>
+					</p>
+				</div>
+				<div class="sub-cont">
+					<div class="sub-contents">
+						<div class="issue-list">
+							<p class="sub-theme-tit">교수학습법</p>
+							<p class="ex-tit">변화하고 있는 교육 패러다임에 따른 교육현장의 이슈와 관련된 콘텐츠를 제공합니다.</p>
+							<div class="listtab mo-boxes">
+								<ul class="list-tabmenu list-inline">
+									<li class="all-active"><a href="#">교수학습법(50)</a></li>
+									<li><a href="#">학교이슈(50)</a></li>
+								</ul>
+							</div>
+							<ul class="list-inline">
+								<li class="on"><a href="#"><img src="../../static/image/i_list-type.png" alt="리스트형아이콘이미지"/></a></li>
+								<li><a href="#"><img src="../../static/image/i_img-type.png" alt="이미지형아이콘이미지"/></a></li>
+							</ul>
+							<!-- 이미지형으로 보기 (최대 12개까지 노출) -->
+							<div class="sb-body">
+								<div class="sb-contbox">
+									<? foreach(range(1,12) as $v) { ?>
+									<div class="cont-item sb-item">
+										<div class="sub-thum-item">
+											<a href="#">
+												<div class="thum-item">
+													<div class="thum type03">
+														<div class="thum-image">
+															<img src="../../static/image/V11994205_5a8280b4_f94c_4eaf_a204_b23360d4a723.jpg" alt="한 학기 동안 PBL수업을 해보다"/>
+														</div>
+														<div class="thum-types">
+															<div class="thum-category">교수학습법</div>
+															<div class="thum-title" title="한 학기 동안 PBL수업을 해보다">
+																<div class="thum-title-md">
+																	<div class="thum-title-wb">
+																		<span>한 학기 동안</span> PBL수업을 해보다
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="cont-title">
+											<a href="#">한 학기 동안 PBL수업을 해보다학기 동안 PBL수업을 해보다</a> 
+										</div>
+										<div class="cont-footer">
+											<div class="swiper swiper-hashtag">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide slide-tag">
+														<a href="#"><span>#프로젝트수업</span></a>
+													</div>
+													<div class="swiper-slide slide-tag">
+														<a href="#"><span>#PBL</span></a>
+													</div>
+													<div class="swiper-slide slide-tag">
+														<a href="#"><span>#자유학기제</span></a>
+													</div>
+													<div class="swiper-slide slide-tag">
+														<a href="#"><span>#판서식</span></a>
+													</div>
+													<div class="swiper-slide slide-tag">
+														<a href="#"><span>#주입식</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="float-right">
+												<a href="#"><span class="heart-like"></span></a>
+												<a href="#"><span class="link-copy"></span></a>
+											</div>
+										</div>
+									</div>
+									<? } ?>
+								</div>
+							</div>
+
+							<!-- 리스트형 (모바일 화면 시 -> 구조변경되게) 신규제작 -->
+                            <div class="cont-list-wrap">
+                                <? foreach(range(1,10) as $v) { ?>
+                                <div class="cont-list">
+                                    <div class="row">
+                                        <!-- 리스트형 이미지 영역 -->
+                                        <div class="col-md-4">
+											<div class="list-img">
+												<a href="#">
+													<div class="thum-item">
+														<div class="thum type03">
+															<div class="thum-image">
+																<img src="../../static/image/V11994205_5a8280b4_f94c_4eaf_a204_b23360d4a723.jpg" alt="한 학기 동안 PBL수업을 해보다"/>
+															</div>
+															<div class="thum-types">
+																<div class="thum-category">교수학습법</div>
+																<div class="thum-title" title="한 학기 동안 PBL수업을 해보다">
+																	<div class="thum-title-md">
+																		<div class="thum-title-wb">
+																			<span>한 학기 동안</span> PBL수업을 해보다
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+                                        </div>
+                                        <!-- 리스트형 텍스트 + 아이콘 영역 -->
+                                        <div class="col-md-7">
+											<div class="list-txt">
+												<div class="list-tit" title="한 학기 동안 PBL수업을 해보다">
+													<a href="#">
+														<p class="bold">한 학기 동안 PBL수업을 해보다</p>
+													</a>
+												</div>
+												<div class="list-exp" title="대구중앙중학교에서 한 학기동안 PBL 수업을 진행하며 선생님과 학생들의 변화를 살펴본다.">
+													대구중앙중학교에서 한 학기동안 PBL 수업을 진행하며 선생님과 학생들의 변화를 살펴본다.
+												</div>
+												<ul class="taglist">
+													<li><a href="#">#프로젝트수업</a></li>
+													<li><a href="#">#PBL</a></li>
+													<li><a href="#">#자유학기제</a></li>
+													<li><a href="#">#판서식</a></li>
+													<li><a href="#">#주입식</a></li>
+												</ul>
+											</div>
+                                        </div>
+                                        <div class="list-icon col-md-1">
+                                            <a href="#"><span class="heart-like"></span></a>
+                                            <a href="#"><span class="link-copy"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <? } ?>
+                            </div>
+							<div class="sub-pagination clearfix">
+								<ul class="pagination pagination-md">
+								<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+<?php include '../layout/footer.html' ?>

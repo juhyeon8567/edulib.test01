@@ -1,0 +1,171 @@
+<?php include '../layout/header.html' ?>
+
+<!-- 고객센터 상단 백그라운드 -->
+<div class="helpdesk-bg" style="display: none;">
+	<div class="text-center">
+		<img src="../../static/image/notice_bgi.png" alt="고객센터배경이미지"/>
+		<p class="cp-tit">고객센터</p>
+	</div>
+</div>
+<div class="sub-wrap container">
+    <?php
+        $menu = 'cs';
+        include '../layout/leftside.php'
+    ?>
+    <div class="cont-area">
+        <div class="cont-inner">
+            <div class="desk-xs-none">
+                <p class="sub-cate float-right list-inline">
+                    <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                    <span>홈 ></span>
+                    <span>고객센터 ></span>
+                    <b><span>1:1 문의</span></b>
+                </p>
+            </div>
+            <p class="sub-theme-tit">1:1 문의</p>
+            <p class="ex-tit">에듀립 서비스 문의 및 개선 의견을 남겨주세요. <br/> 담당자가 확인 후 순차적으로 답변해드리겠습니다</p>
+            <div class="sub-cont">
+                <div class="sub-notice">
+                    <div class="notice-question">
+                        <div class="space-box">
+                            <ul class="que-list space-box">
+                                <li>
+                                    <div class="desk-xs-none">
+                                        <img src="../../static/image/i_theme.png" alt="말풍선이미지"/>
+                                        <span>잠깐! 자주 묻는 질문에 이미 준비된 답변이 있는지 확인해 주세요</span>
+                                    </div>
+                                    <a href="#" class="q-btn">
+                                        <span class="font-m">자주 묻는 질문</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="font-m">
+                            <span class="must">*</span> 필수 입력 항목입니다.
+                        </p>
+                        <div class="que-body">
+                            <div class="card">
+                                <div class="card-body table-responsive p-0">
+                                    <table class="table">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: 400px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="must">*</span>문의 유형</td>
+                                                <td>
+                                                    <select class="form-select form-control">
+                                                        <option selected>회원정보</option>
+                                                        <option value="1">콘텐츠 재생</option>
+                                                        <option value="2">콘텐츠 요청</option>
+                                                        <option value="3">사이트 이용</option>
+                                                        <option value="4">구독권</option>
+                                                        <option value="5">결제 및 환불</option>
+                                                        <option value="6">기타</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="must">*</span> 제목</td>
+                                                <td><input type="text" class="form-control" placeholder="제목을 입력하세요"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="must">*</span>내용</td>
+                                                <td>
+                                                    <textarea type="text" class="form-control" placeholder="문의할 내용을 입력하세요" style="height: 200px;"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>파일 첨부</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-default fileinput-button">
+                                                        <i class="fi fi-rr-file-add"></i> 파일첨부</button>
+                                                    <span class="font-s">※ 첨부가능한 파일 (JPG, PNG, GIF, PDF, HWP, ZIP), 10M 이하</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-box">
+                            <div class="form-group text-center">
+                                <button type="button" class="full-btn btn btn-primary" data-toggle="modal" data-target=".qua-modal">등록하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-pagination clearfix">
+                    <ul class="pagination pagination-md">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모바일 1:1 문의 클릭시 노출되는 상세페이지 -->
+<div class="mobile_layer d-sm-none">
+    <div class="mobile-ct">
+        <div class="mo-head">
+            <h4 class="mo-h-tit">
+                <a href="#">
+                    <img src="../../static/image/arrow_left_blue.png" alt="화살표아이콘">
+                </a>
+            </h4>
+        </div>
+        <hr/>
+        <div class="mo-ct-inner text-center">
+            <div class="space-box">
+                <span>
+                    <img src="../../static/image/check80.png" alt="완료체크박스이미지"/>
+                </span>
+            </div>
+            <p class="bold">문의하신 내용이 정상 처리 되었습니다.</p>
+            <p class="font-m">문의 내역은 [MY 에듀립] > [나의 문의]에서 확인하실 수 있습니다.</p>
+            <div class="space-box">
+                <button type="button" class="btn btn-primary btn-block">나의문의</button>
+                <button type="button" class="btn btn-default btn-block">홈으로</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 1:1문의 > 등록 클릭시 문의내용 등록 확인팝업 -->
+<div class="modal fade qua-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-txt">
+                    <p>문의하신 내용이 정상등록 처리되었습니다!</p>
+                    <p class="font-m">문의내역은 [MY 에듀립] > [나의 문의]에서 확인하실 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="modal-footer float-right">
+                <div class="row justify-content-between btn-row">
+                    <button type="button" class="btn btn-default">메인으로</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include '../layout/footer.html' ?>
+
+      
+
+
+    

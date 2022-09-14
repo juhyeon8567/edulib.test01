@@ -1,0 +1,178 @@
+<?php include '../layout/header.html' ?>
+
+    <div class="sub-wrap container">
+        <?php
+            $menu = 'general';
+            include '../layout/leftside.php'
+        ?>
+        
+        <!-- 콘텐츠 영역 -->
+        <div class="cont-area">
+            <div class="cont-inner">
+                <div class="desk-xs-none">
+                    <p class="sub-cate float-right list-inline">
+                        <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                        <span><a href="#">초등 ></a></span>
+                        <span><a href="#">범교과 ></a></span>
+                        <b><span><a href="#">안전 &#183; 건강 교육</a></span></b>
+                    </p>
+                </div>
+                <p class="sub-theme-tit"><img src="../../static/image/i_books.png" alt="책아이콘이미지"/> 안전 &#183; 건강 교육 </p>
+                <div class="sub-cont">
+                    <div class="sub-contents">
+                        <div class="subject-list">
+                            <div class="sb-head">
+                                <div class="listtab">
+                                    <ul class="list-tabmenu list-inline">
+                                        <li class="all-active"><a href="#">전체(300)</a></li>
+                                        <li><a href="#">생활&#183;교통&#183;재난(100)</a></li>
+                                        <li><a href="#">폭력 및 신변(47)</a></li>
+                                        <li><a href="#">약물&#183;사이버중독 예방(47)</a></li>
+                                        <li><a href="#">응급처치(5)</a></li>
+                                        <li><a href="#">성교육(5)</a></li>
+                                        <li><a href="#">보건&#183;식생활(5)</a></li>
+                                    </ul>
+                                </div>
+                                <ul class="list-icons2 list-inline">
+                                    <li class="on"><a href="#"><img src="../../static/image/i_list-type.png" alt="리스트로보기아이콘"></a></li>
+                                    <li><a href="#"><img src="../../static/image/i_img-type.png" alt="이미지로보기아이콘"></a></li>
+                                </ul>
+                            </div>
+                            <!-- 이미지형으로 보기 (최대 12개까지 노츌) -->
+                            <div class="sb-body">
+                                <div class="sb-contbox">
+                                    <? foreach(range(1,12) as $v) { ?>
+                                    <div class="cont-item sb-item">
+                                        <div class="sub-thum-item">
+                                            <a href="#">
+                                                <div class="thum-item">
+                                                    <div class="thum type03">
+                                                        <div class="thum-image">
+                                                            <img src="../../static/image/V11994205_5a8280b4_f94c_4eaf_a204_b23360d4a723.jpg" alt="꺼진 불도 다시 봐요"/>
+                                                        </div>
+                                                        <div class="thum-types">
+                                                            <div class="thum-category">안전 · 건강 교육</div>
+                                                            <div class="thum-title" title="꺼진 불도 다시 봐요">
+                                                                <div class="thum-title-md">
+                                                                    <div class="thum-title-wb">
+                                                                        <span>꺼진 불도</span> 다시 봐요 꺼진 불도 다시봐요
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="cont-title">
+                                            <a href="#">꺼진 불도 다시 봐요 꺼진 불도 다시 봐요 꺼진 불도 다시 봐요</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <div class="swiper swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#생활안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#화재안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#야외안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#화재</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#캠핑</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <? } ?>
+                                </div>
+                            </div>
+
+                            <!-- 리스트형 (모바일 화면 시 -> 구조변경되게) 신규제작 -->
+                            <div class="cont-list-wrap">
+                                <? foreach(range(1,10) as $v) { ?>
+                                <div class="cont-list">
+                                    <div class="row">
+                                        <!-- 리스트형 이미지 영역 -->
+                                        <div class="list-img col-md-4">
+                                            <div class="list-img">
+                                                <a href="#">
+                                                    <div class="thum-item">
+                                                        <div class="thum type03">
+                                                            <div class="thum-image">
+                                                                <img src="../../static/image/V11994205_5a8280b4_f94c_4eaf_a204_b23360d4a723.jpg" alt="꺼진 불도 다시 봐요"/>
+                                                            </div>
+                                                            <div class="thum-types">
+                                                                <div class="thum-category">안전 · 건강 교육</div>
+                                                                <div class="thum-title" title="꺼진 불도 다시 봐요">
+                                                                    <div class="thum-title-md">
+                                                                        <div class="thum-title-wb">
+                                                                            <span>꺼진 불도</span> 다시 봐요
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- 리스트형 텍스트 + 아이콘 영역 -->
+                                        <div class="col-md-7">
+                                            <div class="list-txt">
+                                                <div class="list-tit" title="꺼진 불도 다시 봐요">
+                                                    <a href="#">
+                                                        <p class="bold">꺼진 불도 다시 봐요</p>
+                                                    </a>
+                                                </div>
+                                                <div class="list-exp" title="야외에서 캠핑과 캠프파이어를 할 때 지켜야할 안전 수칙에 대해 알아본다.">
+                                                    야외에서 캠핑과 캠프파이어를 할 때 지켜야할 안전 수칙에 대해 알아본다.
+                                                </div>
+                                                <ul class="taglist">
+                                                    <li><a href="#">#생활안전</a></li>
+                                                    <li><a href="#">#화재안전</a></li>
+                                                    <li><a href="#">#야외안전</a></li>
+                                                    <li><a href="#">#화재</a></li>
+                                                    <li><a href="#">#캠핑</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="list-icon col-md-1">
+                                            <a href="#"><span class="heart-like"></span></a>
+                                            <a href="#"><span class="link-copy"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <? } ?>
+                            </div>
+                        </div>
+                        <div class="sub-pagination clearfix">
+                            <ul class="pagination pagination-md">
+                            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php include '../layout/footer.html' ?>
+    
+    
+    

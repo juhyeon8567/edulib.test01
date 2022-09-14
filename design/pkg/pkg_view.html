@@ -1,0 +1,203 @@
+
+<?php include '../layout/header.html' ?>
+
+<div class="sub-wrap container">
+    <?php
+        $menu = 'package';
+        include '../layout/leftside.php'
+    ?>
+    <div class="cont-area"> 
+        <div class="cont-inner">
+            <div class="desk-xs-none">
+                <p class="sub-cate float-right list-inline">
+                    <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                    <span><a href="#">주제별 패키지 ></a></span>
+                    <b><span><a href="#">인기 PKG</a></span></b>
+                </p>
+            </div>
+            <div class="sub-cont">
+                <div class="sub-contents">
+                    <p class="sub-theme-tit">인기 PKG</p>
+                    <p class="ex-tit">에듀립 PKG (패키지)는 인기 교육 주제를 한번에 순차적으로 볼 수 있도록 복수의 콘텐츠로 구성된 커리큘럼 PKG입니다.</p>
+                    <div class="pkg-view">
+                        <div class="pkg-item">
+                            <div class="sb-head">
+                                <p class="bold">평화 감수성을 키우는 평화 &#183; 통일 교육</p>
+                            </div>
+                            <div class="row sb-body">
+                                <div class="pkg-v-fir col-md-6 pkg-list-box">
+                                    <img src="../../static/image/V11995811_783abe0c_ff81_4374_baec_1201d75a1dc5.jpg" alt="임시패키지썸네일이미지"/>
+                                </div>
+                                <div class="col-md-6 pkg-box2">
+                                    <div class="pkg-tit-inner">
+                                        <div class="pkg-tit" title="평화 감수성을 키우는 평화 · 통일 교육 PKG">
+                                            <label class="label label-danger">HOT</label>
+                                            <span>평화 감수성을 키우는 평화 · 통일 교육 PKG 평화 감수성을 키우는 평화 · 통일 교육 PKG</span>
+                                        </div>
+                                        <p class="pkg-text f16">분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                            분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                            분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                        </p>
+                                        <ul class="pkg-system list-inline">
+                                            <li><span>추천 대상</span></li>
+                                            <li><span>초등</span></li>
+                                            <li><span>중학</span></li>
+                                            <div class="icon-wrap">
+                                                <a href="#" data-toggle="modal" data-target=".link-modal">
+                                                    <span class="link-copy"></span>
+                                                </a>
+                                            </div>
+                                        </ul>
+                                        <ul class="list-inline">
+                                            <li><span>총 구성</span></li>
+                                            <li><span>콘텐츠 10건</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 목록 리스트 -->
+                        <div class="pkg-item">
+                            <div class="sb-head">
+                                <p class="bold">목록</p>
+                            </div>
+                            <? foreach(range(1,5) as $v) { ?>
+                            <div class="row pkg-box">
+                                <div class="col-4">
+                                    <a href="#" data-toggle="modal" data-target=".edulib-de-pop">
+                                        <img src="../../static/image/V11995811_783abe0c_ff81_4374_baec_1201d75a1dc5.jpg" alt="임시썸네일이미지"/>
+                                    </a>
+                                </div>
+                                <div class="col-8">
+                                    <div class="pkg-tit-inner">
+                                        <label class="label label-skyblue">1차시</label>
+                                        <a href="#">
+                                            <p class="list-txt">남북 분단의 배경 남북 분단의 배경 남북 분단의 배경 남북 분단의 배경 남북 분단의 배경 남북 분단의 배경</p>
+                                        </a>
+                                        <div class="pkg-text">
+                                            <p>분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                                분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                                분단과 통일에 대해 배우며 평화 감수성을 키울 수 있는 평화 &#183; 통일 교육 패키지입니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 주제별패키지 상세 > 콘텐츠 클릭시 팝업 영상 재생  -->
+<div class="modal fade allplay-modal" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body row">
+                <div class="col-lg-3 leftbox">
+                    <h4><img src="../../static/image/i_mark.png" alt="북마크아이콘이미지"/> 차시 선택</h4>
+                    <ul class="playlist">
+                        <li><a href="#">[1차시] 미디어리터러시란? 미디어리터러시란? 미디어리터러시란? 미디어리터러시란?</a></li>
+                        <li><a href="#">[2차시] 대중매체와 뉴미디어</a></li>
+                        <li><a href="#">[3차시] 프로젝트</a></li>
+                        <li><a href="#">[4차시] 콘텐츠명</a></li>
+                        <li><a href="#">[5차시] 콘텐츠명</a></li>
+                        <li><a href="#">[6차시] 콘텐츠명</a></li>
+                        <li><a href="#">[7차시] 콘텐츠명</a></li>
+                        <li><a href="#">[8차시] 콘텐츠명</a></li>
+                        <li><a href="#">[9차시] 콘텐츠명</a></li>
+                        <li><a href="#">[10차시] 콘텐츠명</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 rightbox">
+                    <div class="pn-btn">
+                        <div><a href="#" class="prev-cont float-left"></a></div>
+                        <div><a href="#" class="next-cont float-right"></a></div>
+                    </div>
+                    <!-- 영상삽입 영역 -->
+                    <div class="video-frame-box">
+                        <div class="video-popup">
+                            <iframe id="video-player" class="video-player" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgYFjA8oyNE6IgujJkE5xipAAieie" 
+                            allowfullscreen="" allow="autoplay;fullscreen;">
+                            </iframe>
+                            <!-- <video class="cont-view-video" loop muted controls poster="http://api.wecandeo.com/video/thumbnail?k=BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie">
+                                <source src="http://api.wecandeo.com/video/default/BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie#t=,3" type="video/mp4">
+                            </video> -->
+                            <div class="d-bg"></div>                                           
+                            <div class="player-btn">
+                                <a href="#">
+                                    <img src="../../static/image/player_btn.png" alt="흰색재생버튼이미지"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 주제별패키지 상세 > 콘텐츠 클릭시 팝업 영상 재생 -->
+<div class="modal fade edulib-de-pop">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="ex-tit">차시를 선택하여 재생할 수 있어요!</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3 leftbox">
+                        <ul class="playlist scrollbar">
+                            <li><a href="#">[1차시] 남북 분단의 배경</a></li>
+                            <li class="on"><a href="#">[2차시] 분단의 상처 - 이산가족</a></li>
+                            <li><a href="#">[3차시] 분단의 상처 - 실향민</a></li>
+                            <li><a href="#">[4차시] 북한의 정치 이해</a></li>
+                            <li><a href="#">[5차시] 북한의 사회 모습 이해</a></li>
+                            <li><a href="#">[6차시] 북한의 언어 이해</a></li>
+                            <li><a href="#">[7차시] 평화통일을 이룬 독일의 사례</a></li>
+                            <li><a href="#">[8차시] 남북의 화해와 협력을 위한 노력</a></li>
+                            <li><a href="#">[9차시] 통일 한국의 유망 직업</a></li>
+                            <li><a href="#">[10차시] 통일 한국의 모습</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 rightbox">
+                        <div class="lr-btn-item">
+                            <button type="button" class="prev-btn" title="앞차시 보기">
+                                <img src="../../static/image/i_pop_prev.png" alt="전콘텐츠보기_좌버튼">
+                            </button>
+                            <button type="button" class="next-btn" title="다음차시 보기">
+                                <img src="../../static/image/i_pop_next.png" alt="다음콘텐츠보기_우버튼">
+                            </button>
+                        </div>
+                        <div class="video-frame-box">
+                            <div class="video-popup">
+                                <iframe id="player" class="player" src="//play.wecandeo.com/video/v/?key=BOKNS9AQWrFV1UChAjWcx8lTGFF7DyismsAklYHQtpiilJ81qdbGdncw72YlLwjzmayHP1fA0ExFQPOPeXBuvZcQieie&contSeq=32297&pkgSeq=6" 
+                                frameborder="0" allowfullscreen="" allow="autoplay;fullscreen;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<?php include '../layout/footer.html' ?>
+
+      
+
+
+
+ 

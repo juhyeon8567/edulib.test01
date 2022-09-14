@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>에듀립</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="favicon icon" href="../../static/image/favicon2-16x16.png"/>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../static/external/plugins/fontawesome-free/css/all.min.css"/>
+    <!-- jQuery ui -->
+    <link rel="stylesheet" href="../../static/external/plugins/jquery-ui/jquery-ui.min.css"/>
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="../../static/external/plugins/daterangepicker/daterangepicker.css"/>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../../static/external/plugins/bootstrap/css/bootstrap.min.css"/>
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="../../static/external/plugins/icheck-bootstrap/icheck-bootstrap.min.css"/>
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="../../static/external/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"/>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../../static/external/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"/>
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="../../static/external/plugins/fullcalendar/main.css"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../static/external/dist/css/adminlte.min.css"/>
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../static/external/plugins/summernote/summernote-bs4.min.css"/>
+    <!-- adminlte custom -->
+    <link rel="stylesheet" href="../../static/css/adminlte.custom.css"/>
+    <!-- 신규 추가 -->
+    <link rel="stylesheet" href="../../static/external/dist/css/aos.css"/>
+    <!-- flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'/>
+    <!-- swiper -->
+    <link rel="stylesheet" href="../../static/external/plugins/swiperslide/swiper.min.css"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../static/css/style.css"/>
+    <!-- 반응형 css -->
+    <link rel="stylesheet" href="../../static/css/responsive.css"/>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <!-- 띠배너 -->
+        <div class="promotion_top">
+            <div class="container">
+                <div class="pro-bn-box">
+                    <a href="#">
+                        <div class="promotion_bn text-center">
+                            <img src="../../static/image/headtop_banner.png" alt="배너이미지"/>
+                        </div>
+                    </a>
+                </div>
+                <div class="bn-btn">
+                    <a href="#">
+                        <img src="../../static/image/bn-pop-btn.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+                <div class="pro-checkbox">
+                    <label class="font-m">
+                        <input type="checkbox" class="checkbox"/><span>하루동안 보지않기</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- header top -->
+        <div id="header_top" class="container clearfix">
+            <ul class="h-top-tit float-left list-inline">
+                <img src="../../static/image/ebs_partner.png" alt="ebs공식파트너로고이미지"/>
+            </ul>
+            <ul class="h-top-nav float-right list-inline">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">구독권 안내</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <div id="header_search" class="container">
+            <div class="row h-search-area">
+                <div class="logo-box col-lg-4">
+                    <a href="#" id="logo">
+                        <img src="../../static/image/edulib_newopen.png" alt="에듀립로고이미지"/>
+                        <p>세상의 모든 교육 콘텐츠가 한 곳에!</p>
+                    </a>
+                </div>
+                <div class="search-center col-lg-5">
+                    <div class="keyword-list">
+                        <ul class="h-keyword keyword list-inline">
+                            <li><img src="../../static/image/button.png" alt="추천키워드"/></li>
+                            <li><a href="#">어버이날</a></li>
+                            <li><a href="#">연소</a></li>
+                            <li><a href="#">글쓰기</a></li>
+                            <li><a href="#">하브루타</a></li>
+                            <li><a href="#">수와 연산</a></li>
+                        </ul>
+                    </div>                        
+                    <div class="search-box">
+                        <input type="text" placeholder="찾으시는 콘텐츠를 주제를 검색해보세요."/>
+                        <input type="button" value="검색" class="btn-search"/>
+                    </div>
+                    <!-- 검색창 자동완성 -->
+                    <div class="atcmp-wrap">
+                        <div class="atcmp-inner">
+                            <!-- 검색 키워드 -->
+                            <ul class="kwd-list">
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt">끝나지 않은 <span class="text_b">역사</span> - 위안부 문제</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt">36년의 시작 - <span class="text_b">역사</span>채널e</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt">종묘의 <span class="text_b">역사</span>적 의미</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt"><span class="text_b">역사</span>를 바꾼 보물, 백제금동대향로</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt">3.1운동 - <span class="text_b">역사</span>채널e</span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="kwd-icon">
+                                            <span class="kwd-txt">수채그림물감의<span class="text_b">역사</span></span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 모바일 화면(767px)시 검색아이콘 -->
+                    <div class="search-box2 d-sm-none">
+                        <button type="button" class="btn">
+                            <img src="../../static/image/search_icon.png" alt="검색아이콘"/>
+                        </button>
+                    </div>
+                </div>
+                <div class="pos-relative col-lg-3 text-right">
+                    <ul class="my-edulib list-inline">
+                        <li><a href="#"><img src="../../static/image/h_icon1.png" alt="마이에듀립아이콘"/></a></li>
+                        <li><a href="#"><img src="../../static/image/h_icon2.png" alt="에듀립소개아이콘"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- gnb 메뉴 + 메뉴 뎁스창 -->
+        <div id="gnb" class="container-fluid">
+            <article>
+                <div class="container main_gnb">
+                    <div class="sitemap-wrap">
+                        <a href="#" class="sitemap-btn active" data-toggle="modal" data-target=".sitemap-popup"></a>
+                    </div>
+                    <ul class="main_gnb_menu list-inline">
+                        <li class="sub_menu sub1" data-target="nav1">
+                            <a href="#">초등</a>
+                        </li>
+                        <li class="sub_menu sub2" data-target="nav2">
+                            <a href="#">중학</a>
+                        </li>
+                        <li class="sub_menu sub3" data-target="nav3">
+                            <a href="#" class="desk-xs-none">계기교육</a>
+                            <a href="#" class="mo-boxes">계기교육</a>
+                        </li>
+                        <li class="sub_menu sub4" data-target="nav4">
+                            <a href="#" class="desk-xs-none">교육이슈</a>
+                            <a href="#" class="mo-boxes">교육이슈</a>
+                        </li>
+                        <li class="sub_menu sub5" data-target="nav5">
+                            <a href="#" class="desk-xs-none">주제별 패키지</a>
+                            <a href="#" class="mo-boxes">주제별 패키지</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- gnb menu depth 콘텐츠 리스트 추가 (진행중) -->
+                <div class="main_gnb_depth">
+                    <div class="depth nav1">
+                        <div class="menu_inner">
+                            <div class="grade_inner">
+                                <h4 class="text_b">초등</h4>
+                                <div class="drop-box box2">
+                                    <ul class="grade">
+                                        <li class="cls-menu">
+                                            <span>1학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=130&srchAllSeq=173">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=142&srchAllSeq=780">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=174&srchAllSeq=2351#">봄</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=175&srchAllSeq=2448">여름</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=176&srchAllSeq=2260">가을</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=177&srchAllSeq=2514">겨울</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=182&srchAllSeq=1465">안전한 생활</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>2학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=132&srchAllSeq=293">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=144&srchAllSeq=905">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=178&srchAllSeq=2383">봄</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=179&srchAllSeq=2492">여름</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=180&srchAllSeq=2309">가을</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=181&srchAllSeq=2560">겨울</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=183&srchAllSeq=1496">안전한 생활</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>3학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=134&srchAllSeq=399">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=146&srchAllSeq=1024">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=154&srchAllSeq=1628">사회</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=166&srchAllSeq=1952">과학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=162&srchAllSeq=1519">도덕</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=186&srchAllSeq=45">음악</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=190&srchAllSeq=1">미술</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=194&srchAllSeq=73">체육</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>4학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=136&srchAllSeq=502">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=148&srchAllSeq=1150">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=156&srchAllSeq=1698">사회</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=168&srchAllSeq=2040">과학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=163&srchAllSeq=1543">도덕</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=187&srchAllSeq=52">음악</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=191&srchAllSeq=12">미술</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=195&srchAllSeq=91">체육</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>5학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=138&srchAllSeq=599">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=150&srchAllSeq=1266">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=158&srchAllSeq=1762">사회</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=170&srchAllSeq=2124">과학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=164&srchAllSeq=1567">도덕</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=184&srchAllSeq=1891">실과</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=188&srchAllSeq=59">음악</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=192&srchAllSeq=23">미술</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=196&srchAllSeq=109">체육</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>6학년</span>
+                                            <ul class="subject1">
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=140&srchAllSeq=685">국어</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=152&srchAllSeq=1389">수학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=160&srchAllSeq=1834">사회</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=172&srchAllSeq=2208">과학</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=165&srchAllSeq=1591">도덕</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=185&srchAllSeq=1906">실과</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=189&srchAllSeq=66">음악</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=193&srchAllSeq=34">미술</a></li>
+                                                <li><a href="/ctt/cont/esContentsList?srchCateSeq=197&srchAllSeq=127">체육</a></li>
+                                            </ul>
+                                        </li>   
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="subject_inner">
+                                <h4 class="text_b">범교과</h4>
+                                <ul class="subject">
+                                    <li><a href="#">안전.건강 교육</a></li>
+                                    <li><a href="#">인성 교육</a></li>
+                                    <li><a href="#">진로 교육</a></li>
+                                    <li><a href="#">통일.독도 교육</a></li>
+                                    <li><a href="#">창의.과학 교육</a></li>
+                                    <li><a href="#">역사 교육</a></li>
+                                    <li><a href="#">독서 교육</a></li>
+                                    <li><a href="#">경제.금융 교육</a></li>
+                                    <li><a href="#">ESD 교육</a></li>
+                                    <li><a href="#">SW 교육</a></li>
+                                    <li><a href="#">미디어리터러시 교육</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 메뉴닫기버튼 -->
+                        <div class="btn_gnb">
+                            <button type="button" class="btn_gnb_close"></button>
+                        </div>
+                    </div>
+                    <!-- 중학뎁스 -->
+                    <div class="depth nav2">
+                        <div class="menu_inner">
+                            <div class="grade_inner">
+                                <h4 class="text_b">중학</h4>
+                                <div class="drop-box box2">
+                                    <ul class="grade">
+                                        <li class="cls-menu">
+                                            <span>국어</span>
+                                            <ul class="subject-act subject1">
+                                                <li><a href="#">듣기.말하기</a></li>
+                                                <li><a href="#">읽기</a></li>
+                                                <li><a href="#">쓰기</a></li>
+                                                <li><a href="#">문법</a></li>
+                                                <li><a href="#">문학</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>수학</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">수학1</a></li>
+                                                <li><a href="#">수학2</a></li>
+                                                <li><a href="#">수학3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>사회</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">사회1</a></li>
+                                                <li><a href="#">사회2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>역사</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">역사1</a></li>
+                                                <li><a href="#">역사2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>과학</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">과학1</a></li>
+                                                <li><a href="#">과학2</a></li>
+                                                <li><a href="#">과학3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>도덕</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">도덕1</a></li>
+                                                <li><a href="#">도덕2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>기술.가정</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">기술.가정1</a></li>
+                                                <li><a href="#">기술.가정2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>음악</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">음악1</a></li>
+                                                <li><a href="#">음악2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>미술</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">미술1</a></li>
+                                                <li><a href="#">미술2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>체육</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">체육1</a></li>
+                                                <li><a href="#">체육2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cls-menu">
+                                            <span>정보</span>
+                                            <ul class="subject1">
+                                                <li><a href="#">정보</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="subject_inner">
+                                <h4 class="text_b">범교과</h4>
+                                <ul class="subject">
+                                    <li><a href="#">안전.건강 교육</a></li>
+                                    <li><a href="#">인성 교육</a></li>
+                                    <li><a href="#">진로 교육</a></li>
+                                    <li><a href="#">통일.독도 교육</a></li>
+                                    <li><a href="#">창의.과학 교육</a></li>
+                                    <li><a href="#">역사 교육</a></li>
+                                    <li><a href="#">독서 교육</a></li>
+                                    <li><a href="#">경제.금융 교육</a></li>
+                                    <li><a href="#">ESD 교육</a></li>
+                                    <li><a href="#">SW 교육</a></li>
+                                    <li><a href="#">미디어리터러시 교육</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                         <!-- 메뉴닫기버튼 -->
+                         <div class="btn_gnb">
+                            <button type="button" class="btn_gnb_close"></button>
+                        </div>
+                    </div>
+                    <!-- 계기교육 뎁스 -->
+                    <div class="depth nav3">
+                        <div class="menu_inner">
+                            <div class="subject_inner">
+                                <h4 class="text_b">계기교육</h4>
+                                <ul class="w-subject">
+                                    <li><a href="#">1월</a></li>
+                                    <li><a href="#">2월</a></li>
+                                    <li><a href="#">3월</a></li>
+                                    <li><a href="#">4월</a></li>
+                                    <li><a href="#">5월</a></li>
+                                    <li class="on"><a href="#">6월</a></li>
+                                    <li><a href="#">7월</a></li>
+                                    <li><a href="#">8월</a></li>
+                                    <li><a href="#">9월</a></li>
+                                    <li><a href="#">10월</a></li>
+                                    <li><a href="#">11월</a></li>
+                                    <li><a href="#">12월</a></li>
+                                </ul>
+                            </div>
+                            <div class="subject_inner">
+                                <div class="depth-bn">
+                                    <img src="../../static/image/month_cont/depth-month09.png" alt="7월_정보보호의날이미지"/>
+                                </div>
+                            </div>
+                             <!-- 메뉴닫기버튼 -->
+                            <div class="btn_gnb">
+                                <button type="button" class="btn_gnb_close"></button>
+                            </div>
+                            <!-- <div class="subject_inner" style="display: none;">
+                                <div>
+                                    <h4><img src="../../static/image/i_theme.png" alt="말풍선아이콘"/>교육 이슈</h4>
+                                    <ul class="subject">
+                                        <li><a href="#">교수학습법</a></li>
+                                        <li><a href="#">학교이슈</a></li>
+                                    </ul>
+                                </div>
+                                <div class="edu_inner">
+                                    <h4><img src="../../static/image/i_pkgbox.png" alt="패키지박스아이콘"/>주제별 패키지</h4>
+                                    <ul class="subject">
+                                        <li><a href="#">인기 패키지</a></li>
+                                        <li><a href="#">신규 패키지</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- 교육이슈 뎁스 -->
+                    <div class="depth nav4">
+                        <div class="menu_inner">
+                            <div class="subject_inner">
+                                <h4 class="text_b">교육 이슈</h4>
+                                <ul class="w-subject2">
+                                    <li class="on"><a href="#">교수학습법</a></li>
+                                    <li><a href="#">학교이슈</a></li>
+                                </ul>
+                            </div>
+                            <div class="subject_inner">
+                                <div class="depth-bn">
+                                    <img src="../../static/image/depth-issue01.png" alt="교육이슈노출배너이미지"/>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- 메뉴닫기버튼 -->
+                         <div class="btn_gnb">
+                            <button type="button" class="btn_gnb_close"></button>
+                        </div>
+                    </div>
+                    <!-- 주제별패키지 뎁스 -->
+                    <div class="depth nav5">
+                        <div class="menu_inner">
+                            <div class="subject_inner">
+                                <h4 class="text_b">주제별 패키지</h4>
+                                <ul class="w-subject2">
+                                    <li><a href="#">인기 패키지</a></li>
+                                    <li><a href="#">신규 패키지</a></li>
+                                </ul>
+                            </div>
+                            <div class="subject_inner">
+                                <div class="depth-bn">
+                                    <img src="../../static/image/depth-pkg01.png" alt="주제별패키지노출배너이미지"/>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- 메뉴닫기버튼 -->
+                         <div class="btn_gnb">
+                            <button type="button" class="btn_gnb_close"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 사이트맵 팝업창 -->
+                <div class="modal fade sitemap-popup">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="Sitemap">
+                                <div class="sitemap_area">
+                                    <div class="main_sitemap site1">
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_books.png" alt="책아이콘인미지"/> 초등 교과</h4>
+                                            <ul class="site_inner list-inline">
+                                                <li><a href="#">1학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=130&srchAllSeq=173">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=142&srchAllSeq=780">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=174&srchAllSeq=2351#">봄</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=175&srchAllSeq=2448">여름</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=176&srchAllSeq=2260">가을</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=177&srchAllSeq=2514">겨울</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=182&srchAllSeq=1465">안전한 생활</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">2학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=132&srchAllSeq=293">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=144&srchAllSeq=905">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=178&srchAllSeq=2383">봄</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=179&srchAllSeq=2492">여름</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=180&srchAllSeq=2309">가을</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=181&srchAllSeq=2560">겨울</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=183&srchAllSeq=1496">안전한 생활</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">3학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=134&srchAllSeq=399">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=146&srchAllSeq=1024">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=154&srchAllSeq=1628">사회</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=166&srchAllSeq=1952">과학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=162&srchAllSeq=1519">도덕</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=186&srchAllSeq=45">음악</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=190&srchAllSeq=1">미술</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=194&srchAllSeq=73">체육</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">4학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=136&srchAllSeq=502">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=148&srchAllSeq=1150">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=156&srchAllSeq=1698">사회</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=168&srchAllSeq=2040">과학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=163&srchAllSeq=1543">도덕</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=187&srchAllSeq=52">음악</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=191&srchAllSeq=12">미술</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=195&srchAllSeq=91">체육</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">5학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=138&srchAllSeq=599">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=150&srchAllSeq=1266">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=158&srchAllSeq=1762">사회</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=170&srchAllSeq=2124">과학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=164&srchAllSeq=1567">도덕</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=184&srchAllSeq=1891">실과</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=188&srchAllSeq=59">음악</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=192&srchAllSeq=23">미술</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=196&srchAllSeq=109">체육</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">6학년</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=140&srchAllSeq=685">국어</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=152&srchAllSeq=1389">수학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=160&srchAllSeq=1834">사회</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=172&srchAllSeq=2208">과학</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=165&srchAllSeq=1591">도덕</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=185&srchAllSeq=1906">실과</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=189&srchAllSeq=66">음악</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=193&srchAllSeq=34">미술</a></li>
+                                                        <li><a href="/ctt/cont/esContentsList?srchCateSeq=197&srchAllSeq=127">체육</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul> 
+                                        </div>
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_bulb.png" alt="조명아이콘이미지"/> 초등 범교과</h4>
+                                            <ul class="site_inner2">
+                                                <li><a href="#">안전.건강 교육</a></li>
+                                                <li><a href="#">인성 교육</a></li>
+                                                <li><a href="#">진로 교육</a></li>
+                                                <li><a href="#">통일.독도 교육</a></li>
+                                                <li><a href="#">창의.과학 교육</a></li>
+                                                <li><a href="#">역사 교육</a></li>
+                                                <li><a href="#">독서 교육</a></li>
+                                                <li><a href="#">경제.금융 교육</a></li>
+                                                <li><a href="#">ESD 교육</a></li>
+                                                <li><a href="#">SW 교육</a></li>
+                                                <li><a href="#">미디어리터러시 교육</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="main_sitemap site2">
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_books.png" alt="책아이콘인미지"/> 중학 교과</h4>
+                                            <ul class="site_inner list-inline">
+                                                <li><a href="#">국어</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">듣기.말하기</a></li>
+                                                        <li><a href="#">읽기</a></li>
+                                                        <li><a href="#">쓰기</a></li>
+                                                        <li><a href="#">문법</a></li>
+                                                        <li><a href="#">문학</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">수학</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">수학1</a></li>
+                                                        <li><a href="#">수학2</a></li>
+                                                        <li><a href="#">수학3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">사회</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">사회1</a></li>
+                                                        <li><a href="#">사회2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">역사</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">역사1</a></li>
+                                                        <li><a href="#">역사2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">과학</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">과학1</a></li>
+                                                        <li><a href="#">과학2</a></li>
+                                                        <li><a href="#">과학3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">도덕</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">도덕1</a></li>
+                                                        <li><a href="#">도덕2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">기술.가정</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">기술.가정1</a></li>
+                                                        <li><a href="#">기술.가정2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">음악</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">음악1,2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">미술</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">미술1,2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">체육</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">체육1,2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">정보</a>
+                                                    <ul class="subject2">
+                                                        <li><a href="#">정보</a></li>
+                                                    </ul></li>
+                                            </ul>
+                                        </div>
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_bulb.png" alt="조명아이콘이미지"/> 중학 범교과</h4>
+                                            <ul class="site_inner2">
+                                                <li><a href="#">안전.건강 교육</a></li>
+                                                <li><a href="#">인성 교육</a></li>
+                                                <li><a href="#">진로 교육</a></li>
+                                                <li><a href="#">통일.독도 교육</a></li>
+                                                <li><a href="#">창의.과학 교육</a></li>
+                                                <li><a href="#">역사 교육</a></li>
+                                                <li><a href="#">독서 교육</a></li>
+                                                <li><a href="#">경제.금융 교육</a></li>
+                                                <li><a href="#">ESD 교육</a></li>
+                                                <li><a href="#">SW 교육</a></li>
+                                                <li><a href="#">미디어리터러시 교육</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <div class="main_sitemap site3">
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_clock.png" alt="시계아이콘"/> 계기교육</h4>
+                                            <!-- <p class="map-sub-txt">월별 이슈는 여기에!</p> -->
+                                            <ul class="days site_inner2">
+                                                <li><a href="#">1월</a></li>
+                                                <li><a href="#">2월</a></li>
+                                                <li><a href="#">3월</a></li>
+                                                <li><a href="#">4월</a></li>
+                                                <li><a href="#">5월</a></li>
+                                                <li><a href="#">6월</a></li>
+                                                <li><a href="#">7월</a></li>
+                                                <li><a href="#">8월</a></li>
+                                                <li><a href="#">9월</a></li>
+                                                <li><a href="#">10월</a></li>
+                                                <li><a href="#">11월</a></li>
+                                                <li><a href="#">12월</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_theme.png" alt="주제아이콘"/> 교육 이슈</h4>
+                                            <!-- <p class="map-sub-txt">지금 뜨는 교육 이슈는 여기에!</p> -->
+                                            <ul class="site_inner2">
+                                                <li><a href="#">교수학습법</a></li>
+                                                <li><a href="#">학교이슈</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="range">
+                                            <h4><img src="../../static/image/i_pkgbox.png" alt="패키지박스아이콘"/> 주제별 패키지</h4>
+                                            <!-- <p class="map-sub-txt">한번에 볼 수 있는 콘텐츠는 여기에!</p> -->
+                                            <ul class="site_inner2">
+                                                <li><a href="#">인기 패키지</a></li>
+                                                <li><a href="#">신규 패키지</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  지엔비 메뉴아이콘 클릭시 사이트맵 노출 -->
+                <!-- <div class="Sitemap container">
+                    <a href="#" class="map_close_btn"><img src="../../static/image/i_site_close.png" alt="닫기버튼아이콘"/></a>
+                    <div class="sitemap_area">
+                        <div class="main_sitemap site1">
+                            <div class="range range1">
+                                <h4><img src="../../static/image/i_books.png" alt="책아이콘인미지"/> 초등 교육</h4>
+                                <ul class="site_inner list-inline">
+                                    <li><a href="#">1학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">2학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">3학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">4학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">5학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">6학년</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">국어</a></li>
+                                            <li><a href="#">수학</a></li>
+                                            <li><a href="#">봄</a></li>
+                                            <li><a href="#">여름</a></li>
+                                            <li><a href="#">가을</a></li>
+                                            <li><a href="#">겨울</a></li>
+                                            <li><a href="#">안전한 생활</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> 
+                            </div>
+                            <div class="range range2">
+                                <h4><img src="../../static/image/i_books.png" alt="책아이콘이미지"/> 범교과 ㅣ 창체</h4>
+                                <ul class="site_inner2 list-inline"> 
+                                    <li><a href="#">안전.건강 교육</a></li>
+                                    <li><a href="#">인성 교육</a></li>
+                                    <li><a href="#">진로 교육</a></li>
+                                    <li><a href="#">통일.독도 교육</a></li>
+                                    <li><a href="#">창의.과학 교육</a></li>
+                                    <li><a href="#">역사 교육</a></li>
+                                    <li><a href="#">독서 교육</a></li>
+                                    <li><a href="#">경제.금융 교육</a></li>
+                                    <li><a href="#">ESD 교육</a></li>
+                                    <li><a href="#">SW 교육</a></li>
+                                    <li><a href="#">미디어리터러시 교육</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main_sitemap site2">
+                            <div class="range range1">
+                                <h4><img src="../../static/image/i_books.png" alt="책아이콘인미지"/> 중학 교육</h4>
+                                <ul class="site_inner">
+                                    <li><a href="#">국어</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">듣기.말하기</a></li>
+                                            <li><a href="#">읽기</a></li>
+                                            <li><a href="#">쓰기</a></li>
+                                            <li><a href="#">문법</a></li>
+                                            <li><a href="#">문학</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">수학</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">수학1</a></li>
+                                            <li><a href="#">수학2</a></li>
+                                            <li><a href="#">수학3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">사회</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">사회1</a></li>
+                                            <li><a href="#">사회2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">역사</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">역사1</a></li>
+                                            <li><a href="#">역사2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">과학</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">과학1</a></li>
+                                            <li><a href="#">과학2</a></li>
+                                            <li><a href="#">과학3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">도덕</a>
+                                        <ul class="subject2">
+                                            <li><a href="#">도덕1</a></li>
+                                            <li><a href="#">도덕2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">기술.가정</a>
+                                        <ul class="subject2 list-inline">
+                                            <li><a href="#">기술.가정1</a></li>
+                                            <li><a href="#">기술.가정2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="range range2">
+                                <h4><img src="../../static/image/i_books.png" alt="책아이콘이미지"/> 범교과 ㅣ 창체</h4>
+                                <ul class="site_inner2 list-inline">
+                                    <li><a href="#">안전.건강 교육</a></li>
+                                    <li><a href="#">인성 교육</a></li>
+                                    <li><a href="#">진로 교육</a></li>
+                                    <li><a href="#">통일.독도 교육</a></li>
+                                    <li><a href="#">창의.과학 교육</a></li>
+                                    <li><a href="#">역사 교육</a></li>
+                                    <li><a href="#">독서 교육</a></li>
+                                    <li><a href="#">경제.금융 교육</a></li>
+                                    <li><a href="#">ESD 교육</a></li>
+                                    <li><a href="#">SW 교육</a></li>
+                                    <li><a href="#">미디어리터러시 교육</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <div class="main_sitemap site3">
+                            <div class="range range1">
+                                <h4><img src="../../static/image/i_clock.png" alt="시계아이콘"/> 계기교육</h4>
+                                <p class="map-sub-txt">월별 이슈는 여기에!</p>
+                                <ul class="days site_inner2 list-inline">
+                                    <li><a href="#">1월</a></li>
+                                    <li><a href="#">2월</a></li>
+                                    <li><a href="#">3월</a></li>
+                                    <li><a href="#">4월</a></li>
+                                    <li><a href="#">5월</a></li>
+                                    <li><a href="#">6월</a></li>
+                                    <li><a href="#">7월</a></li>
+                                    <li><a href="#">8월</a></li>
+                                    <li><a href="#">9월</a></li>
+                                    <li><a href="#">10월</a></li>
+                                    <li><a href="#">11월</a></li>
+                                    <li><a href="#">12월</a></li>
+                                </ul>
+                            </div>
+                            <div class="range range3">
+                                <h4><img src="../../static/image/i_theme.png" alt="주제아이콘"/> 교육 이슈</h4>
+                                <p class="map-sub-txt">지금 뜨는 교육 이슈는 여기에!</p>
+                                <ul class="site_inner2">
+                                    <li><a href="#">교수학습법</a></li>
+                                    <li><a href="#">학교이슈</a></li>
+                                </ul>
+                            </div>
+                            <div class="range range3">
+                                <h4><img src="../../static/image/i_theme.png" alt="주제아이콘"/> 주제별 패키지</h4>
+                                <p class="map-sub-txt">한번에 볼 수 있는 콘텐츠는 여기에!</p>
+                                <ul class="site_inner2">
+                                    <li><a href="#">인기 패키지</a></li>
+                                    <li><a href="#">신규 패키지</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </article>
+        </div>
+    </header>
+
+    <!-- top 버튼 -->
+    <div class="top_btn_wrap">
+        <button class="top_btn">
+            <img id="topBtn" src="../../static/image/top_btn.png" alt="탑버튼이미지"/>
+        </button>
+    </div>
+
+    <!-- Quick menu -->
+    <div class="quick-area" style="display: none;">
+        <div class="quick-inner quick-open">
+            <div class="quick-title">
+                <div class="q-tit text-center">
+                    <a href="#"><img src="../../static/image/arrow_left_blue.png" alt="메뉴열기아이콘"/></a>
+                    <span>Quick Edulib</span>
+                </div>
+                <span class="login-before">Login</span>
+            </div>
+            <div class="quick-info">
+                <div class="info-login">
+                    <div>
+                        <input type="text" placeholder="ID"/>
+                        <input type="text" placeholder="P/W"/>
+                        <div class="q-checkbox">
+                            <label><input type="checkbox"/>아이디 장</label>
+                        </div>
+                    </div>
+                    <div class="button-login">
+                        <button class="btn btn-primary btn-block" type="button">로그인</button>
+                    </div>
+                    <div class="box-util text-center">
+                        <a href="#" class="id-find font-m">ID</a>
+                        <a href="#" class="pw-find font-m">P/W 찾기</a>
+                        <a href="#" class="join font-m">ㅣ회원가입</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 로그인후 노출되는 유저 정보 -->
+            <!-- <div class="q-login-after">
+                <div class="q-user-info">
+                    <div class="user-info">
+                        <p>000 회원님</p>
+                        <p>반갑습니다.</p>
+                    </div>
+                </div>
+                <div class="q-logout">
+                    <button class="btn btn-default btn-block" type="button">회원정보수정</button>
+                    <button class="btn btn-primary btn-block" type="button">로그아웃</button>
+                </div>
+            </div> -->
+            <div class="quick-menulist text-center">
+                <div class="q-list-tit">
+                    <span>Quick Menu</span>
+                </div>
+                <ul class="q-list-icon list-inline">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target=".login-modal">
+                            <img src="../../static/image/zzim_icon.png" alt="찜하기아이콘"/>
+                            <p>찜한콘텐츠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target=".login-modal">
+                            <img src="../../static/image/clip_icon.png" alt="관심주제아이콘"/>
+                            <p>관심주제</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target=".login-modal">
+                            <img src="../../static/image/cs_icon.png" alt="고객센터아이콘"/>
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target=".login-modal">
+                            <img src="../../static/image/card_icon.png" alt="구독권아이콘"/>
+                            <p>구독권</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick-bn"></div>
+        </div>
+
+        <!-- 퀵메뉴 닫았을 때 (mini) -->
+        <div class="quick-inner quick-close">
+            <div class="quick-title">
+                <div class="q-tit2 text-center">
+                    <a href="#"><img src="../../static/image/arrow_right_blue.png" alt="메뉴닫기아이콘"/></a>
+                </div>
+            </div>
+            <ul class="q-list-icon-cl text-center">
+                <li><a href="#"><img src="../../static/image/user.png" alt="유저아이콘"></a></li>
+                <li><a href="#"><img src="../../static/image/zzim_icon.png" alt="찜하기아이콘"></a></li>
+                <li><a href="#"><img src="../../static/image/clip_icon.png" alt="관심주제아이콘"></a></li>
+                <li><a href="#"><img src="../../static/image/cs_icon.png" alt="고객센터아이콘"></a></li>
+                <li><a href="#"><img src="../../static/image/card_icon.png" alt="구독권아이콘"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 모바일 초등 교과 및 범교과 -->
+    <div class="cont-navlayer d-sm-none">
+        <div class="mo-cont-nav">
+            <div class="c-box">
+                <p class="text_w bold">교과</p>
+                <div class="mo-clsbtn2 float-right">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="mo-body">
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>1학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=130&srchAllSeq=173">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=142&srchAllSeq=780">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=174&srchAllSeq=2351#">봄</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=175&srchAllSeq=2448">여름</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=176&srchAllSeq=2260">가을</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=177&srchAllSeq=2514">겨울</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=182&srchAllSeq=1465">안전한 생활</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>2학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=132&srchAllSeq=293">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=144&srchAllSeq=905">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=178&srchAllSeq=2383">봄</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=179&srchAllSeq=2492">여름</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=180&srchAllSeq=2309">가을</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=181&srchAllSeq=2560">겨울</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=183&srchAllSeq=1496">안전한 생활</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>3학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=134&srchAllSeq=399">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=146&srchAllSeq=1024">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=154&srchAllSeq=1628">사회</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=166&srchAllSeq=1952">과학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=162&srchAllSeq=1519">도덕</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=186&srchAllSeq=45">음악</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=190&srchAllSeq=1">미술</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=194&srchAllSeq=73">체육</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>4학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=136&srchAllSeq=502">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=148&srchAllSeq=1150">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=156&srchAllSeq=1698">사회</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=168&srchAllSeq=2040">과학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=163&srchAllSeq=1543">도덕</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=187&srchAllSeq=52">음악</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=191&srchAllSeq=12">미술</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=195&srchAllSeq=91">체육</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>5학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=138&srchAllSeq=599">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=150&srchAllSeq=1266">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=158&srchAllSeq=1762">사회</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=170&srchAllSeq=2124">과학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=164&srchAllSeq=1567">도덕</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=184&srchAllSeq=1891">실과</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=188&srchAllSeq=59">음악</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=192&srchAllSeq=23">미술</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=196&srchAllSeq=109">체육</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>6학년</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=140&srchAllSeq=685">국어</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=152&srchAllSeq=1389">수학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=160&srchAllSeq=1834">사회</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=172&srchAllSeq=2208">과학</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=165&srchAllSeq=1591">도덕</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=185&srchAllSeq=1906">실과</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=189&srchAllSeq=66">음악</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=193&srchAllSeq=34">미술</option>
+                        <option value="/ctt/cont/esContentsList?srchCateSeq=197&srchAllSeq=127">체육</option>
+                    </select>
+                </div>
+            </div>
+            <div class="c-box">
+                <p class="text_w bold">범교과</p>
+            </div>
+            <div class="mo-body">
+                <div class="subject-list-box">
+                    <ul>
+                        <li><a href="#">안전/건강 교육</a></li>
+                        <li><a href="#">인성 교육</a></li>
+                        <li><a href="#">진로 교육</a></li>
+                        <li><a href="#">통일/독도 교육</a></li>
+                        <li><a href="#">창의/과학 교육</a></li>
+                        <li><a href="#">역사/독서 교육</a></li>
+                        <li><a href="#">경제/금융 교육</a></li>
+                        <li><a href="#">ESD/SW 교육</a></li>
+                        <li><a href="#">미디어리터러시 교육</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 중학 교과 및 범교과 -->
+    <div class="cont-navlayer2 d-sm-none">
+        <div class="mo-cont-nav">
+            <div class="c-box">
+                <p class="text_w bold"> 교과</p>
+                <div class="mo-clsbtn2 float-right">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="mo-body">
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>국어</option>
+                        <option value="1">듣기 말하기</option>
+                        <option value="2">읽기</option>
+                        <option value="3">쓰기</option>
+                        <option value="4">문법</option>
+                        <option value="5">문학</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>수학</option>
+                        <option value="1">수학 ①</option>
+                        <option value="2">수학 ②</option>
+                        <option value="3">수학 ③</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>사회</option>
+                        <option value="1">사회 ①</option>
+                        <option value="2">사회 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>역사</option>
+                        <option value="1">역사 ①</option>
+                        <option value="2">역사 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>과학</option>
+                        <option value="1">과학 ①</option>
+                        <option value="2">과학 ②</option>
+                        <option value="3">과학 ③</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>도덕</option>
+                        <option value="1">도덕 ①</option>
+                        <option value="2">도덕 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>기술&#183;가정</option>
+                        <option value="1">기술&#183;가정 ①</option>
+                        <option value="2">기술&#183;가정 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>음악</option>
+                        <option value="1">음악 ①</option>
+                        <option value="2">음악 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>미술</option>
+                        <option value="1">미술 ①</option>
+                        <option value="2">미술 ②</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>체육</option>
+                        <option value="1">체육 ①</option>
+                        <option value="2">체육 ②</option>
+                    </select>
+                </div>
+            </div>
+            <div class="c-box">
+                <p class="text_w bold">범교과</p>
+            </div>
+            <div class="mo-body">
+                <div class="subject-list-box">
+                    <ul>
+                        <li><a href="#">안전/건강 교육</a></li>
+                        <li><a href="#">인성 교육</a></li>
+                        <li><a href="#">진로 교육</a></li>
+                        <li><a href="#">통일/독도 교육</a></li>
+                        <li><a href="#">창의/과학 교육</a></li>
+                        <li><a href="#">역사/독서 교육</a></li>
+                        <li><a href="#">경제/금융 교육</a></li>
+                        <li><a href="#">ESD/SW 교육</a></li>
+                        <li><a href="#">미디어리터러시 교육</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모바일 계기교육 -->
+    <div class="cont-navlayer3 d-sm-none">
+        <div class="mo-cont-nav">
+            <div class="c-box">
+                <p class="text_w bold">계기교육</p>
+                <div class="mo-clsbtn2 float-right">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="mo-body">
+                <div class="subject-list-box">
+                    <ul>
+                        <li><a href="#">1월</a></li>
+                        <li><a href="#">2월</a></li>
+                        <li><a href="#">3월</a></li>
+                        <li><a href="#">4월</a></li>
+                        <li><a href="#">5월</a></li>
+                        <li><a href="#">6월</a></li>
+                        <li><a href="#">7월</a></li>
+                        <li><a href="#">8월</a></li>
+                        <li><a href="#">9월</a></li>
+                        <li><a href="#">10월</a></li>
+                        <li><a href="#">11월</a></li>
+                        <li><a href="#">12월</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="form-group">
+                    <select class="form-select form-control form-select-lg" aria-label=".form-select-lg">
+                        <option selected>8월</option>
+                        <option value="1">1월</option>
+                        <option value="2">2월</option>
+                        <option value="3">3월</option>
+                        <option value="4">4월</option>
+                        <option value="5">5월</option>
+                        <option value="6">6월</option>
+                        <option value="7">7월</option>
+                        <option value="8">8월</option>
+                        <option value="9">9월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>
+                    </select>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 모바일 교육이슈 -->
+    <div class="cont-navlayer4 d-sm-none">
+        <div class="mo-cont-nav">
+            <div class="c-box">
+                <p class="text_w bold">교육이슈</p>
+                <div class="mo-clsbtn2 float-right">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="mo-body">
+                <div class="subject-list-box">
+                    <ul>
+                        <li><a href="#">교수학습법</a></li>
+                        <li><a href="#">학교 이슈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모바일 주제별패키지 -->
+    <div class="cont-navlayer5 d-sm-none">
+        <div class="mo-cont-nav">
+            <div class="c-box">
+                <p class="text_w bold">주제별 패키지</p>
+                <div class="mo-clsbtn2 float-right">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="mo-body">
+                <div class="subject-list-box">
+                    <ul>
+                        <li><a href="#">인기 패키지</a></li>
+                        <li><a href="#">신규 패키지</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모바일 화면 검색 클릭시 => 검색창 노출 -->
+    <div class="mo-src-layer d-sm-none">
+        <div class="mo-src">
+            <div class="mo-head">
+                <div class="mo-clsbtn">
+                    <a href="#">
+                        <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                    </a>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="검색어를 입력해주세요." size="12px"/>
+                <div class="search-btns">
+                    <button type="button" class="btn btn-default msrc-btn">
+                        <img src="../../static/image/m-search-icon.png" alt="검색아이콘"/>
+                    </button>
+                    <button type="button" class="btn btn-dark mrst-btn">
+                        <img src="../../static/image/mo-close.png" alt="취소아이콘"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mo-rcm">
+            <div class="search-keyword">
+                <p class="mo-tit">추천 검색어</p>
+                <ul class="list-inline">
+                    <li><a href="#">#어버이날</a></li>
+                    <li><a href="#">#연소</a></li>
+                    <li><a href="#">#글쓰기</a></li>
+                    <li><a href="#">#하브루타</a></li>
+                    <li><a href="#">#수와연산</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mo-boxes mo-dark-bg2" style="display: none;"></div>    
+
+    <!-- 모바일 더보기 메뉴뎁스 -->
+    <div class="mobile_layer d-sm-none">
+        <div class="mobile_gnb">
+            <div class="mo_inner">
+                <div class="mo_header">
+                    <div class="mo-clsbtn">
+                        <a href="#">
+                            <img src="../../static/image/i_pop_close.png" alt="닫기버튼아이콘"/>
+                        </a>
+                    </div>
+                    <div class="mo-header-tit">
+                        <a href="#" class="m-login-btn">로그인</a>
+                        <a href="#" class="m-logout-btn">로그아웃</a>
+                        <a href="#" class="m-join-btn">회원가입</a>
+                        
+                    </div>
+                </div>
+                <ul id="accordion" class="mo-nav">
+                    <li>
+                        <div class="mo-navtop">
+                            <img src="../../static/image/i_mark.png" alt="북마크아이콘"/>
+                            <span class="text_b bold">소개</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="mo-submenu">
+                            <li class="sub-navmenu"><a href="#">에듀립소개</a></li>
+                            <li class="sub-navmenu"><a href="#">회사소개</a></li>
+                            <li class="sub-navmenu"><a href="#">이용가이드</a></li>
+                            <li class="sub-navmenu"><a href="#">구독권 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mo-navtop">
+                            <img src="../../static/image/user.png" alt="마이아이콘"/>
+                            <span class="text_b bold">마이 에듀립</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="mo-submenu">
+                            <li class="sub-navmenu"><a href="#">관심 주제</a></li>
+                            <li class="sub-navmenu"><a href="#">찜한 콘텐츠</a></li>
+                            <li class="sub-navmenu"><a href="#">구독권</a></li>
+                            <li class="sub-navmenu"><a href="#">결제 내역</a></li>
+                            <li class="sub-navmenu"><a href="#">나의 문의</a></li>
+                            <li class="sub-navmenu"><a href="#">회원정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mo-navtop">
+                            <img src="../../static/image/cs_icon.png" alt="고객센터아이콘"/>
+                            <span class="text_b bold">고객센터</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="mo-submenu">
+                            <li class="sub-navmenu"><a href="#">공지사항</a></li>
+                            <li class="sub-navmenu"><a href="#">자주 묻는 질문</a></li>
+                            <li class="sub-navmenu"><a href="#">1:1 문의</a></li>
+                            <li class="sub-navmenu"><a href="#">제휴 및 견적</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+    <div class="mo-boxes mo-dark-bg" style="display: none;"></div>
+
+    <!-- "회원만 이용할 수 있습니다" 로그인유도 팝업창 -->
+    <div class="modal fade login-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content" style="width: 400px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="nt-content text-center">
+                        <p>회원만 이용가능한 서비스입니다.</p>
+                        <p>로그인 하시겠습니까?</p>
+                    </div>
+                    <div class="space-box text-center">
+                        <button type="button" class="btn btn-default">취소</button>
+                        <button type="button" class="btn btn-primary">로그인하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

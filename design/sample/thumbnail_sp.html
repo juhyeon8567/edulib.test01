@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 자동썸네일 타입</title>
+	 <!-- CSS -->
+	 <link rel="favicon icon" href="../../static/image/favicon2-16x16.png"/>
+	 <!-- Google Font: Source Sans Pro -->
+	 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
+	 <!-- Font Awesome -->
+	 <link rel="stylesheet" href="../../static/external/plugins/fontawesome-free/css/all.min.css"/>
+	 <!-- jQuery ui -->
+	 <link rel="stylesheet" href="../../static/external/plugins/jquery-ui/jquery-ui.min.css"/>
+	 <!-- daterange picker -->
+	 <link rel="stylesheet" href="../../static/external/plugins/daterangepicker/daterangepicker.css"/>
+	 <!-- bootstrap -->
+	 <link rel="stylesheet" href="../../static/external/plugins/bootstrap/css/bootstrap.min.css"/>
+	 <!-- iCheck for checkboxes and radio inputs -->
+	 <link rel="stylesheet" href="../../static/external/plugins/icheck-bootstrap/icheck-bootstrap.min.css"/>
+	 <!-- Bootstrap Color Picker -->
+	 <link rel="stylesheet" href="../../static/external/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"/>
+	 <!-- Tempusdominus Bootstrap 4 -->
+	 <link rel="stylesheet" href="../../static/external/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"/>
+	 <!-- fullCalendar -->
+	 <link rel="stylesheet" href="../../static/external/plugins/fullcalendar/main.css"/>
+	 <!-- Theme style -->
+	 <link rel="stylesheet" href="../../static/external/dist/css/adminlte.min.css"/>
+	 <!-- summernote -->
+	 <link rel="stylesheet" href="../../static/external/plugins/summernote/summernote-bs4.min.css"/>
+	 <!-- adminlte custom -->
+	 <link rel="stylesheet" href="../../static/css/adminlte.custom.css"/>
+	 <!-- 신규 추가 -->
+	 <link rel="stylesheet" href="../../static/external/dist/css/aos.css"/>
+	 <!-- flaticon -->
+	 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'/>
+	 <!-- swiper -->
+	 <link rel="stylesheet" href="../../static/external/plugins/swiperslide/swiper.min.css"/>
+	 <!-- Theme style -->
+	 <link rel="stylesheet" href="../../static/css/style.css"/>
+	 <!-- 반응형 css -->
+	 <link rel="stylesheet" href="../../static/css/responsive.css"/>
+
+</head>
+<body>
+
+	<!--../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg -->
+	
+	
+	<div class="_cont-item">
+		<div class="_cont-header">
+			<!-- 교과_초등 타입01 -->
+			<div class="thum-item">
+				<div id="thumnail" class="thum">
+					<div class="thum-image">
+						<img src="https://timgs.acs.wecandeo.com/thumb/1952/20201202/11/V11163617_5449_d9f927c_00000.jpg" alt="세모모양 숲 속 이야기"/>
+						<video class="thum-video-item" loop="" muted="" style="display: none;">
+							<source src="../../static/src/edulib pmt_220727.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div class="thum-types">
+						<div class="thum-category">수학</div>
+						<div class="thum-title" title="세모모양 숲 속 이야기">
+							<div class="thum-title-md">
+								<div class="thum-title-wb">
+									<span>세모모양</span> 숲 속 이야기
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="_cont-footer">
+			<div class="_cont-title"></div>
+			<div class="_cont-option">
+				<div class="_cont-keyword"></div>
+				<div class="_cont-icon"></div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<select id="thumTypes">
+			<option value="">없음</option>
+			<option value="type01">type01</option>
+			<option value="type02">type02</option>
+			<option value="type03">type03</option>
+			<option value="type04">type04</option>
+		</select>
+
+		<br/>
+		<br/>
+
+		<button type="button" class="btn btn-primary" onclick="changeType('');">없음</button>
+		<button type="button" class="btn btn-primary" onclick="changeType('type01');">type01</button>
+		<button type="button" class="btn btn-primary" onclick="changeType('type02');">type02</button>
+		<button type="button" class="btn btn-primary" onclick="changeType('type03');">type03</button>
+		<button type="button" class="btn btn-primary" onclick="changeType('type04');">type04</button>
+
+		<br/>
+		<br/>
+
+		<a class="btn btn-primary" onclick="changeType('');">없음</a>
+		<a class="btn btn-primary" onclick="changeType('type01');">type01</a>
+		<a class="btn btn-primary" onclick="changeType('type02');">type02</a>
+		<a class="btn btn-primary" onclick="changeType('type03');">type03</a>
+		<a class="btn btn-primary" onclick="changeType('type04');">type04</a>
+	</div>
+
+	<!-- 교과_중학 타입02 -->
+	<div class="_cont_header2">
+		<div class="thum-item">
+			<div class="thum type02">
+				<div class="thum-image">
+					<img src="../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg" alt="세모모양 숲 속 이야기"/>
+				</div>
+				<div class="thum-types">
+					<div class="thum-category">수학</div>
+					<div class="thum-title" title="세모모양 숲 속 이야기">
+						<div class="thum-title-md">
+							<div class="thum-title-wb">
+								<span>세모모양</span> 숲 속 이야기
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 범교과_타입03 -->
+	<div class="thum-item">
+		<div class="thum type03">
+			<div class="thum-image">
+				<img src="../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg" alt="안전하게 물놀이를 즐겨요"/>
+			</div>
+			<div class="thum-types">
+				<div class="thum-category">안전 · 건강 교육</div>
+				<div class="thum-title" title="안전하게 물놀이를 즐겨요">
+					<div class="thum-title-md">
+						<div class="thum-title-wb">
+							<span>안전하게</span> 물놀이를 즐겨요
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 타입04 (샘플) -->
+	<div class="thum-item">
+		<div class="thum type04">
+			<div class="thum-image">
+				<img src="../../static/image/V11995441_f2949b8a_32ce_4677_8e5f_c1a965a1c767.jpg" alt="직업인 인터뷰 - 요식업자"/>
+			</div>
+			<div class="thum-types">
+				<div class="thum-category">진로 교육</div>
+				<div class="thum-title" title="직업인 인터뷰 - 요식업자">
+					<div class="thum-title-md">
+						<div class="thum-title-wb">
+							<span>직업인 인터뷰</span> - 요식업자
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="../../static/external/plugins/jquery/jquery.min.js"></script>
+	<!-- jQuery ui -->
+	<script src="../../static/external/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../../static/external/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="../../static/external/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- bs-custom-file-input -->
+	<script src="../../static/external/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="../../static/external/dist/js/adminlte.min.js"></script>
+	<!-- InputMask, fullCalendar 2.2.5 -->
+	<script src="../../static/external/plugins/moment/moment.min.js"></script>
+	<!-- fullCalendar 2.2.5 -->
+	<script src="../../static/external/plugins/fullcalendar/main.js"></script>
+	<!-- InputMask -->
+	<script src="../../static/external/plugins/inputmask/jquery.inputmask.min.js"></script>
+	<!-- date-range-picker -->
+	<script src="../../static/external/plugins/daterangepicker/daterangepicker.js"></script>
+	<!-- bootstrap color picker -->
+	<script src="../../static/external/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- Tempusdominus Bootstrap 4 -->
+	<script src="../../static/external/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+	<!-- Summernote -->
+	<script src="../../static/external/plugins/summernote/summernote-bs4.min.js"></script>
+	<!-- jQuery Loading -->
+	<script src="../../static/external/plugins/jquery-loading/jquery.loading.js"></script>
+	<!-- base script -->
+	<script src='../../static/js/base/tccom-common.js'></script>
+	<script src='../../static/js/base/tccom-fileuploader.js'></script>
+	<script src='../../static/js/base/tccom-component.js'></script>
+	<script src='../../static/js/base/tccom-function.js'></script>
+	<script src='../../static/js/base/tccom-auto.js'></script>
+	<!-- 신규 추가 -->
+	<script src="../../static/external/dist/js/aos.js"></script>
+	<!-- Development -->
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+	<!-- Production -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<!-- swiper -->
+	<script src="../../static/external/plugins/swiperslide/swiper.min.js"></script>
+	<!-- 메인 -->
+	<script src="../../static/js/main/main.js"></script>
+	<script src="../../static/js/main/sub.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#thumTypes').change(function() {
+				changeType($(this).val());
+			});
+		});
+
+		changeType = function(type) {
+			$('#thumnail').removeClass('type01 type02 type03 type04');
+			$('#thumnail').addClass(type);
+		}
+	 </script>
+</body>
+</html>

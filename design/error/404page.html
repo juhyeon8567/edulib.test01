@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Not Find Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        @font-face {
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); 
+        font-family: 'yg-jalnan';
+        font-weight: normal; 
+        font-style: normal; 
+    }
+    * {
+        margin: 0; 
+        padding: 0; 
+        text-decoration: none; 
+        list-style: none;
+        font-family: Pretendard,
+        -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+        'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        line-height: 1.3;
+        word-break: keep-all;
+    }
+    body {
+        height: 100vh;
+        background-image: url("../../static/image/404page2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .errorpage {
+        height: auto;
+        padding: 3%;
+    }
+    .errorbox {
+        word-break: keep-all;
+    }
+    .errorbox img {
+        width: 40vw;
+        margin-bottom: 30px;
+    }
+    .errorbox .err-tit p {
+        font-size: 4vw;
+        font-weight: bold;
+        color: #333;
+    }
+    .errorbox .err-txt {
+        padding-top: 30px;
+    }
+    .errorbox .err-txt p {
+        font-size: 18px;
+        line-height: 2;
+    }
+    .no-list-btn {
+        display: block;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-free a {
+        display: inline-block;
+        padding: 30px 50px;
+        background: linear-gradient(to right, #7086ff, #2b8fff, #00B8D1, #0AFA7F);
+        border-radius: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .error-mo {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .error-mo img {width: 100%;}
+
+    @media (max-width : 767px) {
+        body {
+            height: 100vh;
+            background: none;
+            /* background-image: url("../../static/image/404page2-mo.png");
+            background-size: 100%; */
+        }
+        .errorbox img {
+            display: none;
+            margin-bottom: 10px;
+        }
+        .errorbox .err-txt {
+            padding-top: 20px;
+        }
+        .errorbox .err-txt p {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .btn-free a {
+            display: block;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .error-mo {display: block;}
+    }
+
+    </style>
+</head>
+<body>
+    <div class="errorpage">
+        <div class="error-mo">
+            <img src="../../static/image/404page2-mo.png" alt=""/>
+        </div>
+        <div class="errorbox">
+            <img src="../../static/image/404error.png" alt="404에러타이틀이미지"/>
+            <div class="err-tit">
+                <p>PAGE NOT FOUND</p>
+            </div>
+            <div class="err-txt">
+                <p>현재 원하시는 페이지를 찾을 수 없습니다. <br/>
+                    존재하지 않는 주소를 입력하셨거나, 요청하신 페이지의 주소가 변경, 삭제되어 찾을 수 없습니다. <br/>
+                    궁금한 점이 있으시면 고객센터를 통해 문의해 주시기 바랍니다.
+                </p>
+            </div>
+            <div class="no-list-btn">
+                <div class="btn-free">
+                    <a href="#">홈으로 이동</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

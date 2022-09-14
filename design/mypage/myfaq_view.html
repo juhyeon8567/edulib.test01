@@ -1,0 +1,112 @@
+<?php include '../layout/header.html' ?>
+
+    <div class="meb-push">
+        <div class="meb-item row container">
+            <div class="col-md-4 meb-tit">
+                <span>마이 에듀립</span>
+                <h3>홍길동 회원님</h3>
+                <span>환영합니다.</span>
+            </div>
+            <div class="col-md-8">
+                <ul class="my-list-item list-inline">
+                    <li>
+                        <img src="../../static/image/i_sub.png" alt="나의구독권아이콘이미지"/>
+                        <p class="bold push-tit">MY 구독권</p>
+                        <p>12개월권</p>
+                        <!-- <p>없음</p> -->
+                    </li>
+                    <li>
+                        <img src="../../static/image/i_mynt.png" alt="나의문의아이콘이미지"/>
+                        <p class="bold push-tit">MY 문의</p>
+                        <p>1건 / 진행중</p>
+                        <!-- <p>0건 / 없음</p> -->
+                    </li>
+                    <li>
+                        <img src="../../static/image/i_mypay.png" alt="나의결제아이콘이미지"/>
+                        <p class="bold push-tit">결제 내역</p>
+                        <p>1건 / 결제완료</p>
+                        <!-- <p>0건 / 없음</p> -->
+                    </li>
+                    <li>
+                        <img src="../../static/image/i_myp.png" alt="회원아이콘이미지"/>
+                        <p class="bold push-tit">회원 정보</p>
+                        <div class="alt-btn">
+                            <a href="#">수정하기 ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sub-wrap container">
+        <?php
+            $menu = 'mypage';
+            include '../layout/leftside.php'
+        ?>
+        <!-- 콘텐츠 영역 -->
+        <div class="cont-area">
+            <div class="cont-inner">
+                <div class="desk-xs-none">
+                    <p class="sub-cate float-right list-inline">
+                        <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                        <span>마이 에듀립 ></span>
+                        <b><span>나의 문의</span></b>
+                    </p>
+                    <p class="sub-theme-tit">나의 문의</p>
+                    <p class="ex-tit">문의 및 답변 내역 (총 2건의 검색결과)</p>
+                </div>
+                <div class="sub-cont">
+                    <div class="sub-contents">
+                        <div class="sub-notice">
+                            <div class="myfaq-view">
+                                <div class="nt-inner">
+                                    <div class="nt-head">
+                                        <span class="bold">[회원가입] 회원가입은 어떻게 하나요?</span>
+                                        <ul class="list-inline float-right">
+                                            <button type="button" class="btn btn-dark add-file-btn">
+                                                <img src="../../static/image/i_pencil.png" alt="펜아이콘"/>
+                                            </button>
+                                            <li>2021.10.01</li>
+                                        </ul>
+                                    </div>
+                                    <hr/>
+                                    <div class="nt-body">
+                                        <div class="answer-box">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere labore,
+                                                quibusdam iusto illo eveniet porro? Laboriosam recusandae natus, molestias 
+                                                possimus voluptates in dolorum fuga animi odit pariatur? Voluptate, harum deleniti?
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nt-inner">
+                                    <div class="nt-head">
+                                        <span class="bold">[RE] : 고객센터</span>
+                                        <ul class="list-inline float-right">
+                                            <li><span class="badge badge-success">답변완료</span></li>
+                                            <li>2021.10.01</li>
+                                        </ul>
+                                    </div>
+                                    <hr/>
+                                    <div class="nt-body">
+                                        <div class="answer-box">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere labore, 
+                                                quibusdam iusto illo eveniet porro? Laboriosam recusandae natus, molestias 
+                                                possimus voluptates in dolorum fuga animi odit pariatur? Voluptate, harum deleniti?
+                                            </span>
+                                            <img src="../../static/image/company_full.png" alt="임시이미지"/>
+                                        </div>
+                                    </div>
+                                    <div class="space-box text-center">
+                                        <button type="button" class="btn col-3 btn-default">목록으로</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php include '../layout/footer.html' ?>

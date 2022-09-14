@@ -1,0 +1,76 @@
+<?php include '../layout/header.html' ?>
+
+	<div class="sub-wrap container">
+		<?php
+			$menu = 'mypage';
+			include '../layout/leftside.php'
+		?>
+		<div class="cont-area">
+			<div class="cont-inner">
+				<div class="cont-head">
+					<p class="sub-theme-tit">비밀번호 재설정</p>
+				</div>
+				<div class="sub-cont">
+					<div class="sub-contents">
+						<div class="sub-notice">
+							<div class="notice-view">
+								<div class="card">
+									<div class="card-body table-responsive p-0">
+										<table class="member-info-table table">
+											<tbody>
+												<tr>
+													<td>새 비밀번호</td>
+													<td>
+														<input type="password" class="form-control" placeholder="새 비밀번호를 입력해주세요."/>
+													</td>
+												</tr>
+												<tr>
+													<td>새 비밀번호 확인</td>
+													<td>
+														<input type="password" class="form-control" placeholder="새 비밀번호를 한번 더 입력해주세요."/>
+														<!-- <span class="text_r">* 입력된 비밀번호가 불일치합니다.</span> -->
+														<span class="text_b">* 입력된 비밀번호가 일치합니다.</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="space-box">
+										<p class="font-m">※ 현재 비밀번호와 다르게 변경</p>
+										<p class="font-m">※ 영 대소문자, 숫자 2종류 이상을 조합한 10자리 이상 사용 권장</p>
+									</div>
+								</div>
+								<div class="pw-cg-btn">
+									<button type="button" class="done-btn-free" data-toggle="modal" data-target=".pw-modal">변 경</button>
+									<button type="button" >취 소</button>
+								</div>
+							</div>
+						</div>	
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 비밀번호 변경완료 알림 팝업 -->
+<div class="modal fade pw-modal">
+	<div class="modal-dialog modal-dialog-scrollable modal-xs">
+		<div class="modal-content text-center" style="height: 300px; width: 500px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body cpl-txt" id="sample-layer-body">
+				<div class="space-box">
+					<img src="../../static/image/check80.png" alt="확인완료이미지"/>
+				</div>
+				<p>변경하신 정보로 회원 정보 수정이</p>
+				<p>완료되었습니다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<?php include '../layout/footer.html' ?>

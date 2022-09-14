@@ -1,0 +1,311 @@
+<?php include '../layout/header.html' ?>
+
+<div id="wrap">
+    <div id="container_wrap">
+        <div class="container main-wrap">
+            <section>
+                <h3 class="text-center">
+                    <img src="../../static/image/i_id.png" alt="아이디아이콘"/> 아이디가 기억나지 않으세요?
+                </h3>
+                <div class="id-view">
+                    <div class="card">
+                        <div class="card-body table-responsive p-0">
+                            <table class="member-info-table table text-nowrap">
+                                <colgroup>
+                                    <col style="width: 130px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>인증방법</td>
+                                        <td>
+                                            <label class="font-m">이메일 <input type="radio" name="check"/></label>
+                                            <label class="font-m">연락처 <input type="radio" name="check"/></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td>
+                                            <input type="text" class="in-text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td class="font-m">
+                                            <input type="text" class="in-text" placeholder="예)19810901"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이메일</td>
+                                        <td>
+                                            <input type="text" class="in-text" placeholder="이메일 주소를 입력해주세요"/>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td>연락처</td>
+                                        <td class="font-m">
+                                            <input type="tel" class="in-text" size="30px" placeholder="'-'은 빼고 숫자만 입력해주세요."/>
+                                        </td>
+                                    </tr> -->
+                                </tbody>   
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btn-login col-6 mx-auto">
+                        <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target=".idtrue-modal">아이디 찾기</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 비밀번호 찾기 -->
+            <section>
+                <h3 class="text-center">
+                    <img src="../../static/image/i_pw.png" alt="패스워드아이콘"/> 비밀번호가 기억나지 않으세요?
+                </h3>
+                <div class="id-view">
+                    <div class="card">
+                        <div class="card-body table-responsive p-0">
+                            <table class="member-info-table table text-nowrap">
+                                <colgroup>
+                                    <col style="width: 130px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>인증방법</td>
+                                        <td>
+                                            <label class="font-m">이메일 <input type="radio" name="check"/></label>
+                                            <label class="font-m">연락처 <input type="radio" name="check"/></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td>
+                                            <input type="text" class="in-text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>아이디</td>
+                                        <td>
+                                            <input type="text" class="in-text"/>
+                                            <p class="font-m"><a href="#" class="text_b">아이디 찾기</a></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td class="font-m">
+                                            <input type="text" class="in-text" placeholder="예)19810901"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이메일</td>
+                                        <td class="font-m">
+                                            <input type="text" class="in-text" placeholder="이메일 주소를 입력해주세요"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>연락처</td>
+                                        <td class="font-m">
+                                            <input type="tel" class="in-text" placeholder="'-'은 빼고 숫자만 입력해주세요."/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btn-login col-6 mx-auto">
+                        <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target=".pw-reset-modal">비밀번호 찾기</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- 아이디 찾기 팝업 -->
+<div class="modal fade idtrue-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content text-center" style="width: 400px;">
+            <div class="modal-header">
+                <h4>아이디 찾기가 완료되었습니다</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="sample-layer-body">
+                <span class="modal-icon">
+                    <img src="../../static/image/check80.png" alt="확인체크아이콘"/>
+                </span>
+                <div class="pop-top">
+                    <p class="font-m">회원님의 아이디는 아래와 같습니다.</p>
+                </div>
+                <div class="pop-center">
+                    <div class="form-group">
+                        <p class="bold">Exa*****</p>
+                        <p class="font-m">※ 개인정보 보호를 위해 아이디 일부는 *으로 표기됩니다.</p>
+                    </div>
+                    <div class="box-util font-m">
+                        <a href="#" class="id-find">기억이 나지 않아요 ㅣ</a>
+                        <a href="#" class="pw-find">비밀번호 재설정하기</a>
+                    </div>
+                </div>
+                <div class="btn-login col-6 mx-auto">
+                    <button class="btn btn-primary btn-block" type="button">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 아이디 불일치 팝업 -->
+<div class="modal fade idfalse-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content text-center" style="width: 500px;">
+            <div class="modal-header">
+                <h4>입력하신 정보와 일치하는 회원이 없습니다</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="sample-layer-body">
+                <div class="pop-top">
+                    <p>정확한 정보를 확인 후 다시 입력해주세요.</p>
+                </div>
+                <div class="pop-center">
+                    <div class="form-group">
+                        <p class="font-m">(기억이 나지 않아요.)</p>
+                    </div>
+                    <div class="box-util font-m">
+                        <a href="#" class="id-find">아이디 찾기 ㅣ</a>
+                        <a href="#" class="pw-find">비밀번호 찾기</a>
+                    </div>
+                </div>
+                <div class="btn-login col-6 mx-auto">
+                    <button class="btn btn-primary btn-block" type="button">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 비밀번호 재설정시 인증번호 팝업 -->
+<div class="modal fade pw-reset-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content text-center" style="width: 600px;">
+            <div class="modal-header">
+                <h4>비밀번호 재설정 하기</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="sample-layer-body">
+                <div class="card" style="box-shadow: none;">
+                    <div class="card-body table-responsive p-0">
+                        <table class="member-info-table table text-nowrap">
+                            <tbody>
+                                <tr>
+                                    <td>이메일</td>
+                                    <td>
+                                        <span class="font-m">Exa*****@gmail.com</span>
+                                        <button type="button" class="btn btn-default btn-sm">인증번호요청</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>인증번호</td>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="인증번호를 입력해주세요"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form-group">
+                        <p class="font-m">※ 인증메일을 받지 못했나요? <a href="#" class="bold">재발송</a></p>
+                    </div>
+                    <div class="btn-login col-6 mx-auto">
+                        <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target=".pw-done-modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 새 비밀번호 재설정 팝업 -->
+<div class="modal fade pw-done-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h4>비밀번호 재설정</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-left" id="sample-layer-body">
+                <p class="font-m">변경 할 비밀번호를 입력해주세요.</p>
+                <div class="pop-center">
+                    <div class="form-group">
+                        <label>새 비밀번호</label>
+                        <input type="password" class="in-text" placeholder="새 비밀번호를 입력해주세요." size="40px"/>
+                    </div>
+                    <div class="form-group">
+                        <label>새 비밀번호 확인</label>
+                        <input type="password" class="in-text" placeholder="한번 더 입력해주세요." size="40px"/>
+                    </div>
+                    <div class="pop-bottom">
+                        <p class="font-m">※ 현재 비밀번호와 다르게 변경</p>
+                        <p class="font-m">※ 영소 대소문자, 숫자 2종류 이상을 조합한 10자리 이상 사용</p>
+                    </div>
+                </div>
+                <div class="btn-login col-6 mx-auto">
+                    <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target=".pw-okay-modal">변경</button>
+                    <button class="btn btn-default btn-block" type="button">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 인증번호 불일치 팝업 -->
+<div class="modal fade false-modal">
+    <div class="modal-dialog modal-dialog-scrollable modal-xs">
+        <div class="modal-content text-center" style="height: 250px; width: 500px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body cpl-txt" id="sample-layer-body">
+                <p>인증번호가 일치하지 않습니다.</p>
+                <p>다시 확인해주시거나 인증번호를 재발급 받으시기 바랍니다.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 새 비밀번호 설정 완료 팝업 -->
+<div class="modal fade pw-okay-modal">
+    <div class="modal-dialog modal-dialog-scrollable modal-xs">
+        <div class="modal-content text-center" style="height: 300px; width: 500px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body cpl-txt" id="sample-layer-body">
+                <span class="modal-icon">
+                    <img src="../../static/image/check80.png" alt="확인체크아이콘"/>
+                </span>
+                <p class="bold">새로운 비밀번호 설정이 완료되었습니다.</p>
+                <div class="btn-login col-6 mx-auto">
+                    <button type="button" class="btn btn-primary">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include '../layout/footer.html' ?>

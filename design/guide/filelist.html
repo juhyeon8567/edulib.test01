@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<meta charset='utf-8' />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>에듀립 코딩리스트</title>
+<head>
+	<link rel="stylesheet" href="../dist/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../dist/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../dist/style.css">
+
+	<style type="text/css">
+	body, .filelist td{margin: 10px; }
+	.filelist a:link	{ text-decoration:underline; color:#464646;}
+	.filelist a:active	{ text-decoration:underline; color:#464646;}
+	.filelist a:visited	{ text-decoration:underline; color:#464646;}
+	.filelist a:hover	{ text-decoration:underline; color:#008400;}
+	.filelist {font:11px dotum; color:#666666;}
+
+	/* index  */
+	.list {width:100%;}
+
+	.filelist table {width:100%;	border-collapse:collapse;}
+	.filelist table th {color:#fff; height:25px; font-size:12px; background:#2B8FFF; padding:2px 0 0 5px; text-align:left;}
+	.filelist table td {border-bottom:1px solid #E3E3E3; color:#333333; font-size:12px; height:22px; padding: 5px 0 0 5px;}
+	.filelist table td.one {color:#000; font-size: 13px; font-weight: bold; }
+	.filelist table td.two {}
+	.filelist span.lt {text-decoration:line-through;}
+	.filelist table td.gr {color:#008400;}
+	.filelist table td.three {}
+	.filelist table td.Folder {font-family:verdana;color:#999;}
+	.filelist table td.filename {font-family:verdana; }
+	.filelist table td.down {text-align:center}
+	.filelist table td.down a {font-family:verdana; font-size: 12px; color:#147393}
+	.filelist table td.down a:hover {color:#008400}
+	.filelist table td.depth {font-weight:bold;}
+	.filelist table td.com {color:#0c3f86;text-align:center}
+	.filelist table td.ing {color:#d60216;text-align:center}
+	.filelist table td.wait {color:#999;text-align:center}
+	.filelist table td.date {color:#0c3f86;text-align:center}
+	.filelist table td.aply {background:#eafbff}   
+	.filelist table td.complt {background:#ffe8fa}   
+	
+	.filelist table tr.category th {background-color: #eee; font-size: 12px; color: #000;}
+
+	.center {text-align:center !important}
+	.tab {color:#ffffff; height:25px; font-size:12px; background:#6ba5d0; padding:2px 0 0 5px; text-align:center; border-left:1px solid #E3E3E3; font-weight:bold;}
+	.tab a:link	{color:#ffffff; font-weight:bold; TEXT-DECORATION:none;}
+	.tab a:visited {color:#ffffff; font-weight:bold; TEXT-DECORATION:none;}
+	.tab a:active {color:#ffffff; font-weight:bold; TEXT-DECORATION:none;}
+	.tab a:hover {color:#ffffff; font-weight:bold; TEXT-DECORATION:none;}
+
+	.tab_on {color:#ffffff; height:25px; font-size:12px; background:#2a83c5;}
+	.tab2 {color:#ffffff; height:25px; font-size:12px; background:#c0d0ff; padding:2px 0 0 5px; text-align:center; border-left:1px solid #E3E3E3; font-weight:bold;}
+	.tab_on2 {color:#ffffff; height:25px; font-size:12px; background:#2a83c5;}
+	.total {color:#666666; font-size:15px; font-weight:bold; margin:5px 0 10px 0;}
+
+	.total a:link,.total a:visited,.total a:active,.total a:hover {color:#F50002;}
+	.filelist .line {height: 2px; background:#e3ebf1;}
+	.pop {color:#008400;}
+	.mmenu {height:25px;}
+	.mmenu a {font-weight:bold; padding:0 5px; font-size:12px}
+
+	.mover {background-color:#F7F7F7;}
+	.mout {background-color:#fff;}
+
+	span.gray {color:gray; padding-left:20px;}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="filelist">
+		<div class="total">
+			<strong style="color:#2B8FFF;font-family:'맑은 고딕',Malgun Gothic;font-size:20px">에듀립 코딩리스트</strong>
+			<p style="font-weight: bold;">※ 신규 추가 페이지는 컬러처리</p>
+		</div>
+		<div id="list">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<colgroup>
+					<col width="5%"/>
+					<col width="10%"/>	
+					<col width="8%"/>	
+					<col width="7%"/>
+					<col width="30%"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th >Folder</th>
+						<th>File-name</th>
+						<th>반응형 진행전</th>
+						<th>모바일 완료</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 메인 레이아웃 -->
+					<tr>
+						<td class="one">메인</td>
+						<td>메인페이지</td>
+						<td></td>
+						<td class="Folder">/main/</td>
+						<td class="filename"><a href="../main/index.html" target="_blank">index.html</a></td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>서브레이아웃</td>
+						<td></td>
+						<td class="Folder">/layout/</td>
+						<td class="filename"><a href="../layout/sublayout.html" target="_blank">sublayout.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+		
+					<!-- 콘텐츠 교과-->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">교과</td>
+						<td>단원별 콘텐츠</td>
+						<td>목록</td>
+						<td class="Folder">/contents/</td>
+						<td class="filename"><a href="../contents/content_list.html" target="_blank">content_list.html</a></td>		
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>단원별 콘텐츠</td>
+						<td>상세</td>
+						<td class="Folder">/contents/</td>
+						<td class="filename"><a href="../contents/content_view.html" target="_blank">content_view.html</a></td>		
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<!-- 콘텐츠 범교과 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">범교과</td>
+						<td>범교과 콘텐츠</td>
+						<td>목록</td>
+						<td class="Folder">/contents/</td>
+						<td class="filename"><a href="../contents/subject_list.html" target="_blank">subject_list.html</a></td>			
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<!-- 계기교육 (월별콘텐츠) -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">계기교육</td>
+						<td>월별 콘텐츠</td>
+						<td>목록</td>
+						<td class="Folder">/month/</td>
+						<td class="filename"><a href="../month/content_month.html" target="_blank">content_month.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<!-- 교육이슈 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">교육이슈</td>
+						<td>교육이슈 콘텐츠</td>
+						<td>목록</td>
+						<td class="Folder">/contents/</td>
+						<td class="filename"><a href="../contents/issue_list.html" target="_blank">issue_list.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<!-- 패키지 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">주제별패키지</td>
+						<td>인기/신규</td>
+						<td>목록</td>
+						<td class="Folder">/pkg/</td>
+						<td class="filename"><a href="../pkg/pkg_list.html" target="_blank">pkg_list.html</a>
+							<span class="gray"></span>
+						</td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>인기/신규</td>
+						<td>상세</td>
+						<td class="Folder">/pkg/</td>
+						<td class="filename"><a href="../pkg/pkg_view.html" target="_blank">pkg_view.html</a>
+							<span class="gray"></span>
+						</td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+
+					<!-- 통합 검색 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">검색</td>
+						<td>통합검색</td>
+						<td>목록</td>
+						<td class="Folder">/search/</td>
+						<td class="filename"><a href="../search/search_list.html" target="_blank">search_list.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>통합검색 결과없을시</td>
+						<td>상세</td>
+						<td class="Folder">/search/</td>
+						<td class="filename"><a href="../search/search_view.html" target="_blank">search_view.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 회사소개 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">소개</td>
+						<td>회사소개</td>
+						<td>상세</td>
+						<td class="Folder">/company/</td>
+						<td class="filename"><a href="../company/intro_company.html" target="_blank">intro_company.html</a></td>
+						<td>o</td>
+						<td>o
+							<span class="gray">회사소개 pr 페이지 추가</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>에듀립소개</td>
+						<td>상세</td>
+						<td class="Folder">/company/</td>
+						<td class="filename"><a href="../company/intro_edulib.html" target="_blank">intro_edulib.html</a></td>
+						<td></td>
+						<td>
+							<span class="gray"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>구독권 안내</td>
+						<td>상세</td>
+						<td class="Folder">/company/</td>
+						<td class="filename"><a href="../company/intro_subscribe.html" target="_blank">intro_subscribe.html</a></td>
+						<td>o</td>
+						<td>o
+							<span class="gray">구독권 안내 pr 페이지 추가</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>이용가이드</td>
+						<td>상세</td>
+						<td class="Folder">/company/</td>
+						<td class="filename"><a href="../company/intro_userguide.html" target="_blank">intro_userguide.html</a></td>
+						<td></td>
+						<td>
+							<span class="gray"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>제휴 / 콘텐츠소개</td>
+						<td>상세</td>
+						<td class="Folder">/company/</td>
+						<td class="filename"><a href="../company/intro_estimate.html" target="_blank">intro_estimate.html</a></td>
+						<td></td>
+						<td>
+							<span class="gray"></span>
+						</td>
+					</tr>
+
+
+					<!-- 공지사항 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">고객센터</td>
+						<td>공지사항</td>
+						<td>목록</td>
+						<td class="Folder">/notice/</td>
+						<td class="filename"><a href="../notice/notice_list.html" target="_blank">notice_list.html</a>
+							<span class="gray"></span>
+						</td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>공지사항</td>
+						<td>상세</td>
+						<td class="Folder">/notice/</td>
+						<td class="filename"><a href="../notice/notice_view.html" target="_blank">notice_view.html</a>
+							<span class="gray"></span>
+						</td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- FAQ (자주 묻는 질문) -->
+					<tr>
+						<td class="one"></td>
+						<td>자주 묻는 질문 (FAQ)</td>
+						<td>목록</td>
+						<td class="Folder">/faq/</td>
+						<td class="filename"><a href="../faq/faq_list.html" target="_blank">faq_list.html</a>
+							<span class="gray"></span>
+						</td>			
+						<td>o</td>
+						<td>o</td>
+					</tr>	
+
+					<!-- QNA (1:1 문의) -->
+					<tr>
+						<td class="one"></td>
+						<td>1:1 문의 (QNA)</td>
+						<td>목록</td>
+						<td class="Folder">/qna/</td>
+						<td class="filename"><a href="../qna/qna_list.html" target="_blank">qna_list.html</a>
+							<span class="gray"></span>
+						</td>		
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					
+					<!-- 제휴/견적 문의 -->
+					<tr>
+						<td class="one"></td>
+						<td>제휴 / 콘텐츠 구매 문의</td>
+						<td>목록</td>
+						<td class="Folder">/estimate/</td>
+						<td class="filename"><a href="../estimate/est_list.html" target="_blank">est_list.html</a></td>	
+						<td>o</td>
+						<td>o
+							<span class="gray">pr 페이지 추가</span>
+						</td>
+					</tr>
+					<!-- 단체 구독 신청 -->
+					<tr>
+						<td class="one"></td>
+						<td>단체 구독 신청</td>
+						<td>목록</td>
+						<td class="Folder">/estimate/</td>
+						<td class="filename"><a href="../estimate/group_subscribe.html" target="_blank">group_subscribe.html</a></td>	
+						<td>o</td>
+						<td>o
+							<span class="gray">pr 페이지 추가</span>
+						</td>
+					</tr>
+					<!-- 이벤트 게시판 -->
+					<tr>
+						<td class="one"></td>
+						<td>이벤트 게시판</td>
+						<td>상세</td>
+						<td class="Folder">/notice/</td>
+						<td class="filename"><a href="../notice/event_view.html" target="_blank">event_view.html</a></td>	
+						<td>o</td>
+						<td>o
+							<span class="gray">pr 페이지 추가</span>
+						</td>
+					</tr>
+					
+					
+					<!-- 마이페이지 > 나의 관심주제 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">마이페이지</td>
+						<td>나의 관심주제</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/mytheme_list.html">mytheme_list.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 마이 에듀립 > 내가 찜한 콘텐츠 -->
+					<tr>
+						<td class="one"></td>
+						<td>내가 찜한 콘텐츠</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/mylike_list.html" target="_blank">mylike_list.html</a></td>		
+						<td>o</td>
+						<td>o</td>
+					</tr>
+				
+					<!-- 마이 에듀립 > 나의 구독권 -->
+					<tr>
+						<td class="one"></td>
+						<td>나의 구독권</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/subscription.html" target="_blank">subscription.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 마이 에듀립 > 단체구독 신청내역 -->
+					<tr>
+						<td class="one"></td>
+						<td>단체 구독 신청내역</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/mygroup_ssc.html" target="_blank">mygroup_ssc.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 마이 에듀립 > 단체구독 신청내역 -->
+					<tr>
+						<td class="one"></td>
+						<td>단체 구독 신청내역</td>
+						<td>상세</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/mygroup_sscview.html" target="_blank">mygroup_sscview.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 마이 에듀립 > 결제 내역 -->
+					<tr>
+						<td class="one"></td>
+						<td>결제내역</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/payment_list.html" target="_blank">payment_list.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+					<!-- 마이 에듀립 > 나의 문의 -->
+					<tr>
+						<td class="one"></td>
+						<td>나의 문의</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/myfaq_list.html" target="_blank">myfaq_list.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>나의 문의</td>
+						<td>상세</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/myfaq_view.html" target="_blank">myfaq_view.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<!-- 회원정보 -->
+					<tr>
+						<td class="one"></td>
+						<td>회원 정보</td>
+						<td>목록</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/membership.html" target="_blank">membership.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>회원 정보</td>
+						<td>비밀번호 재설정</td>
+						<td class="Folder">/mypage/</td>
+						<td class="filename"><a href="../mypage/mypage-pw.html" target="_blank">mypage-pw.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+
+
+					<!-- 회원 및 로그인 -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">회원</td>
+						<td>로그인</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/login.html" target="_blank">login.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>회원정보 입력</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/signup_info.html" target="_blank">signup_info.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>회원가입 완료</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/signup.html" target="_blank">signup.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>아이디/비밀번호 찾기</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/id.pw_find.html" target="_blank">id.pw_find.html</a></td>
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>이용약관</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/terms.html" target="_blank">terms.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>개인정보처리방침</td>
+						<td>상세</td>
+						<td class="Folder">/member/</td>
+						<td class="filename"><a href="../member/privacy.html" target="_blank">privacy.html</a></td>	
+						<td>o</td>
+						<td>o</td>
+					</tr>
+					
+					<!-- beta open event page -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">이벤트</td>
+						<td>베타오픈 페이지</td>
+						<td>상세</td>
+						<td class="Folder">/event/</td>
+						<td class="filename"><a href="../event/betaevent.html" target="_blank">betaevent.html</a></td>	
+						<td>o</td>
+					</tr>
+					<tr>
+						<td class="one"></td>
+						<td>그랜드오픈 페이지</td>
+						<td>상세</td>
+						<td class="Folder">/event/</td>
+						<td class="filename"><a href="../event/grandopen.html" target="_blank">grandopen.html</a></td>	
+						<td>o</td>
+					</tr>
+					
+					<!-- 404 error page -->
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">error</td>
+						<td>404page</td>
+						<td></td>
+						<td class="Folder">/error/</td>
+						<td class="filename"><a href="../error/404page.html" target="_blank">404page.html</a></td>	
+						<td>o</td>
+					</tr>
+					<tr>
+						<td colspan="9" class="line"></td>
+					</tr>
+					<tr>
+						<td class="one">자동썸네일</td>
+						<td>썸네일</td>
+						<td>반응형</td>
+						<td class="Folder"></td>
+						<td class="filename"><a href="../sample/thumbnail_sp.html" target="_blank">thumbnail_sp.html</a></td>	
+						<td>o</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	<br/>
+	<br/>
+	<br/>
+
+	<script type="text/javascript" src="../dist/jquery/jquery-1.12.4.min.js"></script>
+	<script src="../dist/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../dist/event.js"></script>
+
+	<!-- Modal -->
+	<!-- <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../img/icn-del-lg.png"></button>				
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div> -->
+</body>
+</html>

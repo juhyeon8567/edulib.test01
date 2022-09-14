@@ -1,0 +1,92 @@
+<?php include '../layout/header.html' ?>
+<div class="sub-wrap container">
+	<?php
+		$menu = 'cs';
+		include '../layout/leftside.php'
+	?>
+	<div class="cont-area">
+		<div class="cont-inner">
+			<div class="desk-xs-none">
+				<p class="sub-cate float-right list-inline">
+					<span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+					<span><a href="#">홈 ></a></span>
+					<span><a href="#">고객센터 ></a></span>
+					<b><span><a href="#">공지사항</a></span></b>
+				</p>
+			</div>
+			<p class="sub-theme-tit">공지사항</p>
+			<p class="ex-tit">에듀립 서비스 공지사항을 최신으로 확인해 보세요</p>
+			<div class="sub-cont">
+				<div class="sub-notice">
+					<div class="notice-list">
+						<div class="card">
+							<div class="card-header">
+								<div class="card-tools">
+									<div class="input-group input-group-md">
+										<input type="text" name="table_search" class="edu-search form-control float-right" placeholder="검색어를 입력해 주세요."/>
+										<div class="input-group-append">
+											<button type="button" class="btn btn-default">
+												<i class="fas fa-search"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sub-notice-table card-body table-responsive p-0">
+								<table class="table text-nowrap">
+									<thead class="table-top">
+										<tr>
+											<th>번호</th>
+											<th class="desk-xs-none">유형</th>
+											<th>제목</th>
+											<th class="desk-xs-none">첨부</th>
+											<th class="desk-xs-none">등록일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<? foreach(range(1,10) as $v) { ?>
+										<tr>
+											<td class="bold">01
+												<!-- <span><img src="../../static/image/i_speaker.png" alt="공지확성기아이콘"/></span> -->
+											</td>
+											<td class="desk-xs-none">
+												<span>공지</span>
+											</td>
+											<td>
+												<a href="#" title="에듀립 콘텐츠 저작물 이용 안내">
+													<p class="nt-els-text">에듀립 콘텐츠 저작물 이용 안내 에듀립 콘텐츠 저작물 워ㅏ루아ㅓ루ㅏ어ㅏㅓㅇㄹㅇㄹ</p>
+													<label class="label-free label label-warning">N</label>
+												</a>
+												<p class="mo-boxes font-m">2021.10.04</p>
+											</td>
+											<td class="center-icon desk-xs-none">
+												<a href="#">
+													<img src="../../static/image/i_download.png" alt="다운로드아이콘"/>
+												</a>
+											</td>
+											<td class="nt-days desk-xs-none">2021.10.04</td>
+										</tr>
+										<? } ?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="sub-pagination clearfix">
+						<ul class="pagination pagination-md">
+							<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">5</a></li>
+							<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php include '../layout/footer.html' ?>

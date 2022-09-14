@@ -1,0 +1,1872 @@
+<?php include '../layout/header.html' ?>
+
+<div id="wrap">
+    <!-- 메인 컨테이너 wrap -->
+    <div class="container_wrap">
+        <!-- 메인배너 -->
+        <div class="main-swiper-wrap">
+            <div class="main-swiper">
+                <div class="swiper-container container">
+                    <div class="main-bn-swiper swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-open.png" alt="그랜드오픈이벤트배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-reading.png" alt="올바른독서습관배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-thanksgiving.png" alt="추석반보기배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>  
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-mongol.png" alt="몽골의전통가옥게르배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-seodang.png" alt="퇴계이황의도산서당배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-smartphone.png" alt="스마트폰중독배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="main-banner-item">
+                                <a href="#">
+                                    <img src="../../static/image/main/09/main-bn-dragonfly.png" alt="잠자리의모습과특징배너" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination main-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                    <div class="swiper-nav container">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <!-- 메인 배너 재생 / 멈춤 버튼  -->
+                    <div class="btns" style="display: none;">
+                        <button type="button" class="start-btn start"></button>
+                        <button type="button" class="stop-btn stop"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-wrap">
+            <!-- 로그인시 노출 (관심주제 콘텐츠설정) -->
+            <section class="main-theme">
+                <h3>회원님을 위한 <span class="text_rb">추천 콘텐츠 Pick!</span>
+                    <a href="#" class="btn click-btn" data-toggle="modal" data-target=".banpop-modal">
+                        <img src="../../static/image/i_set.png" alt="설정아이콘이미지"/>
+                    </a>
+                </h3>
+                <div class="theme_ct row">
+                    <div class="col-4 text-center float-left">
+                        <figure>
+                            <img src="../../static/image/user_sample.png" alt="사용자프로필이미지"/>
+                            <figcaption>신규 회원님</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-8">
+                        <p class="theme_txt">나의<span> 학급, 과목, 주제</span>를 설정해 주세요</p>
+                        <p class="desk-xs-none">회원님께 해당하는 "학급, 과목, 주제"를 설정하면, 원하는 콘텐츠를 에듀립이 "바로" 추천해드립니다</p>
+                        <div class="theme_btn float-left">
+                            <a href="#">지금 관심주제 설정하기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 관심주제 콘텐츠 1 -->
+            <section class="main-sc">
+                <div class="cont-swiper">
+                    <div class="cate">
+                        <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                        <span>초등 > 1학년 > <b>수학</b></span>
+                    </div>
+                    <div class="cont-btn-item">
+                        <div class="cont-swiper-nav">
+                            <div class="swiper-button-next cont-swiper-next1"></div>
+                            <div class="swiper-button-prev cont-swiper-prev1"></div>
+                        </div>
+                    </div>
+                    <div class="sub-swiper-container">
+                        <div class="swiper-wrapper cont-item-wide">
+                            <? foreach(range(1,12) as $v) { ?>
+                            <div class="swiper-slide swiper-slide-active">
+                                <div class="cont-item">
+                                    <div class="cont-thum-item">
+                                        <a href="#">
+                                            <div class="thum-item">
+                                                <div class="thum type01">
+                                                    <div class="thum-image">
+                                                        <img src="../../static/image/V11271455_33e5c32d_3df5_4743_b72c_0cb0c37b841a.jpg" alt="거미의 덧셈"/>
+                                                        <video class="thum-video-item" loop muted>
+                                                            <source src="../../static/src/edulib pmt_220727.mp4" type="video/mp4"/>
+                                                        </video>
+                                                    </div>
+                                                    <div class="thum-types">
+                                                        <div class="thum-category">수학</div>
+                                                        <div class="thum-title" title="거미의 덧셈">
+                                                            <div class="thum-title-md">
+                                                                <div class="thum-title-wb">
+                                                                    <span>거미의 </span>덧셈
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cont-center">
+                                        <div class="cont-title">
+                                            <a href="#">거미의 덧셈</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <div class="swiper swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#거미</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#계산</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#더하기</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#덧셈</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#수</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#수와연산</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#연산</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".link-modal"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 관심주제 콘텐츠 2 -->
+            <section class="main-sc">
+                <div class="cont-swiper">
+                    <div class="cate text-left">
+                        <span><img src="../../static/image/i_pin.png" alt="핀아이콘"/></span>
+                        <span>중학 > <b>수학</b></span>
+                    </div>
+                    <div class="cont-btn-item">
+                        <div class="cont-swiper-nav">
+                            <div class="swiper-button-next cont-swiper-next2"></div>
+                            <div class="swiper-button-prev cont-swiper-prev2"></div>
+                        </div>
+                    </div>
+                    <div class="sub-swiper-container">
+                        <div class="swiper-wrapper cont-item-wide">
+                            <? foreach(range(1,12) as $v) { ?>
+                            <div class="swiper-slide swiper-slide-active">
+                                <div class="cont-item">
+                                    <div class="cont-thum-item">
+                                        <a href="#">
+                                            <div class="thum-item">
+                                                <div class="thum type02">
+                                                    <div class="thum-image">
+                                                        <img src="../../static/image/V11286935_3d096418_64c0_4275_84d6_da7159c41bdf.jpg" alt="마름모의 성질"/>
+                                                        <video class="thum-video-item" loop muted>
+                                                            <source src="../../static/src/edulib pmt_220727.mp4" type="video/mp4"/>
+                                                        </video>
+                                                    </div>
+                                                    <div class="thum-types">
+                                                        <div class="thum-category">과학</div>
+                                                        <div class="thum-title" title="마름모의 성질">
+                                                            <div class="thum-title-md">
+                                                                <div class="thum-title-wb">
+                                                                    <span>마름모의</span> 성질
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cont-center">
+                                        <div class="cont-title">
+                                            <a href="#">마름모의 성질</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <div class="swiper-container swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#로봇</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#마름모의 성질</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#마름모</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#사각형</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".link-modal"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- 추천콘텐츠 2줄 노출시 더보기 버튼 -->
+                <div class="cont-view-more">
+                    <button type="button" class="btn">더보기<img src="../../static/image/i_add.png" alt="더보기아이콘"/></button> 
+                </div>
+            </section>
+            <!-- hot! 인기 콘텐츠 -->
+            <section class="main-sc main-hot-cont">
+                <div class="cont-swiper">
+                    <div class="cont-top">
+                        <h3><span class="text_r">Hot!</span> "지금 많이 보는 교육 콘텐츠"</h3>
+                        <div class="cont-swiper-nav">
+                            <div class="swiper-button-next cont-swiper-next3"></div>
+                            <div class="swiper-button-prev cont-swiper-prev3"></div>
+                        </div>
+                    </div>
+                    <div class="sub-swiper-container">
+                        <div class="swiper-wrapper cont-item-wide">
+                            <? foreach(range(1,12) as $v) { ?>
+                            <div class="swiper-slide swiper-slide-active">
+                                <!-- 인기콘텐츠 > 랭킹 기능 -->
+                                <div class="cont-ranking">
+                                    <!-- 1위 (금) -->
+                                    <div class="cont-ranking-gold" style="display: none;">
+                                        <span class="cont-ranking-txt">1위</span>
+                                    </div>
+                                    <!-- 2위 (은) -->
+                                    <div class="cont-ranking-silver" style="display: none;">
+                                        <span class="cont-ranking-txt">2위</span>
+                                    </div>
+                                    <!-- 3위 (동) -->
+                                    <div class="cont-ranking-bronze" style="display: none;">
+                                        <span class="cont-ranking-txt">3위</span>
+                                    </div>
+                                    <!-- 4위 ~ 12위까지 (북마크) -->
+                                    <div class="cont-ranking-other">
+                                        <span class="cont-ranking-txt">4위</span>
+                                    </div>
+                                </div>
+                                <div class="cont-item">
+                                    <div class="cont-thum-item">
+                                        <a href="#">
+                                            <div class="thum-item">
+                                                <div class="thum type03">
+                                                    <div class="thum-image">
+                                                        <img src="../../static/image/V11994205_5a8280b4_f94c_4eaf_a204_b23360d4a723.jpg" alt="꺼진 불도 다시 봐요"/>
+                                                        <video class="thum-video-item" loop muted>
+                                                            <source src="../../static/src/edulib pmt_220727.mp4" type="video/mp4"/>
+                                                        </video>
+                                                    </div>
+                                                    <div class="thum-types">
+                                                        <div class="thum-category">안전 · 건강 교육</div>
+                                                        <div class="thum-title" title="꺼진 불도 다시 봐요">
+                                                            <div class="thum-title-md">
+                                                                <div class="thum-title-wb">
+                                                                    <span>꺼진 불도</span> 다시 봐요
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cont-center">
+                                        <div class="cont-title">
+                                            <a href="#">꺼진 불도 다시 봐요</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <!-- <div class="cont-grade">
+                                                <span class="grade">1위</span>
+                                            </div> -->
+                                            <div class="swiper-container swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#생활안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#화재안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#야외활동</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#화재</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#캠핑</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".link-modal"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- New! 최신 교육 콘텐츠 -->
+            <section class="main-sc main-hot-cont">
+                <div class="cont-swiper">
+                    <div class="cont-top">
+                        <h3><span class="text_b">New!</span> "최신 교육 콘텐츠"</h3>
+                        <div class="cont-swiper-nav">
+                            <div class="swiper-button-next cont-swiper-next3"></div>
+                            <div class="swiper-button-prev cont-swiper-prev3"></div>
+                        </div>
+                    </div>
+                    <div class="sub-swiper-container">
+                        <div class="swiper-wrapper cont-item-wide">
+                            <? foreach(range(1,12) as $v) { ?>
+                            <div class="swiper-slide swiper-slide-active">
+                                <div class="cont-item">
+                                    <div class="cont-thum-item">
+                                        <a href="#">
+                                            <div class="thum-item">
+                                                <div class="thum type04">
+                                                    <div class="thum-image">
+                                                        <img src="../../static/image/V11995469_507f6b03_7f9e_4c8f_b021_eb6dc96bf965.jpg" alt="벌이 나타났어요"/>
+                                                        <video class="thum-video-item" loop muted>
+                                                            <source src="../../static/src/edulib pmt_220727.mp4" type="video/mp4"/>
+                                                        </video>
+                                                    </div>
+                                                    <div class="thum-types">
+                                                        <div class="thum-category">안전 · 건강 교육</div>
+                                                        <div class="thum-title" title="벌이 나타났어요">
+                                                            <div class="thum-title-md">
+                                                                <div class="thum-title-wb">
+                                                                    <span>벌이</span> 나타났어요
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cont-center">
+                                        <div class="cont-title">
+                                            <a href="#">벌이 나타났어요</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <!-- <div class="cont-grade">
+                                                <span class="grade">1위</span>
+                                            </div> -->
+                                            <div class="swiper-container swiper-hashtag">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#생활안전</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#벌</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#활동</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#응급처치</span></a>
+                                                    </div>
+                                                    <div class="swiper-slide slide-tag">
+                                                        <a href="#"><span>#벌쏘임</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="float-right">
+                                                <a href="#"><span class="heart-like"></span></a>
+                                                <a href="#" data-toggle="modal" data-target=".link-modal"><span class="link-copy"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 주제별 추천! 패키지 콘텐츠 -->
+            <section class="main-sc">
+                <div class="cont-swiper">
+                    <div class="cont-top">
+                        <h3><span class="text_g">Easy!</span> "한번에 보면 좋을 주제별 콘텐츠"</h3>
+                        <div class="cont-swiper-nav">
+                            <div class="swiper-button-next cont-swiper-next5"></div>
+                            <div class="swiper-button-prev cont-swiper-prev5"></div>
+                        </div>
+                    </div>
+                    <div class="sub-swiper-container">
+                        <div class="swiper-wrapper">
+                            <? foreach(range(1,12) as $v) { ?>
+                            <div class="swiper-slide swiper-slide-active">
+                                <div class="cont-item">
+                                    <a href="#">
+                                        <div class="cont-thumbnail">
+                                            <img src="../../static/image/pkg-dokdo.png" alt="영상으로체험하는독도교육"/>
+                                        </div>
+                                    </a>
+                                    <div class="cont-center">
+                                        <div class="cont-title">
+                                            <a href="#">영상으로 체험하는 독도 교육</a>
+                                        </div>
+                                        <div class="cont-footer">
+                                            <span class="float-right">
+                                                <a href="#"><span class="link-copy"></span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 로그인시 노출 [weekly 추천 달력] -->
+            <section class="main-sc">
+                <h3><span class="text_o">Weekly 추천!</span> 이번 주에 보면 좋은 콘텐츠는?</h3>
+                <div class="calendar-tit">
+                    <span class="cal_tit">5월</span>
+                    <span class="cal-icon">
+                        <a href="#" data-toggle="modal" data-target=".main-calendar-modal">
+                            <img src="../../static/image/i_calendar.png" alt="달력아이콘"/>
+                            <span>전체보기</span>
+                        </a>
+                    </span>
+                </div>
+                <div class="main_calendar">
+                    <table class="table-calendar">
+                        <thead>
+                            <tr class="back-line weekly">
+                                <th>일</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="back-line">
+                                <td colspan="7">
+                                    <table class="table-calendar-schedule">
+                                        <tr class="cal-date">
+                                            <td class="date-item"><span>04</span></td>
+                                            <td class="date-item"><span>05</span></td>
+                                            <td class="date-item today on"><span>06</span></td>
+                                            <td class="date-item"><span>07</span></td>
+                                            <td class="date-item"><span>08</span></td>
+                                            <td class="date-item"><span>09</span></td>
+                                            <td class="date-item"><span>10</span></td>
+                                        </tr>
+                                        <tr class="cal-plan">
+                                            <td></td>
+                                            <td class="sch">
+                                                <div class="day1">
+                                                    <div class="sch-badge">
+                                                        <img src="../../static/image/balloon.png" alt="풍선아이콘">
+                                                    </div>
+                                                    <a href="#">
+                                                        <div>
+                                                            <span>세계난민의 날</span>
+                                                            <span class="play-icon"></span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="sch">
+                                                <div class="day1">
+                                                    <div class="sch-badge">
+                                                        <img src="../../static/image/carnation.png" alt="카네이션아이콘">
+                                                    </div>
+                                                    <a href="#">
+                                                        <div title="세계아동노동 반대의 날 6.15 남북 공동 선언">
+                                                            <span>세계 아동노동 반대의 날 6.15 남북 공동 선언</span>
+                                                            <span class="play-icon"></span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="cal-plan">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td colspan="4" class="sch">
+                                                <div class="item long-eve">
+                                                    <a href="#">
+                                                        <span>나라사랑 주간 - 호국보훈의 날 (6.6 ~ 6.10) </span>
+                                                        <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="cal-plan">
+                                            <td colspan="2" class="sch">
+                                                <div class="step1">
+                                                    <span>1. 초등3학년 과학</span>
+                                                </div>   
+                                            </td>
+                                            <td colspan="2" class="sch">
+                                                <a href="#">
+                                                    <div class="step step3">
+                                                        <label class="label-gone">대단원</label>
+                                                        <span>2. 대기와 오염</span>
+                                                    </div>
+                                                </a>    
+                                            </td>
+                                            <td colspan="3" class="sch">
+                                                <a href="#">
+                                                    <div class="step step3">
+                                                        <label class="label-gtwo">중단원</label>
+                                                        <span>3. 물질의 구성</span>
+                                                    </div>
+                                                </a> 
+                                            </td>
+                                        </tr>
+                                        <tr class="cal-plan">
+                                            <td colspan="2" class="sch">
+                                                <div class="step step1">
+                                                    <span>1. 초등 3학년 사회</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="2" class="sch">
+                                                <a href="#">
+                                                    <div class="step step3">
+                                                        <label class="label-gone">대단원</label>
+                                                        <span>2. 지형과 우리 고장</span>
+                                                    </div>
+                                                </a> 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 997px 해상도일시 노출 -->
+                    <div class="plan-ct d-xs-none">
+                        <h4>회원님, 이번주 이 콘텐츠는 어떠세요?</h4>
+                        <div class="plan-box">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#">
+                                        <span>세계 난민의 날 (06.20)</span>
+                                        <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>세계 아동노동 반대의 날 (05.08)</span>
+                                        <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span> 다문화 교육주간 (05.07 ~ 05.13)</span> 
+                                        <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 공지사항 및 에듀립 소식 -->
+            <section>
+                <div class="main-notice-ct">
+                    <div class="notice_ct col-md-6 float-left">
+                        <h4>공지사항</h4>
+                        <a href="#" class="more_tit"></a>
+                        <ul class="main_notice">
+                            <? foreach(range(1,5) as $v) { ?>
+                            <li>
+                                <a href="#">
+                                    <span>[공지] 에듀립 홈페이지 그랜드오픈 이벤트 회원가입하고 선물받자!</span>
+                                    <span class="date float-right" style="display: none;">2020.12.22</span>
+                                </a>
+                            </li>
+                            <? } ?>
+                        </ul>
+                    </div>
+                    <div class="event_ct col-md-6 float-left">
+                        <h4>에듀립 소식</h4>
+                        <div class="event_top">
+                            <ul class="main_event list-inline">
+                                <li class="thum2">
+                                    <a href="#">
+                                        <span class="imgs">
+                                            <img src="../../static/image/grand_min_banner.png" alt="그랜드오픈이벤트배너이미지" class="img-rounded"/>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="thum2">
+                                    <a href="#">
+                                        <span class="imgs">
+                                            <img src="../../static/image/bn_03.png" alt="클래스로그배너이미지" class="img-rounded"/>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 모바일(767px) 화면시 슬라이드 형식의 배너로 변경 -->
+                        <div class="mo-event-ct swiper-container d-xs-done">
+                            <div class="mo-e-wrapper swiper-wrapper"> 
+                                <div class="mo-eventbox swiper-slide">
+                                    <div class="mo-event-bn">
+                                        <a href="#">
+                                            <img src="../../static/image/grand_min_banner02.png" alt="그랜드오픈이벤트배너이미지"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mo-eventbox swiper-slide">
+                                    <div class="mo-event-bn">
+                                        <a href="#">
+                                            <img src="../../static/image/classlog_bn.png" alt="클래스로그배너이미지"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mo-boxes swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                            <span class="swiper-pagination-bullet"></span>
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 메인페이지 백그라운드 -->
+    <div class="content_bgb" style="display: none;">
+        <div class="text-center">
+            <img src="../../static/image/main-bg-p.png" alt="메인백그라운드이미지"/>
+        </div>
+        <!-- <div class="rk-bgi"></div>
+        <div class="rk-bgi2"></div> -->
+    </div>
+
+    <!-- 메인 달력 전체보기 클릭시 팝업 노출 -->
+    <!-- <div class="modal fade main-calendar-modal" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content" style="height: 900px; width: 1000px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="sample-layer-body">
+                    <div class="month-inner">
+                        <div class="month-top">
+                            <p>5월</p>
+                            <button type="button" class="btn btn-sm month-prev-btn">
+                                <a href="#"><img src="../../static/image/i_prev_b.png" alt="이전버튼"></a>
+                            </button>
+                            <button type="button" class="btn btn-sm month-next-btn">
+                                <a href="#"><img src="../../static/image/i_next_b.png" alt="다음버튼"></a>
+                            </button>
+                        </div>
+                        <table class="table-calendar2">
+                            <thead>
+                                <tr class="back-line weekly text-center">
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="back-line">
+                                    <td colspan="7">
+                                        <table class="table-calendar-schedule2">
+                                            <tr>
+                                                <td class="last-week">27</td>
+                                                <td class="last-week">28</td>
+                                                <td class="last-week">29</td>
+                                                <td class="last-week">30</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td class="today">6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>5월 5일 어린이날</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="today"></td>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>5월 8일 어버이날</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="today"></td>
+                                                <td colspan="4" class="sch">
+                                                    <div class="item long-eve">
+                                                        <a href="#">
+                                                            <img src="../../static/image/i_process-left.png" alt="진행화살표"/>
+                                                            <span>다문화 교육 주간</span>
+                                                        </a>    
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>5월 15일 스승의날</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="sch">
+                                                    <div class="item long-eve">
+                                                        <a href="#">
+                                                            <span> 5.7 ~ 5.13</span>
+                                                            <img src="../../static/image/i_process-right.png" alt="진행화살표"/>
+                                                        </a>    
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 메인 > 달력 전체보기 팝업 -->
+    <div class="modal fade main-calendar-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="month-inner">
+                        <div class="month-top">
+                            <p>6월</p>
+                            <button type="button" class="btn btn-sm month-prev-btn">
+                                <a href="#">
+                                    <img src="../../static/image/swiper-prev.png" alt="이전버튼"/>
+                                </a>
+                            </button>
+                            <button type="button" class="btn btn-sm month-next-btn">
+                                <a href="#">
+                                    <img src="../../static/image/swiper-next.png" alt="다음버튼"/>
+                                </a>
+                            </button>
+                        </div>
+                        <table class="table-calendar2">
+                            <thead>
+                                <tr class="back-line weekly text-center">
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="back-line">
+                                    <td colspan="7">
+                                        <table class="table-calendar-schedule2">
+                                            <tr class="line-x line-blank">
+                                                <td class="last-week">27</td>
+                                                <td class="last-week">28</td>
+                                                <td class="last-week">29</td>
+                                                <td class="last-week">30</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td class="today">6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>세계난민의 날</span>
+                                                                <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>세계아동노동 반대의 날</span>
+                                                                <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4" class="sch">
+                                                    <div class="item long-eve">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>다문화 교육주간</span>
+                                                                <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="line-x">
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="sch">
+                                                    <div class="day1">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>스승의날</span>
+                                                                <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td colspan="5" class="sch">
+                                                    <div class="item long-eve">
+                                                        <a href="#">
+                                                            <div>
+                                                                <span>나라사랑주간 - 국가보훈의 날</span>
+                                                                <img src="../../static/image/i_video1.png" alt="비디오버튼이미지"/>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="line-x line-blank">
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                            </tr>
+                                            <tr class="line-x line-blank">
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td>31</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 관심주제 설정하기 팝업창 -->
+<div class="modal fade theme-modal">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">나만의 관심주제 설정하기</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body scrollbar">
+				<div class="theme_modal">
+					<div class="theme_inner">
+						<!-- 초등 -->
+						<div class="theme_center" style="display: none;">
+							<ul class="tm-subject">
+								<p class="item-tit">학급</p>
+								<p class="font-s">* 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 <span class="text_b">택1</span>)</p>
+								<li>
+									<label>
+										<input type="radio" class="on"><span>초등</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>중학</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">학년</p>
+								<li>
+									<label>
+										<input type="radio"><span>1학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>2학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>3학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>4학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>5학년</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio"><span>6학년</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">과목</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>국어</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>수학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>사회</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>도덕</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>봄</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>여름</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>가을</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>겨울</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>안전한 생활</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>실과</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>음악</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미술</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>체육</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">범교과</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>안정 &#183; 건강</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>인성</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>진로</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>통일 &#183; 독도</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>창의 &#183; 과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>역사</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>독서</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>경제 &#183; 금융</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>ESD</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>SW</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미디어리터러시</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<!-- 중학 -->
+						<div class="theme_center">
+							<ul class="tm-subject">
+								<p class="item-tit">학급</p>
+								<p class="font-s">* 관심 주제 설정은 한 개의 학급에서만 설정이 가능합니다. (초등/중학 중 <span class="text_b">택1</span>)</p>
+								<li>
+									<label>
+										<input type="radio"><span>초등</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="radio" class="on"><span>중학</span>
+									</label>
+								</li>
+							</ul>
+							<ul class="tm-subject2">
+								<p class="item-tit">과목</p>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">국어</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>듣기 &#183; 말하기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>읽기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>쓰기</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>문법</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>문학</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">수학</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ②</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>수학 ③</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">사회</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>사회 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>사회 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">도덕</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>도덕 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>도덕 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">역사</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>역사 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>역사 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">과학</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ②</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>과학 ③</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">기술 &#183; 가정</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>기술 &#183; 가정 ①</span>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input type="checkbox"><span>기술 &#183; 가정 ②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">음악</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>음악 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">미술</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>미술 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">체육</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>체육 ①,②</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="tm-option">
+									<ul>
+										<span class="sel-tit">정보</span>
+										<li>
+											<label>
+												<input type="checkbox"><span>정보</span>
+											</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="tm-subject">
+								<p class="item-tit">범교과</p>
+								<li>
+									<label>
+										<input type="checkbox"><span>안정 &#183; 건강</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>인성</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>진로</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>통일 &#183; 독도</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>창의 &#183; 과학</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>역사</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>독서</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>경제 &#183; 금융</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>ESD</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>SW</span>
+									</label>
+								</li>
+								<li>
+									<label>
+										<input type="checkbox"><span>미디어리터러시</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="tm-clickbox scrollbar">
+					<p class="f20">내가 선택한 관심주제</p>
+					<span>* 마우스를 스크롤해서 확인 해보세요.</span>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>국어</li>
+						<span>&#62;</span>
+						<li>듣기 &#183; 말하기</li>
+					</ul>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>수학</li>
+						<span>&#62;</span>
+						<li>수학 ②</li>
+					</ul>
+					<ul class="tm-linebar list-inline">
+						<li>중학</li>
+						<span>&#62;</span>
+						<li>1학년</li>
+						<span>&#62;</span>
+						<li>창의 &#183; 과학</li>
+					</ul>
+				</div>
+				<div class="row justify-content-between btn-row">
+					<div class="reset_btn col-sm-6 text-left">
+						<button type="button" class="btn btn-primary">
+							<img src="../../static/image/i_selectall.png" alt="전체선택아이콘"> 전체 선택
+						</button>
+						<button type="button" class="btn btn-default">
+							<img src="../../static/image/i_reset.png" alt="선택초기화아이콘"> 선택 초기화
+						</button>
+					</div>
+					<div class="apply_btn col-sm-6 text-right">
+						<button type="button" class="btn btn-primary">확인</button>
+						<button type="button" class="btn btn-default">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 이벤트 레이어 팝업창 -->
+<!-- <div class="main_event_pop">
+    <div class="eve_top">
+        <input type="button" class="pop_close_btn float-right close" aria-label="Close"/>
+    </div>
+    <div class="eve_inner text-right">
+        <img src="../../static/image/popup/grandopen_popup.png" alt="그랜드오픈이벤트팝업이미지" usemap="#event-pop"/>
+        <map name="event-pop" id="event-pop">
+            <area shape="rect" coords="84,493,514,573" href="/reg/memberRegistered" alt="지금회원가입하고혜택받기버튼이미지/">
+        </map>
+        <div class="e-popbox">
+            <label class="font-m">
+                <input type="checkbox"/> 하루동안 보지않기
+            </label>
+        </div>
+    </div>
+</div> -->
+
+<!-- 이벤트 팝업창 -->
+<div class="modal fade banpop-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="eve_top">
+                <input type="button" class="pop_close_btn text-right close" data-dismiss="modal" aria-label="Close"/>
+            </div>
+            <div class="eve_inner text-right">
+                <img src="../../static/image/popup/grandopen_popup.png" alt="그랜드오픈이벤트팝업이미지"/>
+                <a href="#" type="button">
+                    <span class="event-btn"></span>
+                </a>
+                <div class="e-popbox">
+                    <label class="font-m">
+                        <input type="checkbox"/> 하루동안 보지않기
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 메인배너 클릭시 영상 팝업창 -->
+<div class="modal fade banner_pop" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+            <div class="modal-body">
+                <div class="ban-inner">
+                    <div class="ban-center">
+                        <iframe id="player" class="player" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie" 
+                        frameborder="0" allowfullscreen="" allow="autoplay;fullscreen;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 메인배너 클릭시 영상 팝업창 -->
+<div class="banner_pop" style="display: none;">
+    <div class="ban-inner">
+        <div class="ban-top">
+            <button type="button" class="btn">
+                <img src="../../static/image/i_ban-cls.png" alt="닫기버튼아이콘"/>
+            </button>
+        </div>
+        <div class="ban-center">
+            <iframe id="player" class="player" src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrFCoEz077Q3YZHuozs7v9BgywisEb6D4ytsRDkyOthGhwrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie" 
+            frameborder="0" allowfullscreen="" allow="autoplay;fullscreen;"></iframe>
+        </div>
+    </div>
+</div>
+<div class="ban-bg"></div>
+
+
+<!-- 링크공유 아이콘 클릭시 링크공유 팝업창 -->
+<div class="modal fade link-modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="link_popup">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="link-item">
+                        <div class="link_head">
+                            <span class="link-label">공유하기</span>
+                            <p>더욱 쉽게! <span class="bold"><ins>외부로 URL을 공유해 보세요!</ins></span></p>
+                        </div>
+                        <div class="link_center">
+                            <input type="url" class="link-input" value="http://www.edulib.kr"/>
+                            <button type="button" class="btn btn-link">URL 복사</button>
+                        </div>
+                        <div class="link_bottom">
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_kakao.png" alt="카카오톡이미지"/>
+                                    <figcaption>카카오톡</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_line.png" alt="라인이미지"/>
+                                    <figcaption>라인</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_blog.png" alt="네이버블로그로고이미지"/>
+                                    <figcaption>블로그</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_facebook.png" alt="페이스북로고이미지"/>
+                                    <figcaption>페이스북</figcaption>
+                                </a>
+                            </figure>
+                            <figure>
+                                <a href="#">
+                                    <img src="../../static/image/i_twiter.png" alt="트위터로고이미지"/>
+                                    <figcaption>트위터</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- 구독 회원 전용 링크창 -->
+                    <div class="link-item">
+                        <div class="link_head">
+                            <span class="Meb-only-label">구독회원전용</span>
+                            <p><ins>로그인 없이!</ins> <span class="bold">10일 동안</span> 편리하게 URL을 이용해 보세요!</p>
+                        </div>
+                        <div class="link_center">
+                            <input type="url" class="link-input" value="http://www.edulib.kr"/>
+                            <button type="button" class="btn btn-link">URL 복사</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 이메일 전송 안내문구 -->
+<div style="display: none; width: 600px; padding: 20px; margin: 0 auto; background-color: #e7eefa;">
+    <p style="text-align: center;">ex) 에듀립 이메일 안내공지글 예시 작업중입니다.</p>
+    <div style="padding: 20px; background-color: #fff;">
+        <div style="padding-bottom: 20px;">
+            <h3>안녕하세요 <span style="color: #2b8fff;">에듀립님</span></h3>
+            <p>에듀립 서비스를 항상 이용해주셔서 감사합니다.</p>
+            <p style="margin-bottom: 0; line-height: 1.5;">회원님은 기존에 이용하시던 이용권 재 결재시 <br/> 아래와 같은 사유로 결제가 실패하여 이용권 이용이 중단되었습니다.</p>
+        </div>
+        <hr/>
+        <div style="padding: 10px 0px;">
+            <div style="padding: 10px;">
+                <span style="font-size: 15px; color: #747474;">이용권</span>
+                <span style="margin-left: 10px;">all-in-one</span>
+            </div>
+            <div style="padding: 10px;">
+                <span style="font-size: 15px; color: #747474;">결제수단</span>
+                <span style="margin-left: 10px;">신용카드</span>
+            </div>
+            <div style="padding: 10px;">
+                <span style="font-size: 15px; color: #747474;">결제일자</span>
+                <span style="margin-left: 10px;">2022.07.05</span>
+            </div>
+            <div style="padding: 10px;">
+                <span style="font-size: 15px; color: #747474;">실패사유</span>
+                <span style="margin-left: 10px; font-size: 15px; color: red;">분실 혹은 거래불가인 카드입니다. 확인 후 결제해주세요.</span>
+            </div>
+        </div>
+        <hr/>
+        <div style="margin: 30px 0px 10px 0px; text-align: center;">
+            <a href="#" style="display: inline-block; padding: 25px 40px; background-color: #2b8fff; color: #fff; font-size: 17px;">구매하기</a>
+        </div>
+    </div>
+</div>
+
+<!-- 임시 비밀번호 발급 메일 - 회원에게 전송 -->
+<div style="display: none; width: 500px; padding: 15px; background-color: rgba(21,126,251,.1);; margin-left: 10px; margin-bottom: 10px;">
+    <img src="../../static/image/logo.png" alt="에듀립로고이미지" width="140px"/>
+    <p style="margin-top: 15px; font-size: 18px; font-weight: bold; padding-left: 3px;">임시 비밀번호 발급</p>
+    <div style="padding: 15px; background-color: #fff;">
+        <p>안녕하세요. 결제테스트11회원님.</p>
+        <p style="line-height: 1.3;">임시비밀번호로 로그인 후 반드시 비밀번호를 수정하여 사용하시기 바랍니다. 이용중이시던 화면으로 돌아가 아래의 임시 비밀번호를 입력해주세요.</p>
+        <div style="margin-top: 10px; padding: 10px; border: 1px solid #2b8fff;">
+            <div style="font-size: 20px; font-weight: bold; color: #2b8fff;">e4Rb3GiTuhZA</div>
+        </div>
+    </div>
+</div>
+
+<!-- 신규문의 접수 메일 - 관리자에게 전송 -->
+<div style="display: none; width: 500px; padding: 15px; background-color: rgba(21,126,251,.1);; margin-left: 10px; margin-bottom: 10px;">
+    <img src="../../static/image/logo.png" alt="에듀립로고이미지" width="140px"/>
+    <p style="margin-top: 15px; font-size: 20px; font-weight: bold; padding-left: 3px;">1:1문의 안내</p>
+    <div style="padding: 15px; background-color: #fff;">
+        <p>안녕하세요. 관리자님.</p>
+        <p style="line-height: 1.3;">1:1문의 게시판에 신규 문의가 접수되었습니다.</p>
+        <p style="font-weight: bold; color: #2b8fff;">관리자 페이지 > 1:1문의에 답변을 해주시기 바랍니다.</p>
+    </div>
+</div>
+
+
+<?php include '../layout/footer.html' ?>

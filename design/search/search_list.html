@@ -1,0 +1,110 @@
+<?php include '../layout/header.html' ?>
+
+<div id="wrap">
+    <div class="container_wrap">
+        <div class="container main-wrap">
+            <!-- 리스트 아이콘 클릭시 리스트타입 노출-->
+            <section class="search-list-top">
+                <h3 class="text-center">
+                    <span class="text_b">"프로젝트"</span>에 관한 검색 결과
+                    <img src="../../static/image/m-search-icon.png" alt="검색돋보기아이콘이미지"/>
+                </h3>
+                <div class="listtab text-center">
+                    <ul class="list-tabmenu list-inline">
+                        <li class="on"><a href="#">전체(25)</a></li>
+                        <li><a href="#">초등(10)</a></li>
+                        <li><a href="#">중학(11)</a></li>
+                        <li><a href="#">계기 교육(0)</a></li>
+                        <li><a href="#">교육 이슈(2)</a></li>
+                        <li><a href="#">주제별 패키지(2)</a></li>
+                    </ul>
+                    <ul class="list-icon list-inline float-right" style="display: none;">
+                        <li>
+                            <a href="#">
+                                <img src="../../static/image/i_list-type.png" alt="리스트로보기아이콘"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    
+            <!-- 리스트형 (모바일 화면 시 -> 구조변경되게) 신규제작 -->
+            <div class="cont-list-wrap">
+                <? foreach(range(1,8) as $v) { ?>
+                <div class="cont-list">
+                    <div class="row">
+                        <!-- 리스트형 이미지 영역 -->
+                        <div class="col-md-4">
+                            <div class="list-img">
+                                <a href="#">
+                                    <div class="thum-item">
+                                        <div class="thum type03">
+                                            <div class="thum-image">
+                                                <img src="../../static/image/V11995811_783abe0c_ff81_4374_baec_1201d75a1dc5.jpg" alt="사각지대, 보이지 않는 위험"/>
+                                            </div>
+                                            <div class="thum-types">
+                                                <div class="thum-category">안전 · 건강 교육</div>
+                                                <div class="thum-title" title="사각지대, 보이지 않는 위험">
+                                                    <div class="thum-title-md">
+                                                        <div class="thum-title-wb">
+                                                            <span>사각지대,</span> 보이지 않는 위험
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 리스트형 텍스트 + 아이콘 영역 -->
+                        <div class="col-md-7">
+                            <div class="list-txt">
+                                <div class="list-tit" title="사각지대, 보이지 않는 위험">
+                                    <a href="#">
+                                        <p class="bold"><span class="focus">사각지대,</span> 보이지 않는 위험</p>
+                                    </a>
+                                </div>
+                                <div class="list-exp" title="사각지대가 무엇인지 알아보고 사각지대의 위험성을 알아본다."><span class="focus">사각지대</span>가 무엇인지 알아보고 사각지대의 위험성을 알아본다.
+                                    무엇인지 알아보고 사각지대의 위험성을 알아본다 무엇인지 알아보고 사각지대의 위험성을 알아본다 
+                                    무엇인지 알아보고 사각지대의 위험성을 알아본다 무엇인지 알아보고 사각지대의 위험성을 알아본다.
+                                </div>
+                                <div class="list-route font-m">범교과 > 초등 > 생활·교통·재난 > 안전·건강 교육 > 생활·교통·재난</div>
+                                <ul class="taglist">
+                                    <li><a href="#" class="focus">#사각지대</a></li>
+                                    <li><a href="#">#자동차</a></li>
+                                    <li><a href="#">#보행안전</a></li>
+                                    <li><a href="#">#안전수칙</a></li>
+                                    <li><a href="#">#안전교육</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-icon col-md-1">
+                            <a href="#"><span class="heart-like on"></span></a>
+                            <a href="#"><span class="link-copy"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <? } ?>
+            </div>
+            <div class="sub-pagination clearfix page-btn">
+                <ul class="pagination pagination-md">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link on" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include '../layout/footer.html' ?>
